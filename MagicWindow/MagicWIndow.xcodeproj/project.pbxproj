@@ -28,7 +28,7 @@
 		00EB0792BFD114C26D1FBFB7 /* Pods-FritzSkyReplacementDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FritzSkyReplacementDemo.release.xcconfig"; path = "Target Support Files/Pods-FritzSkyReplacementDemo/Pods-FritzSkyReplacementDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2F1C790B23BBCD9752B4C44F /* Pods-SkySegmentationGifCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkySegmentationGifCreator.release.xcconfig"; path = "Target Support Files/Pods-SkySegmentationGifCreator/Pods-SkySegmentationGifCreator.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D924E3982B893B32FDFBF /* Pods-SkySegmentationGifCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkySegmentationGifCreator.debug.xcconfig"; path = "Target Support Files/Pods-SkySegmentationGifCreator/Pods-SkySegmentationGifCreator.debug.xcconfig"; sourceTree = "<group>"; };
-		837BFB8022AAE6FB00010A93 /* FritzSkyReplacementDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FritzSkyReplacementDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		837BFB8022AAE6FB00010A93 /* MagicWIndow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicWIndow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837BFB8322AAE6FB00010A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		837BFB8522AAE6FB00010A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		837BFB8822AAE6FB00010A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		837BFB7722AAE6FB00010A93 = {
 			isa = PBXGroup;
 			children = (
-				837BFB8222AAE6FB00010A93 /* FritzSkyReplacementDemo */,
+				837BFB8222AAE6FB00010A93 /* MagicWIndow */,
 				837BFB8122AAE6FB00010A93 /* Products */,
 				627CFBA9298D5F5109380471 /* Pods */,
 				56A686DE067819B42CDFF837 /* Frameworks */,
@@ -92,12 +92,12 @@
 		837BFB8122AAE6FB00010A93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				837BFB8022AAE6FB00010A93 /* FritzSkyReplacementDemo.app */,
+				837BFB8022AAE6FB00010A93 /* MagicWIndow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		837BFB8222AAE6FB00010A93 /* FritzSkyReplacementDemo */ = {
+		837BFB8222AAE6FB00010A93 /* MagicWIndow */ = {
 			isa = PBXGroup;
 			children = (
 				AD9225FB246F202B0018EF02 /* save.png */,
@@ -116,15 +116,15 @@
 				837BFB8C22AAE6FC00010A93 /* LaunchScreen.storyboard */,
 				837BFB8F22AAE6FC00010A93 /* Info.plist */,
 			);
-			path = FritzSkyReplacementDemo;
+			path = MagicWIndow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		837BFB7F22AAE6FB00010A93 /* FritzSkyReplacementDemo */ = {
+		837BFB7F22AAE6FB00010A93 /* MagicWIndow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "FritzSkyReplacementDemo" */;
+			buildConfigurationList = 837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWIndow" */;
 			buildPhases = (
 				F4E63DE038EA65B06A534018 /* [CP] Check Pods Manifest.lock */,
 				837BFB7C22AAE6FB00010A93 /* Sources */,
@@ -136,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = FritzSkyReplacementDemo;
+			name = MagicWIndow;
 			productName = SkySegmentationGifCreator;
-			productReference = 837BFB8022AAE6FB00010A93 /* FritzSkyReplacementDemo.app */;
+			productReference = 837BFB8022AAE6FB00010A93 /* MagicWIndow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "FritzSkyReplacementDemo" */;
+			buildConfigurationList = 837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWIndow" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				837BFB7F22AAE6FB00010A93 /* FritzSkyReplacementDemo */,
+				837BFB7F22AAE6FB00010A93 /* MagicWIndow */,
 			);
 		};
 /* End PBXProject section */
@@ -398,8 +398,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ai.fritz.SkySegmentationGifCreator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWIndow;
+				PRODUCT_NAME = MagicWIndow;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,8 +417,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ai.fritz.SkySegmentationGifCreator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWIndow;
+				PRODUCT_NAME = MagicWIndow;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "FritzSkyReplacementDemo" */ = {
+		837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWIndow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837BFB9022AAE6FC00010A93 /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "FritzSkyReplacementDemo" */ = {
+		837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWIndow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837BFB9322AAE6FC00010A93 /* Debug */,
