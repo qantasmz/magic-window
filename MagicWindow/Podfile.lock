@@ -1,0 +1,75 @@
+PODS:
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
+  - DeepDiff (2.3.1)
+  - Fritz/VisionSegmentationModel/Sky/Accurate (5.3.4):
+    - FritzVisionSkySegmentationModelAccurate (~> 5.3.0)
+  - FritzBase/Core (5.3.4)
+  - FritzBase/CoreMLHelpers (5.3.4)
+  - FritzBase/ManagedModel (5.3.4):
+    - FritzBase/Core (= 5.3.4)
+  - FritzBase/Vision (5.3.4):
+    - FritzBase/Core (= 5.3.4)
+    - FritzBase/CoreMLHelpers (= 5.3.4)
+    - FritzBase/ManagedModel (= 5.3.4)
+  - FritzVisionSkySegmentationModelAccurate (5.3.0):
+    - FritzBase/Vision (~> 5.3.0)
+  - Giphy (1.2.8):
+    - DeepDiff
+    - libwebp
+    - PINCache
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - PINCache (2.3)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
+
+DEPENDENCIES:
+  - Fritz/VisionSegmentationModel/Sky/Accurate
+  - Giphy (from `https://s3.amazonaws.com/sdk.mobile.giphy.com/SDK/1.2.8/Giphy.podspec`)
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - DeepDiff
+    - Fritz
+    - FritzBase
+    - FritzVisionSkySegmentationModelAccurate
+    - libwebp
+    - PINCache
+
+EXTERNAL SOURCES:
+  Giphy:
+    :podspec: https://s3.amazonaws.com/sdk.mobile.giphy.com/SDK/1.2.8/Giphy.podspec
+  SVGKit:
+    :branch: 2.x
+    :git: https://github.com/SVGKit/SVGKit.git
+
+CHECKOUT OPTIONS:
+  SVGKit:
+    :commit: c40671b9a264f8f71831c4e0452736debfae2164
+    :git: https://github.com/SVGKit/SVGKit.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  DeepDiff: e5ae6c50d0321568e4508cec5930b9f10bb293fc
+  Fritz: f2ba23f70813f80afa5e3a3bc88afc21f91ab596
+  FritzBase: e245b8a8ee065caca856f22ba8e0e66becf63086
+  FritzVisionSkySegmentationModelAccurate: ad096f32409f0719fb035467cb373522c538130d
+  Giphy: 0e6c7c127eb22d0b419ae68ccae6d92c827ea034
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
+
+PODFILE CHECKSUM: 891984c0ecccae5630a3b5e6daa212b0567a1c54
+
+COCOAPODS: 1.9.1
