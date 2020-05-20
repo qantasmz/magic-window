@@ -20,7 +20,7 @@
 		AD8AF3F1246B4CEF008A0777 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF3F0246B4CEE008A0777 /* camera.png */; };
 		AD8AF3F3246B531C008A0777 /* TFLiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AF3F2246B531C008A0777 /* TFLiteExtension.swift */; };
 		AD9225FC246F202B0018EF02 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9225FB246F202B0018EF02 /* save.png */; };
-		ADF5CB20246B4106005342FC /* Fritz-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF5CB1F246B4106005342FC /* Fritz-Info.plist */; };
+		ADA69B552475DA6000672F65 /* Fritz-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA69B542475DA6000672F65 /* Fritz-Info.plist */; };
 		ADF5CB22246B41F1005342FC /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF5CB21246B41F1005342FC /* sky.jpg */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		00EB0792BFD114C26D1FBFB7 /* Pods-FritzSkyReplacementDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FritzSkyReplacementDemo.release.xcconfig"; path = "Target Support Files/Pods-FritzSkyReplacementDemo/Pods-FritzSkyReplacementDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2F1C790B23BBCD9752B4C44F /* Pods-SkySegmentationGifCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkySegmentationGifCreator.release.xcconfig"; path = "Target Support Files/Pods-SkySegmentationGifCreator/Pods-SkySegmentationGifCreator.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D924E3982B893B32FDFBF /* Pods-SkySegmentationGifCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkySegmentationGifCreator.debug.xcconfig"; path = "Target Support Files/Pods-SkySegmentationGifCreator/Pods-SkySegmentationGifCreator.debug.xcconfig"; sourceTree = "<group>"; };
-		837BFB8022AAE6FB00010A93 /* MagicWIndow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicWIndow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		837BFB8022AAE6FB00010A93 /* MagicWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837BFB8322AAE6FB00010A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		837BFB8522AAE6FB00010A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		837BFB8822AAE6FB00010A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		AD8AF3F0246B4CEE008A0777 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		AD8AF3F2246B531C008A0777 /* TFLiteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLiteExtension.swift; sourceTree = "<group>"; };
 		AD9225FB246F202B0018EF02 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = images/save.png; sourceTree = SOURCE_ROOT; };
-		ADF5CB1F246B4106005342FC /* Fritz-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fritz-Info.plist"; sourceTree = "<group>"; };
+		ADA69B542475DA6000672F65 /* Fritz-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fritz-Info.plist"; sourceTree = "<group>"; };
 		ADF5CB21246B41F1005342FC /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
 		B061FC3071D1AEEC931E37C9 /* Pods_FritzSkyReplacementDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FritzSkyReplacementDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D740A4F1C963ED2A12454102 /* Pods-FritzSkyReplacementDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FritzSkyReplacementDemo.debug.xcconfig"; path = "Target Support Files/Pods-FritzSkyReplacementDemo/Pods-FritzSkyReplacementDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		837BFB7722AAE6FB00010A93 = {
 			isa = PBXGroup;
 			children = (
-				837BFB8222AAE6FB00010A93 /* MagicWIndow */,
+				837BFB8222AAE6FB00010A93 /* MagicWindow */,
 				837BFB8122AAE6FB00010A93 /* Products */,
 				627CFBA9298D5F5109380471 /* Pods */,
 				56A686DE067819B42CDFF837 /* Frameworks */,
@@ -92,21 +92,21 @@
 		837BFB8122AAE6FB00010A93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				837BFB8022AAE6FB00010A93 /* MagicWIndow.app */,
+				837BFB8022AAE6FB00010A93 /* MagicWindow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		837BFB8222AAE6FB00010A93 /* MagicWIndow */ = {
+		837BFB8222AAE6FB00010A93 /* MagicWindow */ = {
 			isa = PBXGroup;
 			children = (
+				ADA69B542475DA6000672F65 /* Fritz-Info.plist */,
 				AD9225FB246F202B0018EF02 /* save.png */,
 				AD8AF3F2246B531C008A0777 /* TFLiteExtension.swift */,
 				AD8AF3F0246B4CEE008A0777 /* camera.png */,
 				AD8AF3EC246B49BF008A0777 /* UIImage+AnimatedGIF.swift */,
 				AD8AF3ED246B49BF008A0777 /* UIImageView+AnimatedGIF.swift */,
 				ADF5CB21246B41F1005342FC /* sky.jpg */,
-				ADF5CB1F246B4106005342FC /* Fritz-Info.plist */,
 				83BE4F0322B2AE7400C6C5AF /* clouds.png */,
 				83BE4F0222B2AE7400C6C5AF /* mountains.jpg */,
 				837BFB8322AAE6FB00010A93 /* AppDelegate.swift */,
@@ -116,15 +116,15 @@
 				837BFB8C22AAE6FC00010A93 /* LaunchScreen.storyboard */,
 				837BFB8F22AAE6FC00010A93 /* Info.plist */,
 			);
-			path = MagicWIndow;
+			path = MagicWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		837BFB7F22AAE6FB00010A93 /* MagicWIndow */ = {
+		837BFB7F22AAE6FB00010A93 /* MagicWindow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWIndow" */;
+			buildConfigurationList = 837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWindow" */;
 			buildPhases = (
 				F4E63DE038EA65B06A534018 /* [CP] Check Pods Manifest.lock */,
 				837BFB7C22AAE6FB00010A93 /* Sources */,
@@ -136,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = MagicWIndow;
+			name = MagicWindow;
 			productName = SkySegmentationGifCreator;
-			productReference = 837BFB8022AAE6FB00010A93 /* MagicWIndow.app */;
+			productReference = 837BFB8022AAE6FB00010A93 /* MagicWindow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWIndow" */;
+			buildConfigurationList = 837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWindow" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				837BFB7F22AAE6FB00010A93 /* MagicWIndow */,
+				837BFB7F22AAE6FB00010A93 /* MagicWindow */,
 			);
 		};
 /* End PBXProject section */
@@ -183,8 +183,8 @@
 				83BE4F0522B2AE7400C6C5AF /* clouds.png in Resources */,
 				AD9225FC246F202B0018EF02 /* save.png in Resources */,
 				837BFB8B22AAE6FC00010A93 /* Assets.xcassets in Resources */,
+				ADA69B552475DA6000672F65 /* Fritz-Info.plist in Resources */,
 				837BFB8922AAE6FB00010A93 /* Main.storyboard in Resources */,
-				ADF5CB20246B4106005342FC /* Fritz-Info.plist in Resources */,
 				ADF5CB22246B41F1005342FC /* sky.jpg in Resources */,
 				AD8AF3F1246B4CEF008A0777 /* camera.png in Resources */,
 				83BE4F0422B2AE7400C6C5AF /* mountains.jpg in Resources */,
@@ -393,13 +393,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7EHRJ8NVGS;
-				INFOPLIST_FILE = FritzSkyReplacementDemo/Info.plist;
+				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWIndow;
-				PRODUCT_NAME = MagicWIndow;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWindow;
+				PRODUCT_NAME = MagicWindow;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,13 +412,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7EHRJ8NVGS;
-				INFOPLIST_FILE = FritzSkyReplacementDemo/Info.plist;
+				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWIndow;
-				PRODUCT_NAME = MagicWIndow;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.MagicWindow;
+				PRODUCT_NAME = MagicWindow;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWIndow" */ = {
+		837BFB7B22AAE6FB00010A93 /* Build configuration list for PBXProject "MagicWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837BFB9022AAE6FC00010A93 /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWIndow" */ = {
+		837BFB9222AAE6FC00010A93 /* Build configuration list for PBXNativeTarget "MagicWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837BFB9322AAE6FC00010A93 /* Debug */,
