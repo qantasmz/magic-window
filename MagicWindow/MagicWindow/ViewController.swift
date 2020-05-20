@@ -7,6 +7,8 @@ import ImageIO
 import MobileCoreServices
 import Photos
 
+import SVGKit
+import SVProgressHUD
 
 
 class ViewController: UIViewController {
@@ -24,10 +26,12 @@ class ViewController: UIViewController {
     
     var _currentGif:String!
     var _cnt: Int!
+    var _calcLock:Int = 0
     
     var photoCameraButton: UIButton!
     
     
+    var albumButton: UIButton!
     var saveButton: UIButton!
 
     private var imagePicker = UIImagePickerController()
@@ -108,10 +112,22 @@ class ViewController: UIViewController {
     let screenWidth = view.frame.size.width
     let screenHeight = view.frame.size.height
     
-    let img = UIImage(named:"camera.png")
-    photoCameraButton.frame = CGRect(x:screenWidth/2-50, y:screenHeight-150,
-                          width:100, height:100)
-    photoCameraButton.setImage(img, for: .normal)
+    
+    
+
+    
+    var svgImageView: UIImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
+    let svgImage = SVGKImage(named: "camera-sharp")
+    svgImage?.size = svgImageView.bounds.size
+    svgImageView.image = svgImage?.uiImage
+    
+    photoCameraButton.frame = CGRect(x:screenWidth/2-37.5, y:screenHeight-137.5,
+                          width:75, height:75)
+    
+    
+    photoCameraButton.addSubview(svgImageView)
+    //photoCameraButton.setImage(svgImage, for: .normal)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
     photoCameraButton.addTarget(self, action: #selector(buttonEvent(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(photoCameraButton)
@@ -122,12 +138,30 @@ class ViewController: UIViewController {
       photoCameraButton.isEnabled = true
     }
     
+
+    albumButton = UIButton()
+    albumButton.frame = CGRect(x:screenWidth/2+67, y:screenHeight-114,
+                          width:32, height:32)
+    var albumImageView: UIImageView = UIImageView()
+    albumImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+    let albumImage = SVGKImage(named: "image-sharp")
+    albumImage?.size = albumImageView.bounds.size
+    albumImageView.image = albumImage?.uiImage
+    albumButton.addSubview(albumImageView)
+    albumButton.imageView?.contentMode = .scaleAspectFit
+    albumButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
+    self.view.addSubview(albumButton)
+
+
     saveButton = UIButton()
-    
-    let saveimg = UIImage(named:"save.png")
-    saveButton.frame = CGRect(x:screenWidth/2+100, y:screenHeight-125,
-                          width:50, height:50)
-    saveButton.setImage(saveimg, for: .normal)
+    saveButton.frame = CGRect(x:screenWidth/2+127, y:screenHeight-118,
+                          width:36, height:36)
+    var saveImageView: UIImageView = UIImageView()
+    saveImageView.frame = CGRect(x: 0, y: 0, width: 36, height: 36)
+    let saveImage = SVGKImage(named: "download-sharp")
+    saveImage?.size = saveImageView.bounds.size
+    saveImageView.image = saveImage?.uiImage
+    saveButton.addSubview(saveImageView)
     saveButton.imageView?.contentMode = .scaleAspectFit
     saveButton.addTarget(self, action: #selector(saveGif(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(saveButton)
@@ -135,8 +169,8 @@ class ViewController: UIViewController {
     //gifButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
     //gifButton.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
     
-    gifButton.frame = CGRect(x:screenWidth/2-150, y:screenHeight-125,
-                          width:50, height:50)
+    gifButton.frame = CGRect(x:screenWidth/2-140, y:screenHeight-118,
+                          width:36, height:36)
 
     gifButton.addTarget(self, action: #selector(gifButtonTapped), for: .touchUpInside)
     
@@ -150,15 +184,11 @@ class ViewController: UIViewController {
     
     */
     
-    /*
-    _cnt = 0
-    let data = try! Data(contentsOf: URL(string: "https://media.giphy.com/media/"+String(getGifId())+"/giphy.gif")!)
-    backgroundView.animateGIF(data: data) {
-        print("played")
-    }
- */
     
     getGifList()
+    
+
+    SVProgressHUD.show()
     
   }
     func getGifId() -> String{
@@ -187,6 +217,15 @@ class ViewController: UIViewController {
         }
     }
     
+       
+    @objc func openAlbum(_ sender : UIButton) {
+
+
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
+    }
+       
+    
     
  @objc func buttonEvent(_ sender : UIButton) {
      guard
@@ -199,66 +238,86 @@ class ViewController: UIViewController {
      imagePicker.sourceType = .camera
      present(imagePicker, animated: true)
  }
+    func showHud(){
+        SVProgressHUD.show()
+    }
+  
+    func hideHud(){
+        SVProgressHUD.dismiss()
+    }
     
     @objc func saveGif(_ sender : UIButton) {
         
-
-        let _arr = self.backgroundView.animationImages
         
-        let _uimage = _arr?[self._cnt]
-        images.removeAll()
-        self._cnt = 0
-        for i in 0..._arr!.count-1 {
+        self.showHud()
+        
+
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let _arr = self.backgroundView.animationImages
             
-            let _uimage = _arr?[i]
-            self.backgroundView.image = _uimage
-                       
-           self._cnt = i
-           if(self._cnt == _arr?.count){
-               self._cnt = 0
-           }
+            let _uimage = _arr?[self._cnt]
+            self.images.removeAll()
+            self._cnt = 0
+            for i in 0..._arr!.count-1 {
+                
+                let _uimage = _arr?[i]
+                self.backgroundView.image = _uimage
+                           
+               self._cnt = i
+               if(self._cnt == _arr?.count){
+                   self._cnt = 0
+               }
 
-            let rendImg = getImage(self._core)
+                let rendImg = self.getImage(self._core)
+                
+                let _img = rendImg.cgImage
+                self.images.append(_img!)
+            }
             
-            let _img = rendImg.cgImage
-            images.append(_img!)
-        }
-        
-        
-        let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(NSUUID().uuidString).gif")
-        
-        print(url?.absoluteURL)
-        guard let destination = CGImageDestinationCreateWithURL(url as! CFURL, kUTTypeGIF, images.count, nil) else {
-            print("CGImageDestinationの作成に失敗")
-            return
-        }
-        
+            
+            let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(NSUUID().uuidString).gif")
+            
+            print(url?.absoluteURL)
+            guard let destination = CGImageDestinationCreateWithURL(url as! CFURL, kUTTypeGIF, self.images.count, nil) else {
+                print("CGImageDestinationの作成に失敗")
+                return
+            }
+            
 
-        let properties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFLoopCount as String: 0]]
-        CGImageDestinationSetProperties(destination, properties as CFDictionary)
-        
-        let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)]]
-        for image in images {
-            CGImageDestinationAddImage(destination, image, frameProperties as CFDictionary)
-        }
-        
-        if CGImageDestinationFinalize(destination) {
-            print("GIF生成が成功")
-        } else {
-            print("GIF生成に失敗")
-        }
-        
+            let properties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFLoopCount as String: 0]]
+            CGImageDestinationSetProperties(destination, properties as CFDictionary)
+            
+            let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)]]
+            for image in self.images {
+                CGImageDestinationAddImage(destination, image, frameProperties as CFDictionary)
+            }
+            
+            if CGImageDestinationFinalize(destination) {
+                print("GIF生成が成功")
+            } else {
+                print("GIF生成に失敗")
+            }
+            
 
-        let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
-            let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
-            let _nd = data as! NSData
-            _nd.write(to: url!, atomically: true)
+            let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
+                let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
+                let _nd = data as! NSData
+                _nd.write(to: url!, atomically: true)
 
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
-             }, completionHandler: nil)
-         })
-         task.resume()
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
+                 }, completionHandler:  { success, error in
+                    if !success { NSLog("error creating asset: \(error)") }else{
+
+                        self.hideHud()
+                    }
+                })
+                
+
+             })
+             task.resume()
+        }
     }
     
     
@@ -295,7 +354,7 @@ class ViewController: UIViewController {
   }
 
   func createSticker(_ timage: UIImage) {
-
+    
     guard let image = timage.transformOrientationToUp() else {
       return
     }
@@ -339,13 +398,10 @@ class ViewController: UIViewController {
     self.sceneView.image = outputImage
     
     
-    /*
-    _cnt = 0
-    let data = try! Data(contentsOf: URL(string: "https://media.giphy.com/media/"+_currentGif+"/giphy.gif")!)
-    backgroundView.animateGIF(data: data) {
-        print("played")
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        self._calcLock = 0
     }
- */
+    
 
     //self.imageView.image = mask
     //guard let skyRemoved = createMask(of: image, fromMask: mask) else { return }
@@ -358,7 +414,11 @@ class ViewController: UIViewController {
   }
     func setGif(id: String){
         _cnt = 0
+        
+        
         let data = try! Data(contentsOf: URL(string: "https://media.giphy.com/media/"+id+"/giphy.gif")!)
+        
+        
         backgroundView.animateGIF(data: data) {
             print("played")
         }
@@ -389,16 +449,19 @@ class ViewController: UIViewController {
     func renderFirstView(){
         
         
-        
         let randomInt = Int.random(in: 1..<self.gifList.data.count)
         self.setGif(id:self.gifList.data[randomInt].id)
         
-
+        
         repeatRender()
         
         self.createSticker(self.foreground!)
 
         _core.bringSubviewToFront(sceneView)
+        
+
+        SVProgressHUD.dismiss()
+ 
     }
     private func getGifList(){
 
@@ -425,7 +488,9 @@ class ViewController: UIViewController {
                 }
  */
                 
-                self.renderFirstView()
+                DispatchQueue.main.async {
+                   self.renderFirstView()
+                }
                 
                } catch let error {
                   print(error)
@@ -469,14 +534,20 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     _ picker: UIImagePickerController,
     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
   ) {
-
+    
+    dismiss(animated: true)
     if let pickedImage = info[.originalImage] as? UIImage {
       //runSegmentation(pickedImage)
-        createSticker(pickedImage)
+        
+        if(_calcLock == 0){
+
+            _calcLock = 1
+            createSticker(pickedImage)
+        }
     }
 
-    dismiss(animated: true)
   }
+    
 }
 
 
@@ -488,6 +559,7 @@ extension ViewController: GiphyDelegate {
     func didSelectMedia(giphyViewController: GiphyViewController, media: GPHMedia) {
         giphyViewController.dismiss(animated: true, completion: { [weak self] in
             self!.setGif(id:media.id)
+
             /*
             self?.addMessageToConversation(text: nil, media: media)
             guard self?.conversation.count ?? 0 > 7 else { return }

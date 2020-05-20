@@ -18,6 +18,9 @@ extension UIImageView {
         //self.startAnimating()
 
         print(self.animationDuration)
+        
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + animatedGIFImage.duration * Double(animationRepeatCount)) {
             completion?()
             

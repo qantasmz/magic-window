@@ -31,11 +31,13 @@ PODS:
   - PINCache (2.3)
   - SVGKit (2.1.0):
     - CocoaLumberjack (~> 3.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Fritz/VisionSegmentationModel/Sky/Accurate
   - Giphy (from `https://s3.amazonaws.com/sdk.mobile.giphy.com/SDK/1.2.8/Giphy.podspec`)
   - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - FritzVisionSkySegmentationModelAccurate
     - libwebp
     - PINCache
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   Giphy:
@@ -69,7 +72,8 @@ SPEC CHECKSUMS:
   libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 891984c0ecccae5630a3b5e6daa212b0567a1c54
+PODFILE CHECKSUM: 9d0dcc5a87835d27d36dbb1c95abcbc1038bdbaa
 
 COCOAPODS: 1.9.1
