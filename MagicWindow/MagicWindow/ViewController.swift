@@ -1,7 +1,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, IntroViewDelegate {
+class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, TutorialViewDelegate, SkyViewDelegate, ShareViewDelegate {
 
 
     var introView: IntroViewController!
@@ -19,6 +19,29 @@ class ViewController: UIViewController, IntroViewDelegate {
      introView.modalPresentationStyle = .overCurrentContext
      introView.modalTransitionStyle = .crossDissolve
      
+     cameraView = CameraViewController()
+     cameraView.delegate = self;
+     cameraView.modalPresentationStyle = .overCurrentContext
+     cameraView.modalTransitionStyle = .crossDissolve
+     
+     
+     tutorialView = TutorialViewController()
+     tutorialView.delegate = self;
+     tutorialView.modalPresentationStyle = .overCurrentContext
+     tutorialView.modalTransitionStyle = .crossDissolve
+     
+     
+     skyView = SkyViewController()
+     skyView.delegate = self;
+     skyView.modalPresentationStyle = .overCurrentContext
+     skyView.modalTransitionStyle = .crossDissolve
+     
+     
+     shareView = ShareViewController()
+     shareView.delegate = self;
+     shareView.modalPresentationStyle = .overCurrentContext
+     shareView.modalTransitionStyle = .crossDissolve
+     
 
      
   }
@@ -29,6 +52,27 @@ class ViewController: UIViewController, IntroViewDelegate {
      present(introView, animated: true, completion: nil)
   }
     
+     func goToCamera() {
+          dismiss(animated: true, completion:  {
+               self.showCamera()
+          })
+     }
+     func showCamera() {
+          present(cameraView, animated: true, completion: nil)
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
 
 }
 

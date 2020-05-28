@@ -75,6 +75,11 @@ class CameraViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+
+    let screenWidth:CGFloat = view.frame.size.width
+    let screenHeight:CGFloat = view.frame.size.height
+    
 
     Giphy.configure(apiKey: "WTgeyO5XWRLFyRwo13hBRDiMhhP9HfvB", verificationMode: false)
     
@@ -118,8 +123,6 @@ class CameraViewController: UIViewController {
     // システムボタンを指定してボタンを作成
     photoCameraButton = UIButton()
 
-    let screenWidth = view.frame.size.width
-    let screenHeight = view.frame.size.height
     
     
     
