@@ -15,6 +15,11 @@
 		83BE4F0422B2AE7400C6C5AF /* mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83BE4F0222B2AE7400C6C5AF /* mountains.jpg */; };
 		83BE4F0522B2AE7400C6C5AF /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BE4F0322B2AE7400C6C5AF /* clouds.png */; };
 		85678B6DC35BD83B13640DEE /* Pods_MagicWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D00F9F3B04EF83872C4CC /* Pods_MagicWindow.framework */; };
+		AD7BA53A24805A11002295F0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53924805A11002295F0 /* IntroViewController.swift */; };
+		AD7BA53C24805A83002295F0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53B24805A83002295F0 /* CameraViewController.swift */; };
+		AD7BA53E24805AB6002295F0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */; };
+		AD7BA54024805AE1002295F0 /* SkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53F24805AE1002295F0 /* SkyViewController.swift */; };
+		AD7BA54224805B00002295F0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA54124805B00002295F0 /* ShareViewController.swift */; };
 		AD8AF3EE246B49BF008A0777 /* UIImage+AnimatedGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AF3EC246B49BF008A0777 /* UIImage+AnimatedGIF.swift */; };
 		AD8AF3EF246B49BF008A0777 /* UIImageView+AnimatedGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AF3ED246B49BF008A0777 /* UIImageView+AnimatedGIF.swift */; };
 		AD8AF3F1246B4CEF008A0777 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF3F0246B4CEE008A0777 /* camera.png */; };
@@ -42,6 +47,11 @@
 		837BFB8F22AAE6FC00010A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE4F0222B2AE7400C6C5AF /* mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountains.jpg; sourceTree = "<group>"; };
 		83BE4F0322B2AE7400C6C5AF /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
+		AD7BA53924805A11002295F0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		AD7BA53B24805A83002295F0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		AD7BA53F24805AE1002295F0 /* SkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyViewController.swift; sourceTree = "<group>"; };
+		AD7BA54124805B00002295F0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		AD8AF3EC246B49BF008A0777 /* UIImage+AnimatedGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AnimatedGIF.swift"; sourceTree = "<group>"; };
 		AD8AF3ED246B49BF008A0777 /* UIImageView+AnimatedGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AnimatedGIF.swift"; sourceTree = "<group>"; };
 		AD8AF3F0246B4CEE008A0777 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -121,6 +131,11 @@
 				837BFB8A22AAE6FC00010A93 /* Assets.xcassets */,
 				837BFB8C22AAE6FC00010A93 /* LaunchScreen.storyboard */,
 				837BFB8F22AAE6FC00010A93 /* Info.plist */,
+				AD7BA53924805A11002295F0 /* IntroViewController.swift */,
+				AD7BA53B24805A83002295F0 /* CameraViewController.swift */,
+				AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */,
+				AD7BA53F24805AE1002295F0 /* SkyViewController.swift */,
+				AD7BA54124805B00002295F0 /* ShareViewController.swift */,
 			);
 			path = MagicWindow;
 			sourceTree = "<group>";
@@ -266,8 +281,13 @@
 			files = (
 				AD8AF3EF246B49BF008A0777 /* UIImageView+AnimatedGIF.swift in Sources */,
 				837BFB8622AAE6FB00010A93 /* ViewController.swift in Sources */,
+				AD7BA54224805B00002295F0 /* ShareViewController.swift in Sources */,
+				AD7BA53E24805AB6002295F0 /* TutorialViewController.swift in Sources */,
 				AD8AF3F3246B531C008A0777 /* TFLiteExtension.swift in Sources */,
+				AD7BA53A24805A11002295F0 /* IntroViewController.swift in Sources */,
+				AD7BA53C24805A83002295F0 /* CameraViewController.swift in Sources */,
 				AD8AF3EE246B49BF008A0777 /* UIImage+AnimatedGIF.swift in Sources */,
+				AD7BA54024805AE1002295F0 /* SkyViewController.swift in Sources */,
 				837BFB8422AAE6FB00010A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
