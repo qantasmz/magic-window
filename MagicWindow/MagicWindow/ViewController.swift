@@ -23,9 +23,10 @@ class ViewController: UIViewController {
     
     private var images = [CGImage]()
     
-    
+    var saveArr = [UIImage]()
     var _currentGif:String!
     var _cnt: Int!
+    var _saveCnt: Int = 0
     var _calcLock:Int = 0
     
     var photoCameraButton: UIButton!
@@ -246,77 +247,84 @@ class ViewController: UIViewController {
         SVProgressHUD.dismiss()
     }
     
+    func renderSaving(){
+        SVProgressHUD.showProgress(Float(Float(self._saveCnt)/Float(self.saveArr.count)))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            if( self._saveCnt < self.saveArr.count){
+                
+
+                let _uimage = self.saveArr[ self._saveCnt]
+                 self.backgroundView.image = _uimage
+                            
+
+                 let rendImg = self.getImage(self._core)
+                 
+                 let _img = rendImg.cgImage
+                 self.images.append(_img!)
+                self._saveCnt += 1
+                 self.renderSaving()
+            }else{
+                
+                
+                let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(NSUUID().uuidString).gif")
+                
+                print(url?.absoluteURL)
+                guard let destination = CGImageDestinationCreateWithURL(url as! CFURL, kUTTypeGIF, self.images.count, nil) else {
+                    print("CGImageDestinationの作成に失敗")
+                    return
+                }
+                
+
+                let properties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFLoopCount as String: 0]]
+                CGImageDestinationSetProperties(destination, properties as CFDictionary)
+                
+                let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)]]
+                for image in self.images {
+                    CGImageDestinationAddImage(destination, image, frameProperties as CFDictionary)
+                }
+                
+                if CGImageDestinationFinalize(destination) {
+                    print("GIF生成が成功")
+                } else {
+                    print("GIF生成に失敗")
+                }
+                
+
+                let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
+                    let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
+                    let _nd = data as! NSData
+                    _nd.write(to: url!, atomically: true)
+
+                    PHPhotoLibrary.shared().performChanges({
+                        PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
+                     }, completionHandler:  { success, error in
+                        if !success { NSLog("error creating asset: \(error)") }else{
+
+                            self.hideHud()
+                        }
+                    })
+                    
+
+                 })
+                 task.resume()
+            }
+        }
+    }
+    
+    
     @objc func saveGif(_ sender : UIButton) {
         
         
         self.showHud()
         
+        _saveCnt = 0
 
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let _arr = self.backgroundView.animationImages
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.saveArr = self.backgroundView.animationImages!
             
-            let _uimage = _arr?[self._cnt]
             self.images.removeAll()
-            self._cnt = 0
-            for i in 0..._arr!.count-1 {
-                
-                let _uimage = _arr?[i]
-                self.backgroundView.image = _uimage
-                           
-               self._cnt = i
-               if(self._cnt == _arr?.count){
-                   self._cnt = 0
-               }
-
-                let rendImg = self.getImage(self._core)
-                
-                let _img = rendImg.cgImage
-                self.images.append(_img!)
-            }
-            
-            
-            let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(NSUUID().uuidString).gif")
-            
-            print(url?.absoluteURL)
-            guard let destination = CGImageDestinationCreateWithURL(url as! CFURL, kUTTypeGIF, self.images.count, nil) else {
-                print("CGImageDestinationの作成に失敗")
-                return
-            }
-            
-
-            let properties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFLoopCount as String: 0]]
-            CGImageDestinationSetProperties(destination, properties as CFDictionary)
-            
-            let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)]]
-            for image in self.images {
-                CGImageDestinationAddImage(destination, image, frameProperties as CFDictionary)
-            }
-            
-            if CGImageDestinationFinalize(destination) {
-                print("GIF生成が成功")
-            } else {
-                print("GIF生成に失敗")
-            }
-            
-
-            let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
-                let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
-                let _nd = data as! NSData
-                _nd.write(to: url!, atomically: true)
-
-                PHPhotoLibrary.shared().performChanges({
-                    PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
-                 }, completionHandler:  { success, error in
-                    if !success { NSLog("error creating asset: \(error)") }else{
-
-                        self.hideHud()
-                    }
-                })
-                
-
-             })
-             task.resume()
+            self.renderSaving()
         }
     }
     
