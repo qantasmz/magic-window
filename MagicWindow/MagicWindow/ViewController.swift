@@ -2,6 +2,7 @@ import UIKit
 
 
 class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, TutorialViewDelegate, SkyViewDelegate, ShareViewDelegate {
+     
 
 
     var introView: IntroViewController!
@@ -9,6 +10,8 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
     var tutorialView: TutorialViewController!
     var skyView: SkyViewController!
     var shareView: ShareViewController!
+     
+     var inputImage:UIImage!
     
   override func viewDidLoad() {
      super.viewDidLoad()
@@ -60,9 +63,38 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      func showCamera() {
           present(cameraView, animated: true, completion: nil)
      }
+     func goToSky() {
+          dismiss(animated: true, completion:  {
+               self.showSky()
+          })
+     }
+     func showSky() {
+          present(skyView, animated: true, completion: nil)
+          skyView.initialize(img: inputImage)
+     }
+     
+     func backToCamera(){
+          dismiss(animated: true, completion:  {
+               self.showCamera()
+          })
+          
+     }
      
      
+     func goToShare() {
+          dismiss(animated: true, completion:  {
+               self.showShare()
+          })
+     }
      
+     
+     func showShare() {
+          present(shareView, animated: true, completion: nil)
+     }
+     
+     func setInputImage(img:UIImage){
+          inputImage = img
+     }
      
      
      

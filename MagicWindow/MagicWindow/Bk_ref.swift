@@ -11,17 +11,14 @@ import SVGKit
 import SVProgressHUD
 
 
-protocol SkyViewDelegate:class {
-
-    func goToShare()
-    func backToCamera()
+protocol fViewDelegate:class {
 }
 
-class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class fViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     
     
-    weak var  delegate:SkyViewDelegate? = nil
+    weak var  delegate:fViewDelegate? = nil
     
     var captureSession = AVCaptureSession()
     var mainCamera: AVCaptureDevice?
@@ -32,10 +29,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     var videoOutput: AVCaptureVideoDataOutput!
     
-  var imageView: UIImageView!
+  @IBOutlet var imageView: UIImageView!
     
-    
-    var inputImage:UIImage!
     
     
     var _core:UIView!
@@ -77,6 +72,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
   private lazy var visionModel = FritzVisionSkySegmentationModelAccurate()
 
+  let foreground = UIImage(named: "mountains.jpg")
+  let background = UIImage(named: "clouds.png")
 
   var animationDuration = 12.0
     
@@ -98,96 +95,72 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     
+    // Setup image picker.
+    imagePicker.delegate = self
+    imagePicker.sourceType = .photoLibrary
+
     
     let screenSize: CGSize = UIScreen.main.bounds.size
     
 
-    _core = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+    _core = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height-200))
     self.view.addSubview(_core)
-    backgroundView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+    //backgroundView = initialBackground()
+    backgroundView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height-200))
     
     backgroundView.contentMode = .scaleAspectFill
     
-    baseView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+    baseView = UIImageView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height-200))
     
     baseView.contentMode = .scaleAspectFill
+    //backgroundViewDelayed = initialBackground()
 
     sceneView = UIImageView(frame: view.bounds)
     
-    sceneView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
+    sceneView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height-200)
     sceneView.contentMode = .scaleAspectFill
     sceneView.backgroundColor = .clear
     _core.addSubview(sceneView)
     
     
     _core.addSubview(backgroundView)
+    //view.addSubview(backgroundViewDelayed)
 
     _core.bringSubviewToFront(sceneView)
+    //startAnimation(on: backgroundView, delay: 0.0)
+    //startAnimation(on: backgroundViewDelayed, delay: animationDuration / 2)
     
     // システムボタンを指定してボタンを作成
     photoCameraButton = UIButton()
 
     
+    
+    
+
+    
     var svgImageView: UIImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 9, y: 9, width: 32, height: 32)
-    let svgImage = SVGKImage(named: "arrow-back-circle-sharp")
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
+    let svgImage = SVGKImage(named: "camera-sharp")
     svgImage?.size = svgImageView.bounds.size
     svgImageView.image = svgImage?.uiImage
     
-    photoCameraButton.frame = CGRect(x:screenWidth-75, y:50,width:50, height:50)
+    photoCameraButton.frame = CGRect(x:screenWidth/2-37.5, y:screenHeight-137.5,
+                          width:75, height:75)
     
-    let phBase = UIView()
-    phBase.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-    phBase.layer.cornerRadius = 25
-    phBase.backgroundColor = .white
-    phBase.isUserInteractionEnabled = false
-    photoCameraButton.addSubview(phBase)
     
     photoCameraButton.addSubview(svgImageView)
+    //photoCameraButton.setImage(svgImage, for: .normal)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
-    photoCameraButton.addTarget(self, action: #selector(tapCamera(_:)), for: UIControl.Event.touchUpInside)
+    photoCameraButton.addTarget(self, action: #selector(buttonEvent(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(photoCameraButton)
+    // Enable camera option only if current device has camera.
+    let isCameraAvailable = UIImagePickerController.isCameraDeviceAvailable(.front)
+      || UIImagePickerController.isCameraDeviceAvailable(.rear)
+    if isCameraAvailable {
+      photoCameraButton.isEnabled = true
+    }
+    
 
-  
-    
-    let _gifBt = UIButton()
-    
-    _gifBt.setTitle("giphy", for: [])
-    _gifBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _gifBt.backgroundColor = .black
-    _gifBt.layer.cornerRadius = 24
-    _gifBt.frame = CGRect(x:screenWidth/2-180-10, y:screenHeight - 170, width:180, height:48)
-    _gifBt.addTarget(self, action: #selector(self.gifButtonTapped), for: .touchUpInside)
-    self.view.addSubview(_gifBt)
-    
-    
-    let _impBt = UIButton()
-    
-    _impBt.setTitle("import", for: [])
-    _impBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _impBt.backgroundColor = .black
-    _impBt.layer.cornerRadius = 24
-    _impBt.frame = CGRect(x:screenWidth/2+10, y:screenHeight - 170, width:180, height:48)
-    //_impBt.addTarget(self, action: #selector(self.gifButtonTapped), for: .touchUpInside)
-    self.view.addSubview(_impBt)
-    
-    
-    let _decBt = UIButton()
-    
-    _decBt.setTitle("Let's go", for: [])
-    _decBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _decBt.backgroundColor = .black
-    _decBt.layer.cornerRadius = 24
-    _decBt.frame = CGRect(x:(screenWidth-280)/2, y:screenHeight - 100, width:280, height:48)
-    //_decBt.addTarget(self, action: #selector(self.goToCamera), for: .touchUpInside)
-    self.view.addSubview(_decBt)
-    
-    
-    
-/*
     albumButton = UIButton()
     albumButton.frame = CGRect(x:screenWidth/2+67, y:screenHeight-114,
                           width:32, height:32)
@@ -200,10 +173,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     albumButton.imageView?.contentMode = .scaleAspectFit
     albumButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(albumButton)
-*/
 
-    
-    /*
+
     saveButton = UIButton()
     saveButton.frame = CGRect(x:screenWidth/2+127, y:screenHeight-118,
                           width:36, height:36)
@@ -216,8 +187,10 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     saveButton.imageView?.contentMode = .scaleAspectFit
     saveButton.addTarget(self, action: #selector(saveGif(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(saveButton)
- */
-    /*
+    //gifButton.translatesAutoresizingMaskIntoConstraints = false
+    //gifButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+    //gifButton.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
+    
     gifButton.frame = CGRect(x:screenWidth/2-140, y:screenHeight-118,
                           width:36, height:36)
 
@@ -225,28 +198,85 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     self.view.addSubview(gifButton)
+    /*
+    gifButton.leftAnchor.constraint(equalTo: textFieldContainer.leftAnchor, constant: 6).isActive = true
+    gifButton.centerYAnchor.constraint(equalTo: textFieldContainer.centerYAnchor).isActive = true
+    gifButton.addTarget(self, action: #selector(gifButtonTapped), for: .touchUpInside)
+    textFieldLeftConstraint?.constant = gifButton.intrinsicContentSize.width + 15
     
     */
     
     
+    getGifList()
     
 
-
     
+    
+    setupCaptureSession()
+    setupDevice()
+    setupInputOutput()
+    setupPreviewLayer()
+    
+    captureSession.startRunning()
+    
+    
+    SVProgressHUD.show()
     
   }
     
-    public func initialize(img:UIImage){
-        inputImage = img
-        sceneView.alpha = 0
-        backgroundView.alpha = 0
+    
 
-        SVProgressHUD.show()
-        getGifList()
-        
+   func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+       
+
+       let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+       let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
+       
+       let orientation :CGImagePropertyOrientation = CGImagePropertyOrientation.right
+       let orientedImage = ciimage.oriented(orientation)
+       
+       var image : UIImage = self.convert(cmage: orientedImage)
+       
+    
+    print("unch")
+       //print(image.size.width/10)
+       //image?.scaleImage(scaleSize: 0.1)
+       
+       /*
+       let reSize = CGSize(width: image.size.width/30, height: image.size.height/30)
+       
+       
+       UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.main.scale);
+       image.draw(in: CGRect(x: 0, y: 0, width: reSize.width, height: reSize.height));
+       let reSizeImage:UIImage! = UIGraphicsGetImageFromCurrentImageContext();
+       UIGraphicsEndImageContext();
+       image = reSizeImage
+*/
+        //runSegmentation(image)
+      // runSegmentation(image)
+      // self.imageView.image = image
+       
+
+   }
+    
+    func convert(cmage:CIImage) -> UIImage
+    {
+         let context:CIContext = CIContext.init(options: nil)
+         let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+         let image:UIImage = UIImage.init(cgImage: cgImage)
+         return image
     }
-
-
+    
+    
+    func getGifId() -> String{
+        var gifs = ["S5nW5TQUi5SgNaJ7Vi","Qs1EbHPzBtBvRdECyg","qYr8p3Dzbet5S","x9a2PWuuoCtiw","bcm06VWT0iMQo"]
+        gifs.shuffle()
+        
+        print(gifs)
+        return gifs[0]
+    }
+    
+    
     func repeatRender(){
         DispatchQueue.main.asyncAfter(deadline: .now() + self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)) {
 
@@ -265,10 +295,26 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     }
     
        
+    @objc func openAlbum(_ sender : UIButton) {
 
+
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
+    }
        
     
+    
+ @objc func buttonEvent(_ sender : UIButton) {
+     guard
+       UIImagePickerController.isCameraDeviceAvailable(.front)
+         || UIImagePickerController.isCameraDeviceAvailable(.rear)
+     else {
+       return
+     }
 
+     imagePicker.sourceType = .camera
+     present(imagePicker, animated: true)
+ }
     func showHud(){
         SVProgressHUD.show()
     }
@@ -331,8 +377,6 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                         if !success { NSLog("error creating asset: \(error)") }else{
 
                             self.hideHud()
-                            
-                           
                         }
                     })
                     
@@ -341,10 +385,6 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                  task.resume()
             }
         }
-    }
-    
-    @objc func tapCamera(_ sender : UIButton){
-        delegate!.backToCamera()
     }
     
     
@@ -388,8 +428,17 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
 
 
+  func initialBackground() -> UIImageView {
+    let shiftedLeft = CGRect(origin: CGPoint(x: -view.bounds.width, y: view.bounds.minY),
+                             size: view.bounds.size)
+    let view = UIImageView(frame: shiftedLeft)
+    view.contentMode = .scaleAspectFill
+    view.image = background
+    return view
+  }
 
   func createSticker(_ timage: UIImage) {
+    
     guard let image = timage.transformOrientationToUp() else {
       return
     }
@@ -438,6 +487,14 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     }
     
 
+    //self.imageView.image = mask
+    //guard let skyRemoved = createMask(of: image, fromMask: mask) else { return }
+
+    /*
+    DispatchQueue.main.async {
+      self.imageView.image = skyRemoved
+    }
+ */
   }
     func setGif(id: String){
         _cnt = 0
@@ -482,26 +539,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
         repeatRender()
         
-        self.createSticker(self.inputImage)
+        self.createSticker(self.foreground!)
 
         _core.bringSubviewToFront(sceneView)
         
 
         SVProgressHUD.dismiss()
-        
-        UIView.animate(withDuration: 0.5, animations: {
-                                                  
-                                                  
-           self.sceneView.alpha = 1
-      }, completion: { (finished: Bool) in
-        UIView.animate(withDuration: 0.5, animations: {
-                                                      
-                                            
-               self.backgroundView.alpha = 1
-          }, completion: { (finished: Bool) in
-              
-          })
-      })
  
     }
     private func getGifList(){
@@ -522,7 +565,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                   let res = try JSONDecoder().decode(Gif.self, from: data)
 
                 self.gifList = res
-
+                // 結果をコンソールに表示
+                /*
+                for item in res.data {
+                  print("id:\(item.id) name:\(item.type)")
+                }
+ */
                 
                 DispatchQueue.main.async {
                    self.renderFirstView()
@@ -534,7 +582,14 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             }
             
             
-
+            
+            //self.createSticker(self.foreground!)
+            /*
+            let users = try! JSONDecoder().decode([User].self, from: _data)
+            for row in users {
+                print("id:\(row.id) name:\(row.name) remarks:\(row.remarks)")
+            }
+ */
             
         }
         task.resume()
@@ -557,8 +612,99 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
 
 
+extension fViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-extension SkyViewController: GiphyDelegate {
+    func imagePickerController(
+      _ picker: UIImagePickerController,
+      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+    ) {
+      
+      dismiss(animated: true)
+      if let pickedImage = info[.originalImage] as? UIImage {
+        //runSegmentation(pickedImage)
+          
+          if(_calcLock == 0){
+
+              _calcLock = 1
+              createSticker(pickedImage)
+          }
+      }
+
+    }
+    
+
+
+   // カメラの画質の設定
+   func setupCaptureSession() {
+       captureSession.sessionPreset = AVCaptureSession.Preset.photo
+   }
+
+   // デバイスの設定
+   func setupDevice() {
+       // カメラデバイスのプロパティ設定
+       let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+       // プロパティの条件を満たしたカメラデバイスの取得
+       let devices = deviceDiscoverySession.devices
+
+       for device in devices {
+           if device.position == AVCaptureDevice.Position.back {
+               mainCamera = device
+           } else if device.position == AVCaptureDevice.Position.front {
+               innerCamera = device
+           }
+       }
+       // 起動時のカメラを設定
+       currentDevice = innerCamera
+   }
+
+   // 入出力データの設定
+   func setupInputOutput() {
+       do {
+           // 指定したデバイスを使用するために入力を初期化
+           let captureDeviceInput = try AVCaptureDeviceInput(device: currentDevice!)
+           // 指定した入力をセッションに追加
+           
+           
+           videoOutput = AVCaptureVideoDataOutput()
+           // 出力設定: カラーチャンネル
+           videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey : kCVPixelFormatType_32BGRA] as [String : Any]
+           // 出力設定: デリゲート、画像をキャプチャするキュー
+           videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+           // 出力設定: キューがブロックされているときに新しいフレームが来たら削除
+           videoOutput.alwaysDiscardsLateVideoFrames = true
+           
+           let connection  = videoOutput.connection(with: AVMediaType.video)
+           connection?.videoOrientation = .portrait
+           captureSession.addInput(captureDeviceInput)
+           
+           captureSession.addOutput(videoOutput)
+           
+           /*
+           photoOutput = AVCapturePhotoOutput()
+           photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
+           captureSession.addOutput(photoOutput!)
+*/
+       } catch {
+           print(error)
+       }
+   }
+
+   // カメラのプレビューを表示するレイヤの設定
+   func setupPreviewLayer() {
+       // 指定したAVCaptureSessionでプレビューレイヤを初期化
+       self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+       // プレビューレイヤが、カメラのキャプチャーを縦横比を維持した状態で、表示するように設定
+       self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+       // プレビューレイヤの表示の向きを設定
+       self.cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+
+       self.cameraPreviewLayer?.frame = view.frame
+       //imageView.layer.insertSublayer(self.cameraPreviewLayer!, at: 0)
+   }
+}
+
+
+extension fViewController: GiphyDelegate {
     func didSearch(for term: String) {
         print("your user made a search! ", term)
     }
@@ -585,5 +731,3 @@ extension SkyViewController: GiphyDelegate {
         GPHCache.shared.clear(.memoryOnly)
     }
 }
-
-

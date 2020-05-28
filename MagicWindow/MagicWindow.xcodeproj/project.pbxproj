@@ -21,6 +21,9 @@
 		AD7BA54024805AE1002295F0 /* SkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53F24805AE1002295F0 /* SkyViewController.swift */; };
 		AD7BA54224805B00002295F0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA54124805B00002295F0 /* ShareViewController.swift */; };
 		AD7BA544248060D8002295F0 /* defsky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA543248060D8002295F0 /* defsky.jpg */; };
+		AD7BA54624806478002295F0 /* Bk_ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA54524806478002295F0 /* Bk_ref.swift */; };
+		AD7BA54824806971002295F0 /* ios-reverse-camera.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA54724806971002295F0 /* ios-reverse-camera.svg */; };
+		AD7BA54A2480789C002295F0 /* arrow-back-circle-sharp.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */; };
 		AD8AF3EE246B49BF008A0777 /* UIImage+AnimatedGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AF3EC246B49BF008A0777 /* UIImage+AnimatedGIF.swift */; };
 		AD8AF3EF246B49BF008A0777 /* UIImageView+AnimatedGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8AF3ED246B49BF008A0777 /* UIImageView+AnimatedGIF.swift */; };
 		AD8AF3F1246B4CEF008A0777 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8AF3F0246B4CEE008A0777 /* camera.png */; };
@@ -54,6 +57,9 @@
 		AD7BA53F24805AE1002295F0 /* SkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyViewController.swift; sourceTree = "<group>"; };
 		AD7BA54124805B00002295F0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		AD7BA543248060D8002295F0 /* defsky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defsky.jpg; sourceTree = "<group>"; };
+		AD7BA54524806478002295F0 /* Bk_ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bk_ref.swift; sourceTree = "<group>"; };
+		AD7BA54724806971002295F0 /* ios-reverse-camera.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ios-reverse-camera.svg"; sourceTree = "<group>"; };
+		AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "arrow-back-circle-sharp.svg"; sourceTree = "<group>"; };
 		AD8AF3EC246B49BF008A0777 /* UIImage+AnimatedGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AnimatedGIF.swift"; sourceTree = "<group>"; };
 		AD8AF3ED246B49BF008A0777 /* UIImageView+AnimatedGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AnimatedGIF.swift"; sourceTree = "<group>"; };
 		AD8AF3F0246B4CEE008A0777 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 				837BFB8F22AAE6FC00010A93 /* Info.plist */,
 				AD7BA53924805A11002295F0 /* IntroViewController.swift */,
 				AD7BA53B24805A83002295F0 /* CameraViewController.swift */,
+				AD7BA54524806478002295F0 /* Bk_ref.swift */,
 				AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */,
 				AD7BA53F24805AE1002295F0 /* SkyViewController.swift */,
 				AD7BA54124805B00002295F0 /* ShareViewController.swift */,
@@ -145,6 +152,8 @@
 		ADA69B562475DAEE00672F65 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */,
+				AD7BA54724806971002295F0 /* ios-reverse-camera.svg */,
 				AD7BA543248060D8002295F0 /* defsky.jpg */,
 				ADA69B5B2475DE6600672F65 /* image-sharp.svg */,
 				ADA69B592475DD5400672F65 /* download-sharp.svg */,
@@ -226,6 +235,8 @@
 				ADA69B552475DA6000672F65 /* Fritz-Info.plist in Resources */,
 				837BFB8922AAE6FB00010A93 /* Main.storyboard in Resources */,
 				ADA69B5C2475DE6600672F65 /* image-sharp.svg in Resources */,
+				AD7BA54824806971002295F0 /* ios-reverse-camera.svg in Resources */,
+				AD7BA54A2480789C002295F0 /* arrow-back-circle-sharp.svg in Resources */,
 				ADA69B582475DB8700672F65 /* camera-sharp.svg in Resources */,
 				ADF5CB22246B41F1005342FC /* sky.jpg in Resources */,
 				AD8AF3F1246B4CEF008A0777 /* camera.png in Resources */,
@@ -291,6 +302,7 @@
 				AD7BA53A24805A11002295F0 /* IntroViewController.swift in Sources */,
 				AD7BA53C24805A83002295F0 /* CameraViewController.swift in Sources */,
 				AD8AF3EE246B49BF008A0777 /* UIImage+AnimatedGIF.swift in Sources */,
+				AD7BA54624806478002295F0 /* Bk_ref.swift in Sources */,
 				AD7BA54024805AE1002295F0 /* SkyViewController.swift in Sources */,
 				837BFB8422AAE6FB00010A93 /* AppDelegate.swift in Sources */,
 			);
