@@ -1,8 +1,16 @@
 import UIKit
 
 
+protocol SkyViewDelegate:class {
+}
+
+
 class SkyViewController: UIViewController {
 
+    
+    weak var  delegate:SkyViewDelegate? = nil
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
 

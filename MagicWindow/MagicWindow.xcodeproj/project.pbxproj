@@ -40,7 +40,7 @@
 		7B7D924E3982B893B32FDFBF /* Pods-SkySegmentationGifCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkySegmentationGifCreator.debug.xcconfig"; path = "Target Support Files/Pods-SkySegmentationGifCreator/Pods-SkySegmentationGifCreator.debug.xcconfig"; sourceTree = "<group>"; };
 		837BFB8022AAE6FB00010A93 /* MagicWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837BFB8322AAE6FB00010A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		837BFB8522AAE6FB00010A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		837BFB8522AAE6FB00010A93 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		837BFB8822AAE6FB00010A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		837BFB8A22AAE6FC00010A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		837BFB8D22AAE6FC00010A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };

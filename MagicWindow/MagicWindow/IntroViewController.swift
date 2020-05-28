@@ -1,17 +1,22 @@
 import UIKit
 
 
+protocol IntroViewDelegate:class {
+}
+
 class IntroViewController: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
     
-  }
+    weak var  delegate:IntroViewDelegate? = nil
     
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .red
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
 
 }

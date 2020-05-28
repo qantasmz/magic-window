@@ -1,8 +1,15 @@
 import UIKit
 
+protocol ShareViewDelegate:class {
+}
+
 
 class ShareViewController: UIViewController {
 
+    
+    weak var  delegate:ShareViewDelegate? = nil
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
 

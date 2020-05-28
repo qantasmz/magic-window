@@ -11,8 +11,16 @@ import SVGKit
 import SVProgressHUD
 
 
+protocol CameraViewDelegate:class {
+}
+
 class CameraViewController: UIViewController {
 
+    
+    
+    weak var  delegate:CameraViewDelegate? = nil
+    
+    
   @IBOutlet var imageView: UIImageView!
     
     var _core:UIView!
