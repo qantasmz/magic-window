@@ -45,6 +45,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     var movieView: UIImageView!
   var baseView: UIImageView!
+    var imageLoadingView: UIImageView!
     
     private var images = [CGImage]()
     
@@ -67,7 +68,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
   /// Scores output from model greater than this value will be set as 1.
   /// Lowering this value will make the mask more intense for lower confidence values.
-  var clippingScoresAbove: Double { return 0.5 }
+  var clippingScoresAbove: Double { return 0.7 }
 
   /// Values lower than this value will not appear in the mask.
 
@@ -75,6 +76,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
   /// Controls the opacity the mask is applied to the base image.
   var opacity: CGFloat { return 1.0 }
+
 
   private lazy var visionModel = FritzVisionSkySegmentationModelAccurate()
 
@@ -99,6 +101,16 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     var videoURL:  NSURL?
     var rgifNum:Int!
     
+    var scrollView:UIScrollView!
+    
+    var scrollSnapWidth:CGFloat = 200
+    var lastOffset:CGFloat = 0
+    
+    var obj_arr:[NSDictionary]!
+    
+    var prevScrollNum:Int = 0
+    
+    var subView:UIView!
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -106,7 +118,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     let screenWidth:CGFloat = view.frame.size.width
     let screenHeight:CGFloat = view.frame.size.height
     
-
+    
+    SVProgressHUD.setBackgroundColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0))
+    SVProgressHUD.setRingThickness(2)
+    SVProgressHUD.setForegroundColor(.white)
+    
+    
     Giphy.configure(apiKey: "WTgeyO5XWRLFyRwo13hBRDiMhhP9HfvB", verificationMode: false)
     
     
@@ -144,33 +161,34 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     // システムボタンを指定してボタンを作成
     
+    
+    var tmpImage:UIImage
+    var tmpImageView:UIImageView
+    var tmpRect:CGRect
+    
+    var svgImageView: UIImageView
+    var svgImage: SVGKImage
+
     photoCameraButton = UIButton()
 
     
-    var svgImageView: UIImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 9, y: 9, width: 32, height: 32)
-    let svgImage = SVGKImage(named: "arrow-back-circle-sharp")
-    svgImage?.size = svgImageView.bounds.size
-    svgImageView.image = svgImage?.uiImage
+    svgImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 93/3, height: 97/3)
+    svgImage = SVGKImage(named: "peke_svg")
+    svgImage.size = svgImageView.bounds.size
+    svgImageView.image = svgImage.uiImage
     
-    photoCameraButton.frame = CGRect(x:screenWidth-75, y:50,width:50, height:50)
-    
-    let phBase = UIView()
-    phBase.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-    phBase.layer.cornerRadius = 25
-    phBase.backgroundColor = .white
-    phBase.isUserInteractionEnabled = false
-    photoCameraButton.addSubview(phBase)
-    
+    photoCameraButton.frame = CGRect(x:15, y:30,width:93/3, height:97/3)
+
     photoCameraButton.addSubview(svgImageView)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
     photoCameraButton.addTarget(self, action: #selector(tapCamera(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(photoCameraButton)
 
   
-   
+       /*
     toggleUI = UIView(frame: CGRect(x: 0, y: screenHeight/2-25, width: screenSize.width, height: 50))
-    
+
     let leftButton = UIButton()
 
     
@@ -219,44 +237,67 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     rightButton.addTarget(self, action: #selector(tapRight(_:)), for: UIControl.Event.touchUpInside)
     toggleUI.addSubview(rightButton)
 
+    
     self.view.addSubview(toggleUI)
     
+    */
+    skyUI = UIView(frame: CGRect(x: 0, y: screenHeight - 562/3, width: screenSize.width, height: 562/3))
     
     
-    skyUI = UIView(frame: CGRect(x: 0, y: screenHeight - 170, width: screenSize.width, height: 170))
+
+    
+    let skyUICov = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 562/3-200/3))
+    skyUICov.alpha = 0.7
+    skyUICov.backgroundColor = .black
+    skyUI.addSubview(skyUICov)
+    
+    scrollSnapWidth = screenSize.width/3
+    
+    
+     scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 200/3))
+    scrollView.delegate = self
+    scrollView.showsHorizontalScrollIndicator = false
+     
+     skyUI.addSubview(scrollView)
+    
     
     let _gifBt = UIButton()
     
-    _gifBt.setTitle("giphy", for: [])
-    _gifBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _gifBt.backgroundColor = .black
-    _gifBt.layer.cornerRadius = 24
-    _gifBt.frame = CGRect(x:screenWidth/2-180-10, y:0, width:180, height:48)
+    
+    tmpImage = UIImage(named:"gif")!
+    tmpImageView = UIImageView(image:tmpImage)
+    tmpRect = CGRect(x:0, y:0, width:90/3, height:87/3)
+    tmpImageView.frame = tmpRect
+    tmpImageView.contentMode = .scaleAspectFill
+    
+    _gifBt.addSubview(tmpImageView)
+    _gifBt.frame = CGRect(x:screenWidth/2-90, y:200/3, width:90/3, height:87/3)
     _gifBt.addTarget(self, action: #selector(self.gifButtonTapped), for: .touchUpInside)
     skyUI.addSubview(_gifBt)
     
     
     let _impBt = UIButton()
     
-    _impBt.setTitle("import", for: [])
-    _impBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _impBt.backgroundColor = .black
-    _impBt.layer.cornerRadius = 24
-    _impBt.frame = CGRect(x:screenWidth/2+10, y:0, width:180, height:48)
+    
+    tmpImage = UIImage(named:"roll")!
+    tmpImageView = UIImageView(image:tmpImage)
+    tmpRect = CGRect(x:0, y:0, width:82/3, height:80/3)
+    tmpImageView.frame = tmpRect
+    tmpImageView.contentMode = .scaleAspectFill
+    _impBt.addSubview(tmpImageView)
+    _impBt.frame = CGRect(x:screenWidth/2+90-82/3, y:200/3, width:82/3, height:80/3)
     _impBt.addTarget(self, action: #selector(self.importButtonTapped), for: .touchUpInside)
     skyUI.addSubview(_impBt)
     
     
     let _decBt = UIButton()
     
-    _decBt.setTitle("Let's go", for: [])
-    _decBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _decBt.backgroundColor = .black
-    _decBt.layer.cornerRadius = 24
-    _decBt.frame = CGRect(x:(screenWidth-280)/2, y:70, width:280, height:48)
+    _decBt.setTitle("LET'S GO", for: [])
+    _decBt.setTitleColor(UIColor.black, for: [])
+    let font = UIFont(name: "Helvetica-Bold", size: 85/3)
+    _decBt.titleLabel?.font = font
+    _decBt.backgroundColor = .white
+    _decBt.frame = CGRect(x:0, y:562/3-200/3, width:screenWidth, height:200/3)
     _decBt.addTarget(self, action: #selector(self.gotoShare), for: .touchUpInside)
     skyUI.addSubview(_decBt)
     
@@ -266,88 +307,119 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     
-    shareUI = UIView(frame: CGRect(x: 0, y: screenHeight - 170, width: screenSize.width, height: 170))
+    shareUI = UIView(frame: CGRect(x: 0, y: screenHeight -  227/3, width: screenSize.width, height: 227/3))
+    
+    
+    let shareUICov = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 227/3))
+    shareUICov.alpha = 0.7
+    shareUICov.backgroundColor = .black
+    shareUI.addSubview(shareUICov)
+    
+    
     
     let _saveGifBt = UIButton()
     
-    _saveGifBt.setTitle("save gif", for: [])
-    _saveGifBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _saveGifBt.backgroundColor = .black
-    _saveGifBt.layer.cornerRadius = 24
-    _saveGifBt.frame = CGRect(x:screenWidth/2-180-10, y:70, width:180, height:48)
+    
+    tmpImage = UIImage(named:"save")!
+    tmpImageView = UIImageView(image:tmpImage)
+    let dx0 = 90/2-77/3/2
+    tmpRect = CGRect(x:dx0, y:0, width:77/3, height:74/3)
+    tmpImageView.frame = tmpRect
+    tmpImageView.contentMode = .scaleAspectFill
+    
+    _saveGifBt.addSubview(tmpImageView)
+
+    _saveGifBt.frame = CGRect(x:screenWidth/2-90/2, y:15, width:90, height:150)
     _saveGifBt.addTarget(self, action: #selector(self.saveGif), for: .touchUpInside)
+    
+
+    
+    
+    let lbl0 = UILabel()
+    lbl0.frame = CGRect(x: 0, y: 20, width: 90, height: 30)
+    lbl0.textAlignment = .center
+    lbl0.font = UIFont(name: "Helvetica-Oblique", size: 45/3)
+    lbl0.text = "video"
+    lbl0.textColor = .white
+    
+    _saveGifBt.addSubview(lbl0)
+    
+    
+    
+    let _cov0 = UIView(frame: CGRect(x: 0, y: 0, width: 9, height: 150))
+     _cov0.backgroundColor = .clear
+     _saveGifBt.addSubview(_cov0)
+    
     shareUI.addSubview(_saveGifBt)
     
     
     let _saveVideoBt = UIButton()
+    tmpImage = UIImage(named:"save")!
+    tmpImageView = UIImageView(image:tmpImage)
+    let dx1 = 90/2-77/3/2
+    tmpRect = CGRect(x:dx1, y:0, width:77/3, height:74/3)
+    tmpImageView.frame = tmpRect
+    tmpImageView.contentMode = .scaleAspectFill
     
-    _saveVideoBt.setTitle("save video", for: [])
-    _saveVideoBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _saveVideoBt.backgroundColor = .black
-    _saveVideoBt.layer.cornerRadius = 24
-    _saveVideoBt.frame = CGRect(x:screenWidth/2+10, y:70, width:180, height:48)
+    _saveVideoBt.addSubview(tmpImageView)
+    _saveVideoBt.frame = CGRect(x:screenWidth/2-140, y:15, width:90, height:150)
     _saveVideoBt.addTarget(self, action: #selector(self.saveVideo), for: .touchUpInside)
+    
+    let lbl1 = UILabel()
+    lbl1.frame = CGRect(x: 0, y: 20, width: 90, height: 30)
+    lbl1.textAlignment = .center
+    lbl1.font = UIFont(name: "Helvetica-Oblique", size: 45/3)
+    lbl1.text = "gif"
+    lbl1.textColor = .white
+    
+    _saveVideoBt.addSubview(lbl1)
+    let _cov1 = UIView(frame: CGRect(x: 0, y: 0, width: 9, height: 150))
+     _cov1.backgroundColor = .clear
+     _saveVideoBt.addSubview(_cov1)
+    
     shareUI.addSubview(_saveVideoBt)
     
     
     let _shareVideoBt = UIButton()
     
-    _shareVideoBt.setTitle("share video", for: [])
-    _shareVideoBt.setTitleColor(UIColor.white, for: [])
-    //_decBt.titleLabel?.font = UIFont (name: "HiraginoSans-W6", size: 15)
-    _shareVideoBt.backgroundColor = .black
-    _shareVideoBt.layer.cornerRadius = 24
-    _shareVideoBt.frame = CGRect(x:(screenWidth-280)/2, y:0, width:280, height:48)
+    tmpImage = UIImage(named:"sharing")!
+    tmpImageView = UIImageView(image:tmpImage)
+    let dx2 = 90/2 - 76/3/2
+    tmpRect = CGRect(x:dx2, y:0, width:76/3, height:76/3)
+    tmpImageView.frame = tmpRect
+    tmpImageView.contentMode = .scaleAspectFill
+    
+    _shareVideoBt.addSubview(tmpImageView)
+    _shareVideoBt.frame = CGRect(x:screenWidth/2+50, y:15, width:90, height:150)
     _shareVideoBt.addTarget(self, action: #selector(self.shareVideo), for: .touchUpInside)
+    
+    
+    let lbl2 = UILabel()
+    lbl2.frame = CGRect(x: 0, y: 20, width: 90, height: 30)
+    lbl2.textAlignment = .center
+    lbl2.font = UIFont(name: "Helvetica-Oblique", size: 45/3)
+    lbl2.text = "share"
+    lbl2.textColor = .white
+    
+    _shareVideoBt.addSubview(lbl2)
+    let _cov2 = UIView(frame: CGRect(x: 0, y: 0, width: 9, height: 150))
+     _cov2.backgroundColor = .clear
+     _shareVideoBt.addSubview(_cov2)
     shareUI.addSubview(_shareVideoBt)
     
     
     self.view.addSubview(shareUI)
     
-/*
-    albumButton = UIButton()
-    albumButton.frame = CGRect(x:screenWidth/2+67, y:screenHeight-114,
-                          width:32, height:32)
-    var albumImageView: UIImageView = UIImageView()
-    albumImageView.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-    let albumImage = SVGKImage(named: "image-sharp")
-    albumImage?.size = albumImageView.bounds.size
-    albumImageView.image = albumImage?.uiImage
-    albumButton.addSubview(albumImageView)
-    albumButton.imageView?.contentMode = .scaleAspectFit
-    albumButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(albumButton)
-*/
+    
 
-    
-    /*
-    saveButton = UIButton()
-    saveButton.frame = CGRect(x:screenWidth/2+127, y:screenHeight-118,
-                          width:36, height:36)
-    var saveImageView: UIImageView = UIImageView()
-    saveImageView.frame = CGRect(x: 0, y: 0, width: 36, height: 36)
-    let saveImage = SVGKImage(named: "download-sharp")
-    saveImage?.size = saveImageView.bounds.size
-    saveImageView.image = saveImage?.uiImage
-    saveButton.addSubview(saveImageView)
-    saveButton.imageView?.contentMode = .scaleAspectFit
-    saveButton.addTarget(self, action: #selector(saveGif(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(saveButton)
- */
-    /*
-    gifButton.frame = CGRect(x:screenWidth/2-140, y:screenHeight-118,
-                          width:36, height:36)
-
-    gifButton.addTarget(self, action: #selector(gifButtonTapped), for: .touchUpInside)
-    
-    
-    self.view.addSubview(gifButton)
-    
-    */
-    
-    
+    let imageLoading:UIImage = UIImage(named:"cloud")!
+    imageLoadingView = UIImageView(image:imageLoading)
+    let rect:CGRect = CGRect(x:0, y:0, width:414/3, height:278/3)
+     imageLoadingView.contentMode = .scaleAspectFill
+    imageLoadingView.frame = rect;
+    imageLoadingView.center = CGPoint(x:screenWidth/2, y:screenHeight/2-55)
+    imageLoadingView.isHidden = true
+    self.view.addSubview(imageLoadingView)
     
 
 
@@ -355,15 +427,76 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
   }
     
+    func createContentsView() -> UIView {
+
+        
+        //self.gifList.data.count
+        // contentsViewを作る
+        let contentsView = UIView()
+        contentsView.frame = CGRect(x: 0, y: 0, width: (self.gifList.data.count+2)*Int(scrollSnapWidth), height: 200/3)
+
+        obj_arr = []
+        for count in 0...self.gifList.data.count {
+            if(count != 0){
+                let obj = createLabel(contentsView: contentsView,num:count, name:"name"+String(count), author:"author"+String(count))
+                contentsView.addSubview(obj["button"] as! UIButton)
+                obj_arr.append(obj)
+            }
+        }
+        
+
+        return contentsView
+    }
+    
+    func createLabel(contentsView: UIView,num:Int,name:String,author:String) -> NSDictionary {
+
+        let obj = NSMutableDictionary()
+        
+        let button = UIButton()
+
+        
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y: 0, width: scrollSnapWidth, height: 138/3)
+        label.textAlignment = .center
+        let font = UIFont(name: "Helvetica-BoldOblique", size: 65/3)
+        label.font = font
+        label.text = name
+        label.textColor = .white
+        
+        button.addSubview(label)
+        
+        
+        let sub = UILabel()
+        sub.frame = CGRect(x: 0, y: 25, width: scrollSnapWidth, height: 138/3)
+        sub.textAlignment = .center
+        let fontSub = UIFont(name: "Helvetica", size: 50/3)
+        sub.font = fontSub
+        sub.text = author
+        sub.textColor = .white
+        
+        button.addSubview(sub)
+        button.frame = CGRect(x:CGFloat(num)*scrollSnapWidth, y:0,width:scrollSnapWidth, height:138/3)
+
+        
+              let _cov = UIView(frame: CGRect(x: 0, y: 0, width: scrollSnapWidth, height: 200/3))
+               _cov.backgroundColor = .clear
+               button.addSubview(_cov)
+              
+        obj["button"] = button
+        obj["label"] = label
+        obj["sub"] = sub
+        
+        return obj
+    }
     public func initialize(img:UIImage){
         _uiStat = 0
         inputImage = img
         sceneView.alpha = 0
         backgroundView.alpha = 0
-        toggleUI.isHidden = false
+        //toggleUI.isHidden = false
         shareUI.isHidden = true
         skyUI.isHidden = false
-        SVProgressHUD.show()
+        showHud()
         getGifList()
         
     }
@@ -393,16 +526,33 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     func showHud(){
         SVProgressHUD.show()
+        imageLoadingView.isHidden = false
+        imageLoadingView.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, animations: {
+              self.imageLoadingView.alpha = 1
+         }, completion: { (finished: Bool) in
+         
+         })
+    
     }
   
     func hideHud(){
         SVProgressHUD.dismiss()
+        
+        
+        UIView.animate(withDuration: 0.5, animations: {
+              self.imageLoadingView.alpha = 0
+         }, completion: { (finished: Bool) in
+            self.imageLoadingView.isHidden = true
+         
+         })
     }
     
     func renderSaving(){
         
-        SVProgressHUD.showProgress(Float(Float(self._saveCnt)/Float(self.saveArr.count)))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+        SVProgressHUD.showProgress(Float(Float(self._saveCnt)/Float(self.saveArr.count))/2)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
             if( self._saveCnt < self.saveArr.count){
                 
 
@@ -492,7 +642,6 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         videoWriter.startSession(atSourceTime: CMTime.zero)
         
         // pixel bufferを宣言
-        var buffer: CVPixelBuffer? = nil
         
         // 現在のフレームカウント
         var frameCount = 0
@@ -505,36 +654,60 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         let fps:__int32_t = __int32_t(1/(self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)))
        
         var _psec:Float64 = 0
+        var opCount:Int = 0
+        startRenderMovie(writerInput:writerInput, videoWriter:videoWriter, durationForEachImage:durationForEachImage,fps:fps,frame:frameCount,url:url!,_sec:_psec,adaptor:adaptor,size:size,pCount:opCount)
         
-        while _psec < 13 {
+        
+    }
+    
+    func startRenderMovie(writerInput: AVAssetWriterInput,videoWriter: AVAssetWriter, durationForEachImage:Int,fps:__int32_t,frame:Int,url:URL,_sec:Float64,adaptor:AVAssetWriterInputPixelBufferAdaptor,size:CGSize,pCount:Int){
+        var opCount = pCount
+        var buffer: CVPixelBuffer? = nil
+        var _psec = _sec
+        var frameCount = frame
+        
 
-            for image in self.images {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
+            
+            if _psec < 13 {
+                SVProgressHUD.showProgress(Float(Float(_psec)/13*0.5+0.5))
                 
-                if (!adaptor.assetWriterInput.isReadyForMoreMediaData) {
-                    break
+                //for image in self.images {
+                if(opCount < self.images.count){
+                    //ProgressHUD.showProgress(Float(Float(frameCount)/Float(self.images.count)))
+               
+                    
+                    // 動画の時間を生成(その画像の表示する時間/開始時点と表示時間を渡す)
+                    let frameTime: CMTime = CMTimeMake(value: Int64(__int32_t(frameCount) * __int32_t(durationForEachImage)), timescale: fps)
+                    //時間経過を確認(確認用)
+                    let second = CMTimeGetSeconds(frameTime)
+                    _psec = second
+                    print(_psec)
+                    
+                    let resize = self.resizeImage(image: UIImage(cgImage: self.images[opCount]), contentSize: size)
+                    // CGImageからBufferを生成
+                    buffer = self.pixelBufferFromCGImage(cgImage: resize.cgImage!)
+                    
+                    // 生成したBufferを追加
+                    if (!adaptor.append(buffer!, withPresentationTime: frameTime)) {
+                        // Error!
+                        print("adaptError")
+                        print(videoWriter.error!)
+                    }
+                    
+                    frameCount += 1
+                    opCount += 1
+                    if(opCount == self.images.count){
+                        opCount = 0
+                    }
                 }
-                
-                // 動画の時間を生成(その画像の表示する時間/開始時点と表示時間を渡す)
-                let frameTime: CMTime = CMTimeMake(value: Int64(__int32_t(frameCount) * __int32_t(durationForEachImage)), timescale: fps)
-                //時間経過を確認(確認用)
-                let second = CMTimeGetSeconds(frameTime)
-                _psec = second
-                print(_psec)
-                
-                let resize = resizeImage(image: UIImage(cgImage: image), contentSize: size)
-                // CGImageからBufferを生成
-                buffer = self.pixelBufferFromCGImage(cgImage: resize.cgImage!)
-                
-                // 生成したBufferを追加
-                if (!adaptor.append(buffer!, withPresentationTime: frameTime)) {
-                    // Error!
-                    print("adaptError")
-                    print(videoWriter.error!)
-                }
-                
-                frameCount += 1
+                self.startRenderMovie(writerInput:writerInput, videoWriter:videoWriter, durationForEachImage:durationForEachImage,fps:fps,frame:frameCount,url:url,_sec:_psec,adaptor:adaptor,size:size,pCount:opCount)
+            }else{
+                self.finishVideoGeneration(writerInput:writerInput, videoWriter:videoWriter, durationForEachImage:durationForEachImage,fps:fps,frameCount:frameCount,url:url)
             }
         }
+    }
+    func finishVideoGeneration(writerInput: AVAssetWriterInput,videoWriter: AVAssetWriter, durationForEachImage:Int,fps:__int32_t,frameCount:Int,url:URL){
         
         // 動画生成終了
         writerInput.markAsFinished()
@@ -542,28 +715,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         videoWriter.finishWriting(completionHandler: {
             // Finish!
             print("movie created.")
+
             
-/*
-            let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
-                let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.mp4")
-                let _nd = data as! NSData
-                _nd.write(to: url!, atomically: true)
-
-                PHPhotoLibrary.shared().performChanges({
-                    PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
-                 }, completionHandler:  { success, error in
-                    if !success { NSLog("error creating asset: \(error)") }else{
-
-                        self.hideHud()
-                        
-                       
-                    }
-                })
-                
-
-             })
-             task.resume()
- */
             
             if(self._saveStat == 1 ) {
              DispatchQueue.main.async {
@@ -581,7 +734,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
              }
             }else if(self._saveStat == 2 ){
                 
-                let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
+                let task = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
                    let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.mp4")
                    let _nd = data as! NSData
                    _nd.write(to: url!, atomically: true)
@@ -591,39 +744,19 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                                       }, completionHandler:  { success, error in
                                          if !success { NSLog("error creating asset: \(error)") }else{
 
+                                            DispatchQueue.main.async {
                                              self.hideHud()
-                                             
+                                            }
                                             
                                          }
                                      })
 
                 })
                 task.resume()
-                /*
-                let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
-                   let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.mp4")
-                   let _nd = data as! NSData
-                   _nd.write(to: url!, atomically: true)
 
-                   PHPhotoLibrary.shared().performChanges({
-                       PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url!)
-                    }, completionHandler:  { success, error in
-                       if !success { NSLog("error creating asset: \(error)") }else{
-
-                           self.hideHud()
-                           
-                          
-                       }
-                   })
-                   
-
-                })
-                task.resume()
- */
             }
 
         })
-        
     }
     
     func pixelBufferFromCGImage(cgImage: CGImage) -> CVPixelBuffer {
@@ -707,36 +840,53 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         CGImageDestinationSetProperties(destination, properties as CFDictionary)
         
         let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: self.backgroundView.animationDuration / Double(self.backgroundView.animationImages!.count)]]
-        for image in self.images {
-            CGImageDestinationAddImage(destination, image, frameProperties as CFDictionary)
-        }
+       
         
-        if CGImageDestinationFinalize(destination) {
-            print("GIF生成が成功")
-        } else {
-            print("GIF生成に失敗")
-        }
-        
+        var opCount:Int = 0
+        saveGifImageEnd(url:url!,destination:destination,frameProperties:frameProperties as CFDictionary,pCount:opCount)
+    }
+    
+    func saveGifImageEnd(url:URL,destination:CGImageDestination,frameProperties:CFDictionary,pCount:Int){
+        var opCount = pCount
 
-        let task = URLSession.shared.dataTask(with: url!, completionHandler: {data, response, error in
-            let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
-            let _nd = data as! NSData
-            _nd.write(to: url!, atomically: true)
+        SVProgressHUD.showProgress(Float(Float(opCount)/Float(self.images.count)*0.5+0.5))
 
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
-             }, completionHandler:  { success, error in
-                if !success { NSLog("error creating asset: \(error)") }else{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
+            if(opCount < self.images.count){
+                CGImageDestinationAddImage(destination, self.images[opCount], frameProperties as CFDictionary)
+                opCount += 1
+                self.saveGifImageEnd(url:url,destination:destination,frameProperties:frameProperties as CFDictionary,pCount:opCount)
+            }else{
 
-                    self.hideHud()
-                    
-                   
+                if CGImageDestinationFinalize(destination) {
+                    print("GIF生成が成功")
+                } else {
+                    print("GIF生成に失敗")
                 }
-            })
-            
+                
+                let task = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
+                    let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.gif")
+                    let _nd = data as! NSData
+                    _nd.write(to: url!, atomically: true)
 
-         })
-         task.resume()
+                    PHPhotoLibrary.shared().performChanges({
+                        PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: url!)
+                     }, completionHandler:  { success, error in
+                        if !success { NSLog("error creating asset: \(error)") }else{
+
+                            DispatchQueue.main.async {
+                            self.hideHud()
+                            }
+                           
+                        }
+                    })
+                    
+
+                 })
+                 task.resume()
+            }
+        }
+        
     }
 
     @objc func tapLeft(_ sender : UIButton){
@@ -764,8 +914,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
         _uiStat = 1
         skyUI.isHidden = true
-        toggleUI.isHidden = true
-        UIView.transition(with: self.view, duration: 0.5, options: [.transitionCurlUp], animations: nil, completion: { _ in
+        //toggleUI.isHidden = true
+        UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: nil, completion: { _ in
             // replace camera preview with new one
             self.shareUI.isHidden = false
         })
@@ -777,10 +927,10 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         }else{
             _uiStat = 0
             shareUI.isHidden = true
-            UIView.transition(with: self.view, duration: 0.5, options: [.transitionCurlDown], animations: nil, completion: { _ in
+            UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: nil, completion: { _ in
                 // replace camera preview with new one
                 self.skyUI.isHidden = false
-                self.toggleUI.isHidden = false
+                //self.toggleUI.isHidden = false
             })
         }
     }
@@ -796,7 +946,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                     self._saveCnt = 0
 
                     self._saveStat = 0
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
                         self.saveArr = self.backgroundView.animationImages!
                         
                         self.images.removeAll()
@@ -824,7 +974,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             _saveCnt = 0
 
             _saveStat = 0
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
                 self.saveArr = self.backgroundView.animationImages!
                 
                 self.images.removeAll()
@@ -846,7 +996,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
                     
                     self._saveStat = 2
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
                         self.saveArr = self.backgroundView.animationImages!
                         
                         self.images.removeAll()
@@ -875,7 +1025,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
             
             _saveStat = 2
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
                 self.saveArr = self.backgroundView.animationImages!
                 
                 self.images.removeAll()
@@ -893,7 +1043,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         
         _saveStat = 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
             self.saveArr = self.backgroundView.animationImages!
             
             self.images.removeAll()
@@ -1131,6 +1281,19 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     func renderFirstView(){
         
         
+        
+
+        if(subView != nil){
+            subView.removeFromSuperview()
+        }
+        subView = createContentsView()
+        scrollView.contentSize = subView.frame.size
+        
+        //scrollView.isPagingEnabled = true
+        scrollView.addSubview(subView)
+        
+        setMenuNum(s:0)
+        
         let randomInt = Int.random(in: 1..<self.gifList.data.count)
         rgifNum = randomInt
         self.setGif(id:self.gifList.data[randomInt].id)
@@ -1142,8 +1305,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         _core.bringSubviewToFront(sceneView)
         
-
-        SVProgressHUD.dismiss()
+        hideHud()
         
         UIView.animate(withDuration: 0.5, animations: {
                                                   
@@ -1242,4 +1404,226 @@ extension SkyViewController: GiphyDelegate {
     }
 }
 
+    /*
+extension SkyViewController: UIScrollViewDelegate {
 
+
+    private func scrollViewDidScroll(scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
+        if scrollView.contentOffset.x > lastOffset + scrollSnapWidth {
+            scrollView.isScrollEnabled = false
+        } else if scrollView.contentOffset.x < lastOffset - scrollSnapWidth {
+            scrollView.isScrollEnabled = false
+        }
+    }
+
+    private func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+        guard !decelerate else {
+            return
+        }
+
+        setContentOffset(scrollView: scrollView)
+    }
+
+    private func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+
+        setContentOffset(scrollView: scrollView)
+    }
+    
+    func setContentOffset(scrollView: UIScrollView) {
+
+        let stopOver = scrollSnapWidth
+        var x = round(scrollView.contentOffset.x / stopOver) * stopOver
+        x = max(0, min(x, scrollView.contentSize.width - scrollView.frame.width))
+        lastOffset = x
+
+        scrollView.setContentOffset(CGPoint(x:x, y:scrollView.contentOffset.y), animated: true)
+
+        scrollView.isScrollEnabled = true
+    }
+
+    
+}
+ */
+extension SkyViewController: UIScrollViewDelegate {
+    func setContentOffset(scrollView: UIScrollView) {
+
+        let stopOver = scrollSnapWidth
+        var x = round(scrollView.contentOffset.x / stopOver) * stopOver
+        x = max(0, min(x, scrollView.contentSize.width - scrollView.frame.width))
+        lastOffset = x
+
+        scrollView.setContentOffset(CGPoint(x:x, y:scrollView.contentOffset.y), animated: true)
+
+        scrollView.isScrollEnabled = true
+    }
+    // スクロール中に呼び出され続けるデリゲートメソッド.
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //print(scrollView.contentOffset.x)
+        if scrollView.contentOffset.x > lastOffset + scrollSnapWidth {
+            scrollView.isScrollEnabled = false
+        } else if scrollView.contentOffset.x < lastOffset - scrollSnapWidth {
+            scrollView.isScrollEnabled = false
+        }
+        
+        
+        /*
+         
+         */
+    }
+
+    // ズーム中に呼び出され続けるデリゲートメソッド.
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+
+    // ユーザが指でドラッグを開始した場合に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        print(#function)
+    }
+
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // velocity = points / second.
+    // targetContentOffsetは、停止が予想されるポイント？
+    // pagingEnabledがYESの場合には、呼び出されません.
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print(#function)
+    }
+
+    // ユーザがドラッグ後、指を離した際に呼び出されるデリゲートメソッド.
+    // decelerateがYESであれば、慣性移動を行っている.
+    //
+    // 指をぴたっと止めると、decelerateはNOになり、
+    // その場合は「scrollViewWillBeginDecelerating:」「scrollViewDidEndDecelerating:」が呼ばれない？
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        //print(#function)
+        
+        guard !decelerate else {
+            return
+        }
+
+        setContentOffset(scrollView: scrollView)
+    }
+
+    // ユーザがドラッグ後、スクロールが減速する瞬間に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        //print(#function)
+        
+        setContentOffset(scrollView: scrollView)
+    }
+
+    // ユーザがドラッグ後、慣性移動も含め、スクロールが停止した際に呼び出されるデリゲートメソッド.
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(round(scrollView.contentOffset.x/scrollSnapWidth))
+        
+        
+        /*
+         for count in 0...self.gifList.data.count {
+             if(count != 0){
+                 let obj = createLabel(contentsView: contentsView,num:count, name:"name"+String(count), author:"author"+String(count))
+                 contentsView.addSubview(obj["button"] as! UIButton)
+                 obj_arr.append(obj)
+             }
+         }
+         
+         */
+    }
+
+    // スクロールのアニメーションが終了した際に呼び出されるデリゲートメソッド.
+    // アニメーションプロパティがNOの場合には呼び出されない.
+    // 【setContentOffset】/【scrollRectVisible:animated:】
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let snum = Int(round(scrollView.contentOffset.x/scrollSnapWidth))
+        if(prevScrollNum != snum){
+            setMenuNum(s:snum)
+        }
+        
+        prevScrollNum = snum
+      // print(#function)
+    }
+    func setMenuNum(s:Int){
+        
+        var nextInt = s
+        rgifNum = nextInt
+        self.setGif(id:self.gifList.data[nextInt].id)
+        
+        for count in 0...obj_arr.count-1 {
+            let obj = obj_arr[count]
+            let _label = obj["label"] as! UILabel
+            let _sub = obj["sub"] as! UILabel
+            if(count != s){
+
+                UIView.animate(withDuration: 0.5, animations: {
+                    /*
+                    let font = UIFont(name: "Helvetica-BoldOblique", size: 45/3)
+                    _label.font = font
+                    
+                    let fontSub = UIFont(name: "Helvetica", size: 35/3)
+                    _sub.font = fontSub
+                */
+
+                    _label.transform = CGAffineTransform(scaleX: 45/65, y:45/65)
+                    _label.frame.origin.y = 15
+                    _sub.transform = CGAffineTransform(scaleX: 35/50, y:35/50)
+                    _sub.frame.origin.y = 30
+                })
+            }else{
+
+                UIView.animate(withDuration: 0.5, animations: {
+                    /*
+                    let font = UIFont(name: "Helvetica-BoldOblique", size: 65/3)
+                    _label.font = font
+                    
+
+                    let fontSub = UIFont(name: "Helvetica", size: 50/3)
+                    _sub.font = fontSub
+                    */
+                    
+                    
+                    _label.transform = CGAffineTransform(scaleX: 1, y:1)
+                    _label.frame.origin.y = 0
+                    _sub.transform = CGAffineTransform(scaleX: 1, y:1)
+                    _sub.frame.origin.y = 25
+                })
+                
+            }
+        }
+        
+    }
+    // ズーム中に呼び出されるデリゲートメソッド.
+    // ズームの値に対応したUIViewを返却する.
+    // nilを返却すると、何も起きない.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        //print(#function)
+        return nil
+    }
+
+    // ズーム開始時に呼び出されるデリゲートメソッド.
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        //print(#function)
+    }
+
+    // ズーム完了時(バウンドアニメーション完了時)に呼び出されるデリゲートメソッド.
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        //print(#function)
+    }
+
+    // 先頭にスクロールする際に呼び出されるデリゲートメソッド.
+    // NOなら反応しない.
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        //print(#function)
+        return true
+    }
+
+    // 先頭へのスクロールが完了した際に呼び出されるデリゲートメソッド.
+    // すでに先頭にいる場合には呼び出されない.
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        //print(#function)
+    }
+
+    // スクロールビューのinsetsの値が変わった際に呼び出されるデリゲートメソッド.
+    func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        //print(#function)
+    }
+}

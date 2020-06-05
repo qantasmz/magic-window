@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="121px" viewBox="0 0 114 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>save icon</title>
+    <defs>
+        <filter x="-1.5%" y="-12.6%" width="103.0%" height="126.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sky-selection-1" transform="translate(-691.000000, -2322.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#000000" stroke-width="0.15">
+            <g id="bottom-icons" filter="url(#filter-1)" transform="translate(181.000000, 2332.000000)">
+                <g id="save-icon" transform="translate(520.000000, 0.000000)">
+                    <path d="M3.13333333,75 C1.4006,75 0,76.4321898 0,78.1968523 L0,97.8031477 C0,99.5678102 1.4006,101 3.13333333,101 L90.8666667,101 C92.5978333,101 94,99.5678102 94,97.8031477 L94,78.1968523 C94,76.4321898 92.5978333,75 90.8666667,75 C89.1355,75 87.7333333,76.4321898 87.7333333,78.1968523 L87.7333333,94.6062953 L6.26666667,94.6062953 L6.26666667,78.1968523 C6.26666667,76.4337883 4.86606667,75 3.13333333,75 Z" id="Path"></path>
+                    <path d="M46.504849,0 C44.7605596,0 43.3506186,1.40300412 43.3506186,3.13170562 L43.3506186,70.4946935 L23.3433357,51.3051673 C22.0974147,50.1025924 20.0944784,50.1370411 18.8864082,51.3818941 C17.6751838,52.6251812 17.7098803,54.6075509 18.9621098,55.8101258 L44.2684997,80.0839761 C44.2716539,80.0871078 44.2716539,80.0871078 44.2748081,80.0902395 L44.3126589,80.1231224 C44.4293654,80.2358638 44.5776142,80.2828394 44.7037834,80.3736589 C44.8993457,80.5145856 45.0822911,80.6696051 45.3093957,80.7619904 C45.6910575,80.9185757 46.094799,81 46.5016947,81 C46.9085904,81 47.3123319,80.9138781 47.6939938,80.7619904 C47.9069043,80.6774343 48.0725014,80.5302442 48.2538697,80.4018442 C48.4005414,80.3047614 48.5645614,80.2452589 48.6938848,80.1199907 L74.0412797,55.8038624 C75.2903549,54.5997216 75.3234743,52.617352 74.113827,51.3756307 C72.9026026,50.1323436 70.9075519,50.0978948 69.6537453,51.2989039 L49.6590793,70.4931276 L49.6590793,3.13013977 C49.6590793,1.40300412 48.2475612,0 46.504849,0 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -55,6 +55,15 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      present(introView, animated: true, completion: nil)
   }
     
+     func goToTutorial() {
+          dismiss(animated: true, completion:  {
+               self.showTutorial()
+          })
+     }
+     func showTutorial() {
+          present(tutorialView, animated: true, completion: nil)
+     }
+
      func goToCamera() {
           dismiss(animated: true, completion:  {
                self.showCamera()

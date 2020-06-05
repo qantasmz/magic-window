@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="89px" viewBox="0 0 121 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>send icon</title>
+    <defs>
+        <filter x="-1.5%" y="-12.6%" width="103.0%" height="126.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sky-selection-1" transform="translate(-946.000000, -2341.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#070707" stroke-width="0.15">
+            <g id="bottom-icons" filter="url(#filter-1)" transform="translate(181.000000, 2332.000000)">
+                <g id="send-icon" transform="translate(825.500000, 53.500000) rotate(180.000000) translate(-825.500000, -53.500000) translate(775.000000, 19.000000)">
+                    <path d="M10.9442724,31.3457143 L37.0968196,5.4355102 C38.3475936,4.19632653 38.3475936,2.16857143 37.0968196,0.929387755 L37.0968196,0.929387755 C35.8460456,-0.309795918 33.7993245,-0.309795918 32.5485505,0.929387755 L0.938080495,32.2469388 C-0.312693498,33.4861224 -0.312693498,35.5138776 0.938080495,36.7530612 L32.5485505,68.0706122 C33.7993245,69.3097959 35.8460456,69.3097959 37.0968196,68.0706122 L37.0968196,68.0706122 C38.3475936,66.8314286 38.3475936,64.8036735 37.0968196,63.5644898 L10.9442724,37.6542857 L97.8162117,37.6542857 C99.6355193,37.6542857 101,36.1897959 101,34.5 L101,34.5 C101,32.697551 99.5218126,31.3457143 97.8162117,31.3457143 L10.9442724,31.3457143 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="82px" viewBox="0 0 103 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>import button</title>
+    <defs>
+        <path d="M81.7735394,0 L11.2264606,0 C5.02625764,0 0,4.98538478 0,11.1351686 L0,60.8648314 C0,67.0146152 5.02625764,72 11.2264606,72 L81.7735394,72 C84.7509818,72 87.606476,70.8268338 89.7118458,68.7385846 C91.8172156,66.6503354 93,63.8180617 93,60.8648314 L93,11.1351686 C93,4.98538478 87.9737424,0 81.7735394,0 L81.7735394,0 Z M11.2152342,4.45361199 L81.7735394,4.45361199 C85.4936612,4.45361199 88.5094157,7.4452983 88.5094157,11.1351686 L88.5094157,48.415713 L69.6714148,33.6727498 C68.8248033,33.0102659 67.6229279,33.0383154 66.8086673,33.7395608 L47.4093433,50.4757191 L22.3518831,22.4150943 C21.9267951,21.9415696 21.3183712,21.6702078 20.6791405,21.669038 C20.0506604,21.6877712 19.4527925,21.9424852 19.0063979,22.3816888 L4.41198888,37.8707083 L4.41198888,11.1463037 C4.40887283,9.35884787 5.12799724,7.64468635 6.40859708,6.38705556 C7.68919691,5.12942478 9.42447023,4.43321106 11.2264606,4.45361199 L11.2152342,4.45361199 Z M81.7735394,67.5460812 L11.2264606,67.5460812 C7.50633884,67.5460812 4.49058426,64.5547017 4.49058426,60.8648314 L4.49058426,44.3959171 L20.6791405,27.2032168 L45.5682038,55.0411383 C46.3861539,55.9552196 47.7939901,56.044668 48.7228392,55.2415713 L68.3466924,38.3161151 L88.5543216,54.0946489 L88.5543216,60.8648314 C88.5543216,62.6445139 87.8385298,64.3506631 86.565579,65.6049009 C85.2926282,66.8591386 83.5677727,67.5577971 81.7735394,67.5460812 Z" id="path-1"></path>
+        <filter x="-7.6%" y="-7.0%" width="115.2%" height="119.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.075" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="camera-main" transform="translate(-265.000000, -2199.000000)" fill-rule="nonzero">
+            <g id="import-button" transform="translate(269.000000, 2201.000000)">
+                <g id="gallery-icon" transform="translate(1.000000, 1.000000)">
+                    <g id="Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#000000" stroke-width="0.15" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M46,32 C52.0751322,32 57,27.0751322 57,21 C57,14.9248678 52.0751322,10 46,10 C39.9248678,10 35,14.9248678 35,21 C35,27.0751322 39.9248678,32 46,32 L46,32 Z M46,14.4 C49.6450793,14.4 52.6,17.3549207 52.6,21 C52.6,24.6450793 49.6450793,27.6 46,27.6 C42.3549207,27.6 39.3999633,24.6450793 39.3999633,21 C39.3941525,19.2457625 40.0869254,17.5613693 41.3252998,16.3188669 C42.5636743,15.0763646 44.2457527,14.378 46,14.378 L46,14.4 Z" id="Shape" stroke="#000000" stroke-width="0.15" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

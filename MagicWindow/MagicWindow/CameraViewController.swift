@@ -42,6 +42,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var photoCameraButton: UIButton!
     var albumButton: UIButton!
     
+    var infoButton: UIButton!
+    
     var reverseButton: UIButton!
     
     var capturedImage:UIImage!
@@ -58,6 +60,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     let screenWidth:CGFloat = view.frame.size.width
     let screenHeight:CGFloat = view.frame.size.height
     
+    SVProgressHUD.setBackgroundColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0))
+    SVProgressHUD.setRingThickness(2)
+    SVProgressHUD.setForegroundColor(.white)
+            
 
     imageView = UIImageView()
 
@@ -72,28 +78,33 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     imagePicker.sourceType = .photoLibrary
 
     
+    var tmpImage:UIImage
+    var tmpImageView:UIImageView
+    var tmpRect:CGRect
+
+    
     let screenSize: CGSize = UIScreen.main.bounds.size
     
-
+    
+    var svgImageView: UIImageView
+    var svgImage: SVGKImage
+    
     
     photoCameraButton = UIButton()
 
-    var svgImageView: UIImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 25/2, y: 25/2, width: 50, height: 50)
-    let svgImage = SVGKImage(named: "camera-sharp")
-    svgImage?.size = svgImageView.bounds.size
-    svgImageView.image = svgImage?.uiImage
     
-    photoCameraButton.frame = CGRect(x:screenWidth/2-37.5, y:screenHeight-137.5,
-                          width:75, height:75)
     
-    let phBase = UIView()
-    phBase.frame = CGRect(x: 0, y: 0, width: 75, height: 75)
-    phBase.layer.cornerRadius = 75/2
-    phBase.backgroundColor = .white
-    phBase.isUserInteractionEnabled = false
-    photoCameraButton.addSubview(phBase)
+    svgImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 313/3, height: 313/3)
+    svgImage = SVGKImage(named: "shoot_svg")
+    svgImage.size = svgImageView.bounds.size
+    svgImageView.image = svgImage.uiImage
     
+    
+    photoCameraButton.frame = CGRect(x:screenWidth/2-313/3/2, y:screenHeight-150,
+                          width:313/3, height:313/3)
+    
+
     photoCameraButton.addSubview(svgImageView)
     //photoCameraButton.setImage(svgImage, for: .normal)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
@@ -108,49 +119,50 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
 
     albumButton = UIButton()
-    albumButton.frame = CGRect(x:screenWidth/2-120, y:screenHeight-114-12.5,
-                          width:50, height:50)
-    var albumImageView: UIImageView = UIImageView()
-    albumImageView.frame = CGRect(x: 9, y: 9, width: 32, height: 32)
-    let albumImage = SVGKImage(named: "image-sharp")
-    albumImage?.size = albumImageView.bounds.size
-    albumImageView.image = albumImage?.uiImage
+    albumButton.frame = CGRect(x:screenWidth/2-145, y:screenHeight-124,
+                          width:94/3, height:74/3)
     
+    svgImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 94/3, height: 74/3)
+    svgImage = SVGKImage(named: "import_svg")
+    svgImage.size = svgImageView.bounds.size
+    svgImageView.image = svgImage.uiImage
     
-    
-    let abBase = UIView()
-    abBase.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-    abBase.layer.cornerRadius = 25
-    abBase.backgroundColor = .white
-    abBase.isUserInteractionEnabled = false
-    albumButton.addSubview(abBase)
-    
-    albumButton.addSubview(albumImageView)
+    albumButton.addSubview(svgImageView)
     albumButton.imageView?.contentMode = .scaleAspectFit
     albumButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(albumButton)
+    
+    
+    
+
+    infoButton = UIButton()
+    infoButton.frame = CGRect(x:screenWidth/2+80, y:screenHeight-124,
+                          width:94/3, height:94/3)
+    
+    svgImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 94/3, height: 94/3)
+    svgImage = SVGKImage(named: "info_svg")
+    svgImage.size = svgImageView.bounds.size
+    svgImageView.image = svgImage.uiImage
+    
+    infoButton.addSubview(svgImageView)
+    infoButton.imageView?.contentMode = .scaleAspectFit
+    infoButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
+    self.view.addSubview(infoButton)
 
     
     
     reverseButton = UIButton()
-    reverseButton.frame = CGRect(x:screenWidth-75, y:50,
-                          width:50, height:50)
-    var reverseImageView: UIImageView = UIImageView()
-    reverseImageView.frame = CGRect(x: 9, y: 9, width: 32, height: 32)
-    let reverseImage = SVGKImage(named: "ios-reverse-camera")
-    reverseImage?.size = reverseImageView.bounds.size
-    reverseImageView.image = reverseImage?.uiImage
+    reverseButton.frame = CGRect(x:screenWidth-100, y:30,
+                          width:89/3, height:81/3)
+    svgImageView = UIImageView()
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 89/3, height: 81/3)
+    svgImage = SVGKImage(named: "cam_svg")
+    svgImage.size = svgImageView.bounds.size
+    svgImageView.image = svgImage.uiImage
     
-    
-    
-    let rvBase = UIView()
-    rvBase.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-    rvBase.layer.cornerRadius = 25
-    rvBase.backgroundColor = .white
-    rvBase.isUserInteractionEnabled = false
-    reverseButton.addSubview(rvBase)
-    
-    reverseButton.addSubview(reverseImageView)
+    reverseButton.addSubview(svgImageView)
     reverseButton.imageView?.contentMode = .scaleAspectFit
     reverseButton.addTarget(self, action: #selector(reverseCamera(_:)), for: UIControl.Event.touchUpInside)
     self.view.addSubview(reverseButton)
@@ -244,7 +256,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         newVideoLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
 
         // horizontal flip
-        UIView.transition(with: self.view, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: { _ in
+        UIView.transition(with: self.view, duration: 1.0, options: [.transitionCrossDissolve], animations: nil, completion: { _ in
             // replace camera preview with new one
             self.imageView.layer.replaceSublayer(self.cameraPreviewLayer!, with: newVideoLayer)
             self.cameraPreviewLayer = newVideoLayer

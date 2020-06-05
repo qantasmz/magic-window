@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="99px" viewBox="0 0 107 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>flip</title>
+    <defs>
+        <filter x="-13.5%" y="-14.8%" width="127.0%" height="129.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="camera-main" transform="translate(-992.000000, -166.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#000000" stroke-width="0.2">
+            <g id="flip" filter="url(#filter-1)" transform="translate(1001.000000, 175.000000)">
+                <g id="camera-flip">
+                    <path d="M26.5,40.5 C26.5,50.426 34.574,58.5 44.5,58.5 C54.426,58.5 62.5,50.426 62.5,40.5 C62.5,30.574 54.426,22.5 44.5,22.5 C34.574,22.5 26.5,30.574 26.5,40.5 Z M44.5,26.5 C52.219,26.5 58.5,32.781 58.5,40.5 C58.5,48.219 52.219,54.5 44.5,54.5 C36.78,54.5 30.5,48.219 30.5,40.5 C30.5,32.781 36.78,26.5 44.5,26.5 Z M82.5,8.5 L44.5,8.5 C43.395,8.5 42.5,9.395 42.5,10.5 C42.5,11.605 43.395,12.5 44.5,12.5 L82.5,12.5 C83.604,12.5 84.5,13.396 84.5,14.5 L84.5,66.5 C84.5,67.604 83.604,68.5 82.5,68.5 L63.328,68.5 L67.914,63.914 C68.695,63.133 68.695,61.867 67.914,61.086 C67.133,60.305 65.867,60.305 65.086,61.086 L57.086,69.086 C56.305,69.867 56.305,71.133 57.086,71.914 L65.086,79.914 C65.477,80.305 65.988,80.5 66.5,80.5 C67.012,80.5 67.523,80.305 67.914,79.914 C68.695,79.133 68.695,77.867 67.914,77.086 L63.328,72.5 L82.5,72.5 C85.809,72.5 88.5,69.809 88.5,66.5 L88.5,14.5 C88.5,11.191 85.809,8.5 82.5,8.5 Z M44.5,68.5 L6.5,68.5 C5.396,68.5 4.5,67.604 4.5,66.5 L4.5,14.5 C4.5,13.396 5.396,12.5 6.5,12.5 L25.672,12.5 L21.086,17.086 C20.305,17.867 20.305,19.133 21.086,19.914 C21.477,20.305 21.988,20.5 22.5,20.5 C23.012,20.5 23.523,20.305 23.913,19.914 L31.913,11.914 C32.695,11.133 32.695,9.867 31.913,9.086 L23.913,1.086 C23.134,0.305 21.866,0.305 21.086,1.086 C20.305,1.867 20.305,3.133 21.086,3.914 L25.672,8.5 L6.5,8.5 C3.191,8.5 0.5,11.191 0.5,14.5 L0.5,66.5 C0.5,69.809 3.191,72.5 6.5,72.5 L44.5,72.5 C45.605,72.5 46.5,71.605 46.5,70.5 C46.5,69.395 45.605,68.5 44.5,68.5 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

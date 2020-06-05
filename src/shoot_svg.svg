@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="313px" height="313px" viewBox="0 0 313 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>camera button</title>
+    <defs>
+        <path d="M155.5,16 C233.648292,16 297,79.3517079 297,157.5 C297,235.648292 233.648292,299 155.5,299 C77.3517079,299 14,235.648292 14,157.5 C14,79.3517079 77.3517079,16 155.5,16 Z M155.5,25 C82.3222707,25 23,84.3222707 23,157.5 C23,230.677729 82.3222707,290 155.5,290 C228.677729,290 288,230.677729 288,157.5 C288,84.3222707 228.677729,25 155.5,25 Z" id="path-1"></path>
+        <filter x="-2.5%" y="-1.8%" width="104.9%" height="104.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="camera-main" transform="translate(-462.000000, -2081.000000)">
+            <g id="camera-button" transform="translate(462.000000, 2081.000000)">
+                <g id="Oval-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <path stroke="#000000" stroke-width="0.2" d="M155.5,16.1 C194.546532,16.1 229.896532,31.9267341 255.484899,57.5151011 C281.073266,83.1034682 296.9,118.453468 296.9,157.5 C296.9,196.546532 281.073266,231.896532 255.484899,257.484899 C229.896532,283.073266 194.546532,298.9 155.5,298.9 C116.453468,298.9 81.1034682,283.073266 55.5151011,257.484899 C29.9267341,231.896532 14.1,196.546532 14.1,157.5 C14.1,118.453468 29.9267341,83.1034682 55.5151011,57.5151011 C81.1034682,31.9267341 116.453468,16.1 155.5,16.1 Z M155.5,24.9 C118.883521,24.9 85.7335211,39.7417605 61.7376408,63.7376408 C37.7417605,87.7335211 22.9,120.883521 22.9,157.5 C22.9,194.116479 37.7417605,227.266479 61.7376408,251.262359 C85.7335211,275.258239 118.883521,290.1 155.5,290.1 C192.116479,290.1 225.266479,275.258239 249.262359,251.262359 C273.258239,227.266479 288.1,194.116479 288.1,157.5 C288.1,120.883521 273.258239,87.7335211 249.262359,63.7376408 C225.266479,39.7417605 192.116479,24.9 155.5,24.9 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
