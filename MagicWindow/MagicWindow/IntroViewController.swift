@@ -11,6 +11,11 @@ class IntroViewController: UIViewController {
     
     weak var  delegate:IntroViewDelegate? = nil
     
+    var _initFlg:Bool = false
+    var initialImage:UIImage!
+    var imageView:UIImageView!
+    var _name:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,14 +25,14 @@ class IntroViewController: UIViewController {
         
         
         
-
+        self.view.alpha = 0
         
         
-        let imageView = UIImageView()
+        imageView = UIImageView()
 
         imageView.contentMode = .scaleAspectFill
         imageView.frame = CGRect(x:0, y:0, width:screenWidth, height:screenHeight)
-        imageView.image = UIImage(named: "curated1")
+        //imageView.image = UIImage(named: "curated1")
         
         
         self.view.addSubview(imageView)
@@ -61,11 +66,10 @@ class IntroViewController: UIViewController {
         
         
         
-        let _name = UILabel(frame: CGRect(x: 0, y: screenHeight-45, width: screenWidth, height: 50/3))
+        _name = UILabel(frame: CGRect(x: 0, y: screenHeight-45, width: screenWidth, height: 50/3))
         _name.font = UIFont(name: "Helvetica-LightOblique", size: 42/3)
         _name.textAlignment = .center
         _name.textColor = .white
-        _name.text = "xxxxxxx"
         self.view.addSubview(_name)
         /*
         let _decBt = UIButton()
@@ -92,11 +96,39 @@ class IntroViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        if let _ = UserDefaults.standard.object(forKey: "num") as? Int {
+            //labelに表示
+            var _num = UserDefaults.standard.object(forKey: "num") as! Int
+            
+            if(_num == 1){
+                _initFlg = true
+            }
+        }
     }
-    
+    public func initialize(img:UIImage,author:String){
+        initialImage = img
+        //print(img)
+        //print(imageView)
+        imageView.image = initialImage
+        _name.text = author
+
+        self.view.alpha = 0
+        UIView.animate(withDuration: 0.5, delay:0.5,animations: {
+               self.view.alpha = 1
+          }, completion: { (finished: Bool) in
+          
+          })
+    }
+
     
     @objc func goToCamera(sender: UIButton!){
-        self.delegate?.goToTutorial()
+        if(_initFlg == true){
+            self.delegate?.goToCamera()
+        }else{
+
+            self.delegate?.goToTutorial()
+        }
         //self.delegate?.goToCamera()
     }
 

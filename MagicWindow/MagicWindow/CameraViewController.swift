@@ -16,12 +16,15 @@ protocol CameraViewDelegate:class {
     func goToSky()
 }
 
-class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, AboutViewDelegate {
+
 
     
     
     weak var  delegate:CameraViewDelegate? = nil
     
+    
+    var aboutView: AboutViewController!
     var captureSession = AVCaptureSession()
     var mainCamera: AVCaptureDevice?
     var innerCamera: AVCaptureDevice?
@@ -48,7 +51,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     var capturedImage:UIImage!
     
-
+    
+    var buttonUI:UIView!
     private var imagePicker = UIImagePickerController()
     
     
@@ -64,7 +68,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     SVProgressHUD.setRingThickness(2)
     SVProgressHUD.setForegroundColor(.white)
             
+    
 
+    aboutView = AboutViewController()
+    aboutView.delegate = self;
+    aboutView.modalPresentationStyle = .fullScreen
+    aboutView.modalTransitionStyle = .coverVertical
+    
+    
     imageView = UIImageView()
 
     imageView.contentMode = .scaleAspectFill
@@ -77,6 +88,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     imagePicker.delegate = self
     imagePicker.sourceType = .photoLibrary
 
+    
+    
+    buttonUI = UIView()
+    buttonUI.frame = CGRect(x:0, y:0, width:screenWidth, height:screenHeight)
+    
     
     var tmpImage:UIImage
     var tmpImageView:UIImageView
@@ -109,7 +125,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     //photoCameraButton.setImage(svgImage, for: .normal)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
     photoCameraButton.addTarget(self, action: #selector(captureCamera(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(photoCameraButton)
+    buttonUI.addSubview(photoCameraButton)
     // Enable camera option only if current device has camera.
     let isCameraAvailable = UIImagePickerController.isCameraDeviceAvailable(.front)
       || UIImagePickerController.isCameraDeviceAvailable(.rear)
@@ -119,25 +135,25 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
 
     albumButton = UIButton()
-    albumButton.frame = CGRect(x:screenWidth/2-145, y:screenHeight-124,
+    albumButton.frame = CGRect(x:screenWidth/2-110, y:screenHeight-110,
                           width:94/3, height:74/3)
     
     svgImageView = UIImageView()
     svgImageView.frame = CGRect(x: 0, y: 0, width: 94/3, height: 74/3)
-    svgImage = SVGKImage(named: "import_svg")
+    svgImage = SVGKImage(named: "import_svg2")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
     albumButton.addSubview(svgImageView)
     albumButton.imageView?.contentMode = .scaleAspectFit
     albumButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(albumButton)
+    buttonUI.addSubview(albumButton)
     
     
     
 
     infoButton = UIButton()
-    infoButton.frame = CGRect(x:screenWidth/2+80, y:screenHeight-124,
+    infoButton.frame = CGRect(x:screenWidth/2+75, y:screenHeight-114,
                           width:94/3, height:94/3)
     
     svgImageView = UIImageView()
@@ -148,13 +164,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     infoButton.addSubview(svgImageView)
     infoButton.imageView?.contentMode = .scaleAspectFit
-    infoButton.addTarget(self, action: #selector(openAlbum(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(infoButton)
+    infoButton.addTarget(self, action: #selector(openAbout(_:)), for: UIControl.Event.touchUpInside)
+    buttonUI.addSubview(infoButton)
 
     
     
     reverseButton = UIButton()
-    reverseButton.frame = CGRect(x:screenWidth-100, y:30,
+    reverseButton.frame = CGRect(x:screenWidth-50, y:50,
                           width:89/3, height:81/3)
     svgImageView = UIImageView()
     svgImageView.frame = CGRect(x: 0, y: 0, width: 89/3, height: 81/3)
@@ -165,9 +181,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     reverseButton.addSubview(svgImageView)
     reverseButton.imageView?.contentMode = .scaleAspectFit
     reverseButton.addTarget(self, action: #selector(reverseCamera(_:)), for: UIControl.Event.touchUpInside)
-    self.view.addSubview(reverseButton)
+    buttonUI.addSubview(reverseButton)
 
+    buttonUI.isHidden = true
+    buttonUI.alpha = 0
     
+    self.view.addSubview(buttonUI)
     
     setupCaptureSession()
     setupDevice()
@@ -223,7 +242,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
    @objc func captureCamera(_ sender : UIButton) {
-    
+    hideButton()
     delegate?.setInputImage(img: capturedImage)
     delegate?.goToSky()
    }
@@ -232,6 +251,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true)
+    }
+       
+    
+    @objc func openAbout(_ sender : UIButton) {
+        
+
+        present(aboutView, animated: true, completion: nil)
     }
        
     
@@ -278,10 +304,35 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-  }
     
 
+     
+  }
+    
+    public func showButton(){
+        buttonUI.isHidden = false
+        buttonUI.alpha = 0
+        
+        UIView.animate(withDuration: 0.5, animations: {
+                                                    
+            self.buttonUI.alpha = 1
 
+        }, completion: { (finished: Bool) in
+        })
+    }
+    
+
+    func hideButton(){
+        
+        UIView.animate(withDuration: 0.5, animations: {
+                                                    
+            self.buttonUI.alpha = 0
+
+        }, completion: { (finished: Bool) in
+
+            self.buttonUI.isHidden = true
+        })
+    }
 }
 
 
@@ -383,4 +434,81 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
 
     self.imageView.layer.addSublayer(self.cameraPreviewLayer!)
    }
+}
+
+extension CameraViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CustomPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+class CustomPresentationController: UIPresentationController {
+    // 呼び出し元のView Controller の上に重ねるオーバレイView
+    var overlayView = UIView()
+
+    // 表示トランジション開始前に呼ばれる
+    override func presentationTransitionWillBegin() {
+        guard let containerView = containerView else {
+            return
+        }
+        overlayView.frame = containerView.bounds
+        overlayView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(CustomPresentationController.overlayViewDidTouch(_:)))]
+        overlayView.backgroundColor = .black
+        overlayView.alpha = 0.0
+        containerView.insertSubview(overlayView, at: 0)
+
+        // トランジションを実行
+        presentedViewController.transitionCoordinator?.animate(alongsideTransition: {[weak self] context in
+            self?.overlayView.alpha = 0.7
+            }, completion:nil)
+    }
+
+    // 非表示トランジション開始前に呼ばれる
+    override func dismissalTransitionWillBegin() {
+        presentedViewController.transitionCoordinator?.animate(alongsideTransition: {[weak self] context in
+            self?.overlayView.alpha = 0.0
+            }, completion:nil)
+    }
+
+    // 非表示トランジション開始後に呼ばれる
+    override func dismissalTransitionDidEnd(_ completed: Bool) {
+        if completed {
+            overlayView.removeFromSuperview()
+        }
+    }
+
+    let margin = (x: CGFloat(30), y: CGFloat(220.0))
+    // 子のコンテナサイズを返す
+    override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+        return CGSize(width: parentSize.width - margin.x, height: parentSize.height - margin.y)
+    }
+
+    // 呼び出し先のView Controllerのframeを返す
+    override var frameOfPresentedViewInContainerView: CGRect {
+        var presentedViewFrame = CGRect()
+        let containerBounds = containerView!.bounds
+        let childContentSize = size(forChildContentContainer: presentedViewController, withParentContainerSize: containerBounds.size)
+        presentedViewFrame.size = childContentSize
+        presentedViewFrame.origin.x = margin.x / 2.0
+        presentedViewFrame.origin.y = margin.y / 2.0
+
+        return presentedViewFrame
+    }
+
+    // レイアウト開始前に呼ばれる
+    override func containerViewWillLayoutSubviews() {
+        overlayView.frame = containerView!.bounds
+        presentedView?.frame = frameOfPresentedViewInContainerView
+        presentedView?.layer.cornerRadius = 10
+        presentedView?.clipsToBounds = true
+    }
+
+    // レイアウト開始後に呼ばれる
+    override func containerViewDidLayoutSubviews() {
+    }
+
+    // overlayViewをタップした時に呼ばれる
+    @objc func overlayViewDidTouch(_ sender: UITapGestureRecognizer) {
+        presentedViewController.dismiss(animated: true, completion: nil)
+    }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 103 82" style="enable-background:new 0 0 103 82;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#filter-2);}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:0.15;}
+</style>
+<filter  filterUnits="objectBoundingBox" height="119.7%" id="filter-2" width="115.2%" x="-7.6%" y="-7.0%">
+	<feMorphology  in="SourceAlpha" operator="dilate" radius="0.075" result="shadowSpreadOuter1"></feMorphology>
+	<feOffset  dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	<feComposite  in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+	<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"></feColorMatrix>
+</filter>
+<title>import button</title>
+<g id="Magic-Sky-UI-v2">
+	<g id="camera-main" transform="translate(-265.000000, -2199.000000)">
+		<g id="import-button" transform="translate(269.000000, 2201.000000)">
+			<g id="gallery-icon" transform="translate(1.000000, 1.000000)">
+				<g id="Shape">
+					<g class="st0">
+						<path id="path-1_2_" d="M81.8,0H11.2C5,0,0,5,0,11.1v49.7C0,67,5,72,11.2,72h70.5c3,0,5.8-1.2,7.9-3.3s3.3-4.9,3.3-7.9V11.1
+							C93,5,88,0,81.8,0L81.8,0z M11.2,4.5h70.6c3.7,0,6.7,3,6.7,6.7v37.3L69.7,33.7c-0.8-0.7-2-0.6-2.9,0.1L47.4,50.5L22.4,22.4
+							c-0.4-0.5-1-0.7-1.7-0.7c-0.6,0-1.2,0.3-1.7,0.7L4.4,37.9V11.1c0-1.8,0.7-3.5,2-4.8S9.4,4.4,11.2,4.5L11.2,4.5z M81.8,67.5
+							H11.2c-3.7,0-6.7-3-6.7-6.7V44.4l16.2-17.2L45.6,55c0.8,0.9,2.2,1,3.2,0.2l19.6-16.9l20.2,15.8v6.8c0,1.8-0.7,3.5-2,4.7
+							C85.3,66.9,83.6,67.6,81.8,67.5z"/>
+					</g>
+					<g>
+						<path id="path-1_1_" class="st1" d="M81.8,0H11.2C5,0,0,5,0,11.1v49.7C0,67,5,72,11.2,72h70.5c3,0,5.8-1.2,7.9-3.3
+							s3.3-4.9,3.3-7.9V11.1C93,5,88,0,81.8,0L81.8,0z M11.2,4.5h70.6c3.7,0,6.7,3,6.7,6.7v37.3L69.7,33.7c-0.8-0.7-2-0.6-2.9,0.1
+							L47.4,50.5L22.4,22.4c-0.4-0.5-1-0.7-1.7-0.7c-0.6,0-1.2,0.3-1.7,0.7L4.4,37.9V11.1c0-1.8,0.7-3.5,2-4.8S9.4,4.4,11.2,4.5
+							L11.2,4.5z M81.8,67.5H11.2c-3.7,0-6.7-3-6.7-6.7V44.4l16.2-17.2L45.6,55c0.8,0.9,2.2,1,3.2,0.2l19.6-16.9l20.2,15.8v6.8
+							c0,1.8-0.7,3.5-2,4.7C85.3,66.9,83.6,67.6,81.8,67.5z"/>
+					</g>
+				</g>
+				<path id="Shape_1_" class="st1" d="M46,32c6.1,0,11-4.9,11-11s-4.9-11-11-11s-11,4.9-11,11S39.9,32,46,32L46,32z M46,14.4
+					c3.6,0,6.6,3,6.6,6.6s-3,6.6-6.6,6.6s-6.6-3-6.6-6.6c0-1.8,0.7-3.4,1.9-4.7C42.6,15.1,44.2,14.4,46,14.4L46,14.4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
