@@ -199,7 +199,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
-    photoCameraButton.frame = CGRect(x:15, y:50,width:135/3, height:135/3)
+    photoCameraButton.frame = CGRect(x:15, y:30,width:135/3, height:135/3)
 
     photoCameraButton.addSubview(svgImageView)
     photoCameraButton.imageView?.contentMode = .scaleAspectFit
@@ -411,7 +411,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     var _obj = createButton()
     var _objBt = _obj["button"] as! UIButton
-    _objBt.frame = CGRect(x:screenWidth-240/3, y:43,width:200/3, height:150/3)
+    _objBt.frame = CGRect(x:screenWidth-240/3, y:23,width:200/3, height:150/3)
     self.view.addSubview(_objBt)
     
     _objLabel = _obj["label"] as! UILabel

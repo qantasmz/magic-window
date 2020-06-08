@@ -79,10 +79,15 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      
      getPreset()
      
-     
+
+     self.setNeedsStatusBarAppearanceUpdate()
      
   }
     
+override var prefersStatusBarHidden: Bool {
+  return true
+}
+     
   override func viewDidAppear(_ animated: Bool) {
      super.viewDidAppear(animated)
      
