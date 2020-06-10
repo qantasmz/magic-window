@@ -29,7 +29,7 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      SVProgressHUD.setBackgroundColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0))
      SVProgressHUD.setRingThickness(2)
      SVProgressHUD.setForegroundColor(.white)
-     
+     //self.view.backgroundColor = .red
      
      
      sceneView = UIImageView(frame: view.bounds)
@@ -76,12 +76,12 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      imageLoadingView.isHidden = true
      self.view.addSubview(imageLoadingView)
      initialGif = NSMutableDictionary()
-     
      getPreset()
      
 
      self.setNeedsStatusBarAppearanceUpdate()
-     
+
+
   }
     
 override var prefersStatusBarHidden: Bool {
@@ -111,6 +111,7 @@ override var prefersStatusBarHidden: Bool {
           self.initialGif["url"] = nil
           self.initialGif["name"] = ""
           self.initialGif["author"] = ""
+          self.initialGif["num"] = nil
                
           self.skyView.setInitial(obj: self.initialGif)
           
@@ -132,7 +133,6 @@ override var prefersStatusBarHidden: Bool {
          let urlString = "http://origin.bassdrum.org/magicsky/def.json"
 
          guard let url = URLComponents(string: urlString) else { return }
-
          // HTTPメソッドを実行
          let task = URLSession.shared.dataTask(with: url.url!) {(data, response, error) in
              if (error != nil) {
@@ -162,7 +162,20 @@ override var prefersStatusBarHidden: Bool {
                self.initialGif["url"] = res.gifs[gifInt].url
                self.initialGif["name"] = res.gifs[gifInt].name
                self.initialGif["author"] = res.gifs[gifInt].author
+               self.initialGif["num"] = gifInt
                     
+                    var _dic = [NSMutableDictionary]()
+                    
+
+                    for count in 0...res.gifs.count-1 {
+                         let _obj = NSMutableDictionary()
+                         _obj["url"] = res.gifs[count].url
+                         _obj["name"] = res.gifs[count].name
+                         _obj["author"] = res.gifs[count].author
+                         _dic.append(_obj)
+                    }
+                    
+                    self.initialGif["dataset"] = _dic
                     
                     self.skyView.setInitial(obj: self.initialGif)
                  DispatchQueue.main.async {
@@ -262,14 +275,30 @@ override var prefersStatusBarHidden: Bool {
           cameraView.showButton()
      }
      func goToSky() {
+          
+         
+          
+          
           dismiss(animated: false, completion:  {
-               self.showSky()
+              self.showSky()
+          })
+     }
+     
+     func showSkyAgain() {
+          dismiss(animated: false, completion:  {
+               self.present(self.skyView, animated: false, completion: nil)
+
           })
      }
      func showSky() {
           present(skyView, animated: false, completion: nil)
-          skyView.startLoad()
-          skyView.initialize(img: inputImage)
+
+          self.skyView.clearView()
+          //self.skyView.initializeDef()
+          DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+               self.skyView.startLoad()
+               self.skyView.initialize(img: self.inputImage)
+          }
      }
      
      func backToCamera(){

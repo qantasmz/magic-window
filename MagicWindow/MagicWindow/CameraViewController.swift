@@ -135,7 +135,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
 
     albumButton = UIButton()
-    albumButton.frame = CGRect(x:screenWidth/2-110, y:screenHeight-110,
+    albumButton.frame = CGRect(x:screenWidth/2-120, y:screenHeight-110,
                           width:94/3, height:74/3)
     
     svgImageView = UIImageView()
@@ -153,7 +153,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
 
     infoButton = UIButton()
-    infoButton.frame = CGRect(x:screenWidth/2+75, y:screenHeight-114,
+    infoButton.frame = CGRect(x:screenWidth-65, y:30,
                           width:94/3, height:94/3)
     
     svgImageView = UIImageView()
@@ -170,7 +170,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     
     reverseButton = UIButton()
-    reverseButton.frame = CGRect(x:screenWidth-50, y:30,
+    reverseButton.frame = CGRect(x:screenWidth/2+85, y:screenHeight-113,
                           width:89/3, height:81/3)
     svgImageView = UIImageView()
     svgImageView.frame = CGRect(x: 0, y: 0, width: 89/3, height: 81/3)

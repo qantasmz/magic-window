@@ -28,12 +28,12 @@ class AboutViewController: UIViewController {
 
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 135/3, height: 135/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 70/3, height: 70/3)
     svgImage = SVGKImage(named: "peke2")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
-    closeButton.frame = CGRect(x:15, y:50,width:135/3, height:135/3)
+    closeButton.frame = CGRect(x:20, y:40,width:70/3, height:70/3)
 
     closeButton.addSubview(svgImageView)
     closeButton.imageView?.contentMode = .scaleAspectFit

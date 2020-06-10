@@ -65,12 +65,13 @@ class IntroViewController: UIViewController {
         self.view.addSubview(label)
         
         
-        
+        /*
         _name = UILabel(frame: CGRect(x: 0, y: screenHeight-45, width: screenWidth, height: 50/3))
         _name.font = UIFont(name: "Helvetica-LightOblique", size: 42/3)
         _name.textAlignment = .center
         _name.textColor = .white
         self.view.addSubview(_name)
+ */
         /*
         let _decBt = UIButton()
         
@@ -111,7 +112,7 @@ class IntroViewController: UIViewController {
         //print(img)
         //print(imageView)
         imageView.image = initialImage
-        _name.text = author
+        //_name.text = author
 
         self.view.alpha = 0
         UIView.animate(withDuration: 0.5, delay:0.5,animations: {

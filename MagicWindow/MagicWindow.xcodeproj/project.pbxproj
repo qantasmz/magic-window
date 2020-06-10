@@ -30,8 +30,10 @@
 		AD711487248ADC5600894922 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = AD711486248ADC5600894922 /* giphy.gif */; };
 		AD711489248ADC8800894922 /* def.png in Resources */ = {isa = PBXBuildFile; fileRef = AD711488248ADC8800894922 /* def.png */; };
 		AD71148B248B01F900894922 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD71148A248B01F900894922 /* AboutViewController.swift */; };
-		AD71148D248B045A00894922 /* peke2.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71148C248B045A00894922 /* peke2.svg */; };
 		AD71148F248B056500894922 /* magicsky_top_b.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71148E248B056500894922 /* magicsky_top_b.svg */; };
+		AD71149124902EB300894922 /* peke2.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71149024902EB200894922 /* peke2.svg */; };
+		AD71149524902FAA00894922 /* peke4.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71149424902FA900894922 /* peke4.svg */; };
+		AD7114992490321200894922 /* toggle2.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD7114982490321200894922 /* toggle2.svg */; };
 		AD7BA53A24805A11002295F0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53924805A11002295F0 /* IntroViewController.swift */; };
 		AD7BA53C24805A83002295F0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53B24805A83002295F0 /* CameraViewController.swift */; };
 		AD7BA53E24805AB6002295F0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */; };
@@ -92,8 +94,10 @@
 		AD711486248ADC5600894922 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../../src/giphy.gif; sourceTree = "<group>"; };
 		AD711488248ADC8800894922 /* def.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = def.png; path = ../../../src/def.png; sourceTree = "<group>"; };
 		AD71148A248B01F900894922 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		AD71148C248B045A00894922 /* peke2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = peke2.svg; path = ../../../src/peke2.svg; sourceTree = "<group>"; };
 		AD71148E248B056500894922 /* magicsky_top_b.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = magicsky_top_b.svg; path = ../../../src/magicsky_top_b.svg; sourceTree = "<group>"; };
+		AD71149024902EB200894922 /* peke2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = peke2.svg; path = ../../../src/peke2.svg; sourceTree = "<group>"; };
+		AD71149424902FA900894922 /* peke4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = peke4.svg; path = ../../../src/peke4.svg; sourceTree = "<group>"; };
+		AD7114982490321200894922 /* toggle2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = toggle2.svg; path = ../../../src/toggle2.svg; sourceTree = "<group>"; };
 		AD7BA53924805A11002295F0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		AD7BA53B24805A83002295F0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -205,8 +209,10 @@
 		ADA69B562475DAEE00672F65 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				AD7114982490321200894922 /* toggle2.svg */,
+				AD71149424902FA900894922 /* peke4.svg */,
+				AD71149024902EB200894922 /* peke2.svg */,
 				AD71148E248B056500894922 /* magicsky_top_b.svg */,
-				AD71148C248B045A00894922 /* peke2.svg */,
 				AD711488248ADC8800894922 /* def.png */,
 				AD711486248ADC5600894922 /* giphy.gif */,
 				AD711484248AD22E00894922 /* grad.svg */,
@@ -312,11 +318,11 @@
 				83BE4F0522B2AE7400C6C5AF /* clouds.png in Resources */,
 				AD711477248AC8D200894922 /* info_svg.svg in Resources */,
 				AD711472248AC8D200894922 /* dl_svg.svg in Resources */,
+				AD7114992490321200894922 /* toggle2.svg in Resources */,
 				AD9225FC246F202B0018EF02 /* save.png in Resources */,
 				837BFB8B22AAE6FC00010A93 /* Assets.xcassets in Resources */,
 				ADA69B5A2475DD5500672F65 /* download-sharp.svg in Resources */,
 				837BFB8922AAE6FB00010A93 /* Main.storyboard in Resources */,
-				AD71148D248B045A00894922 /* peke2.svg in Resources */,
 				AD8255F3248173CA0062507C /* arrow-back.svg in Resources */,
 				ADA69B5C2475DE6600672F65 /* image-sharp.svg in Resources */,
 				AD7BA54824806971002295F0 /* ios-reverse-camera.svg in Resources */,
@@ -343,7 +349,9 @@
 				AD71148F248B056500894922 /* magicsky_top_b.svg in Resources */,
 				AD8151672486F70100AA2181 /* ptpp.svg in Resources */,
 				AD711474248AC8D200894922 /* cam_svg.svg in Resources */,
+				AD71149524902FAA00894922 /* peke4.svg in Resources */,
 				AD81515C2486EE4B00AA2181 /* cloud3.svg in Resources */,
+				AD71149124902EB300894922 /* peke2.svg in Resources */,
 				83BE4F0422B2AE7400C6C5AF /* mountains.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,7 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 2SMAXGRFA3;
 				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -579,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 2SMAXGRFA3;
 				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>close</title>
+    <defs>
+        <path d="M39.9457473,231.000875 L68.9691985,201.979601 C70.3342667,200.614635 70.3342667,198.39569 68.9691985,197.030724 C67.6041302,195.665758 65.3850193,195.665758 64.019951,197.030724 L34.9964998,226.051999 L5.97304865,197.023724 C4.6079804,195.658759 2.38886944,195.658759 1.02380119,197.023724 C-0.341267063,198.38869 -0.341267063,200.607635 1.02380119,201.972601 L30.0472524,231.000875 L1.02380119,260.022149 C-0.341267063,261.387115 -0.341267063,263.60606 1.02380119,264.971026 C1.70283514,265.657009 2.59887994,266 3.49492475,266 C4.39096955,266 5.28701435,265.657009 5.97304865,264.978026 L34.9964998,235.949751 L64.019951,264.971026 C64.7059853,265.657009 65.6020301,266 66.4980749,266 C67.3941197,266 68.2901645,265.657009 68.9761988,264.978026 C70.3412671,263.61306 70.3412671,261.394115 68.9761988,260.029149 L39.9457473,231.000875 Z" id="path-1"></path>
+        <filter x="-10.1%" y="-7.3%" width="120.2%" height="120.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.075" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sky-Selection" transform="translate(4.000000, -194.000000)" fill-rule="nonzero">
+            <g id="sky-selection-Artists">
+                <g id="close">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#000000" stroke-width="0.15" fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

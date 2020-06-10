@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="96px" viewBox="0 0 77 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>noun_change_3322894</title>
+    <defs>
+        <path d="M0,24.2932596 C0,22.2511433 1.65850137,20.5956809 3.7043665,20.5956809 L56.3532928,20.5956809 L41.9976378,6.26633104 C40.5937858,4.81547923 40.6138629,2.50927763 42.0427623,1.08299656 C43.4716616,-0.34328451 45.7820968,-0.363324779 47.235612,1.03795478 L67.9133858,21.680304 C68.9714532,22.7377465 69.2877463,24.3269918 68.7149464,25.7078226 C68.1421465,27.0886535 66.7928972,27.9895238 65.2956335,27.9908383 L3.7043665,27.9908383 C1.65850137,27.9908383 0,26.3353759 0,24.2932596 L0,24.2932596 Z M65.2956335,59.9181977 L3.7043665,59.9181977 C2.20710278,59.9195122 0.857853454,60.8203825 0.285053589,62.2012133 C-0.287746276,63.5820442 0.028546823,65.1712894 1.08661417,66.2287319 L21.764388,86.8710812 C22.6944598,87.8322911 24.071756,88.2177859 25.3669115,87.8794004 C26.6620671,87.5410148 27.6735257,86.5314096 28.0125324,85.2386273 C28.3515391,83.9458449 27.9653367,82.5710725 27.0023622,81.6427049 L12.6467072,67.313355 L65.2956335,67.313355 C67.3414986,67.313355 69,65.6578927 69,63.6157763 C69,61.57366 67.3414986,59.9181977 65.2956335,59.9181977 L65.2956335,59.9181977 Z" id="path-1"></path>
+        <filter x="-10.1%" y="-5.7%" width="120.3%" height="115.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.0075" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Magic-Sky-UI-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sky-Selection" transform="translate(-1054.000000, -141.000000)" fill-rule="nonzero">
+            <g id="sky-selection-Artists">
+                <g id="noun_change_3322894" transform="translate(1058.000000, 143.000000)">
+                    <g id="Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#000000" stroke-width="0.015" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
