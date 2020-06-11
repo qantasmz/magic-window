@@ -129,8 +129,8 @@ override var prefersStatusBarHidden: Bool {
            */
      }
      private func getPreset(){
-
-         let urlString = "http://origin.bassdrum.org/magicsky/def.json"
+          let randomInt = Int.random(in: 1..<1000000)
+         let urlString = "http://origin.bassdrum.org/magicsky/def.json?ran="+String(randomInt)
 
          guard let url = URLComponents(string: urlString) else { return }
          // HTTPメソッドを実行
@@ -179,6 +179,7 @@ override var prefersStatusBarHidden: Bool {
                     
                     self.skyView.setInitial(obj: self.initialGif)
                  DispatchQueue.main.async {
+                    
                     self.setImage(from: res.imgs[imgInt].url,author:res.imgs[imgInt].author)
                     //print(res.imgs.count)
                     //self.initialize(img:)

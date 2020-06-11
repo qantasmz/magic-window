@@ -43,7 +43,7 @@ class AboutViewController: UIViewController {
     
     let logoImage:UIImage = UIImage(named:"magic")!
     let logoImageView = UIImageView(image:logoImage)
-    let rect:CGRect = CGRect(x: screenWidth/2-930/3/2, y: 160, width: 930/3, height: 460/3)
+    let rect:CGRect = CGRect(x: screenWidth/2-930/3/2, y: 160-70, width: 930/3, height: 460/3)
      logoImageView.contentMode = .scaleAspectFill
     logoImageView.frame = rect;
     self.view.addSubview(logoImageView)
@@ -101,7 +101,7 @@ class AboutViewController: UIViewController {
     let _label = UILabel()
     _label.numberOfLines = 0
     _label.textAlignment = .justified
-    _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340, width: 980/3, height: 300)
+    _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340-70, width: 980/3, height: 300)
     _label.attributedText = baseString
     self.view.addSubview(_label)
     

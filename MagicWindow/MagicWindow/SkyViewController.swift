@@ -572,19 +572,20 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     public func setInitial(obj:NSDictionary){
         if(obj["url"] != nil){
             _initialURL = obj["url"] as! String
+            gifObj = obj["dataset"] as! [NSDictionary]
+            rgifNum = obj["num"] as! Int
         }else{
             
             _initialDefURL = Bundle.main.url(forResource: "giphy", withExtension: "gif")
 
+            rgifNum = 0
             
         }
         
         _initialName = obj["name"] as! String
         _initialAuthor = obj["author"] as! String
-        gifObj = obj["dataset"] as! [NSDictionary]
         //配列
         //rgifNum = obj["num"] as! Int
-        rgifNum = obj["num"] as! Int
     }
     
     public func clearView(){
