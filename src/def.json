@@ -1,11 +1,15 @@
 {
 	"imgs": [{
 		"id": "0",
-		"url": "http://origin.bassdrum.org/magicsky/um.jpg",
+		"url": "http://origin.bassdrum.org/magicsky/t01.jpg",
 		"author": "matthieu"
 	}, {
 		"id": "1",
-		"url": "http://origin.bassdrum.org/magicsky/tower.jpg",
+		"url": "http://origin.bassdrum.org/magicsky/t02.jpg",
+		"author": "qanta"
+	}, {
+		"id": "2",
+		"url": "http://origin.bassdrum.org/magicsky/t03.jpg",
 		"author": "qanta"
 	}],
 

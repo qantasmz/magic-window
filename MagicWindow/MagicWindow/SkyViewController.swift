@@ -440,7 +440,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     let rect:CGRect = CGRect(x:0, y:0, width:414/3, height:278/3)
      imageLoadingView.contentMode = .scaleAspectFill
     imageLoadingView.frame = rect;
-    imageLoadingView.center = CGPoint(x:screenWidth/2, y:screenHeight/2-55)
+    imageLoadingView.center = CGPoint(x:screenWidth/2, y:screenHeight/2-50)
     imageLoadingView.isHidden = true
     self.view.addSubview(imageLoadingView)
     
@@ -611,7 +611,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         shareUI.isHidden = true
         skyUI.isHidden = false
         skyUI.alpha = 0
-        
+
+        self.upperView.image = inputImage
         
         //getGifList()
 
@@ -619,7 +620,6 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
         _objLabel.text = _initialName
         //_objSub.text = _initialAuthor
-         self.upperView.image = inputImage
         
     }
     

@@ -41,12 +41,20 @@ class AboutViewController: UIViewController {
     self.view.addSubview(closeButton)
     
     
+    var _hnum:Float = 0
+    
+    
+    
+    _hnum = 640
+    let core0:UIView = UIView(frame: CGRect(x: 0, y: screenHeight/2 - CGFloat(_hnum)/2, width: screenWidth, height: CGFloat(_hnum)))
+    
+    
     let logoImage:UIImage = UIImage(named:"magic")!
     let logoImageView = UIImageView(image:logoImage)
-    let rect:CGRect = CGRect(x: screenWidth/2-930/3/2, y: 160-70, width: 930/3, height: 460/3)
+    let rect:CGRect = CGRect(x: screenWidth/2-930/3/2, y: 160-50, width: 930/3, height: 460/3)
      logoImageView.contentMode = .scaleAspectFill
     logoImageView.frame = rect;
-    self.view.addSubview(logoImageView)
+    core0.addSubview(logoImageView)
     
     
 
@@ -101,19 +109,26 @@ class AboutViewController: UIViewController {
     let _label = UILabel()
     _label.numberOfLines = 0
     _label.textAlignment = .justified
-    _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340-70, width: 980/3, height: 300)
+    _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340-50, width: 980/3, height: 300)
     _label.attributedText = baseString
-    self.view.addSubview(_label)
-    
-    
+    core0.addSubview(_label)
+    self.view.addSubview(core0)
+    /*
     let cpImage:UIImage = UIImage(named:"logos")!
     let cpImageView = UIImageView(image:cpImage)
     let rectCp:CGRect = CGRect(x: screenWidth/2-914/3/2, y: screenHeight-209/3-60, width: 914/3, height: 209/3)
      cpImageView.contentMode = .scaleAspectFill
     cpImageView.frame = rectCp;
     self.view.addSubview(cpImageView)
-  }
+ */
     
+
+    self.setNeedsStatusBarAppearanceUpdate()
+  }
+    override var prefersStatusBarHidden: Bool {
+      return true
+    }
+         
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
   }

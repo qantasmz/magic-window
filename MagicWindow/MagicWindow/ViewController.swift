@@ -17,6 +17,9 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      
      var initialGif:NSMutableDictionary!
      var imageLoadingView: UIImageView!
+     
+
+     var upperView: UIImageView!
     
   override func viewDidLoad() {
      super.viewDidLoad()
@@ -72,13 +75,21 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      let rect:CGRect = CGRect(x:0, y:0, width:414/3, height:278/3)
       imageLoadingView.contentMode = .scaleAspectFill
      imageLoadingView.frame = rect;
-     imageLoadingView.center = CGPoint(x:screenWidth/2, y:screenHeight/2-55)
+     imageLoadingView.center = CGPoint(x:screenWidth/2, y:screenHeight/2-50)
      imageLoadingView.isHidden = true
      self.view.addSubview(imageLoadingView)
      initialGif = NSMutableDictionary()
      getPreset()
      
-
+     upperView = UIImageView(frame: view.bounds)
+     
+     upperView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
+     upperView.contentMode = .scaleAspectFill
+     upperView.backgroundColor = .clear
+     upperView.alpha = 0
+     self.view.addSubview(upperView)
+     
+     
      self.setNeedsStatusBarAppearanceUpdate()
 
 
@@ -279,7 +290,6 @@ override var prefersStatusBarHidden: Bool {
           
          
           
-          
           dismiss(animated: false, completion:  {
               self.showSky()
           })
@@ -299,6 +309,8 @@ override var prefersStatusBarHidden: Bool {
           DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
                self.skyView.startLoad()
                self.skyView.initialize(img: self.inputImage)
+
+               self.upperView.alpha = 0
           }
      }
      
@@ -323,6 +335,8 @@ override var prefersStatusBarHidden: Bool {
      
      func setInputImage(img:UIImage){
           inputImage = img
+          upperView.alpha = 1
+          upperView.image = inputImage
      }
      
      

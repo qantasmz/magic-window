@@ -16,6 +16,8 @@ class IntroViewController: UIViewController {
     var imageView:UIImageView!
     var _name:UILabel!
     
+    var label:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +44,7 @@ class IntroViewController: UIViewController {
         
         
         let _cov = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-         _cov.alpha = 0.4
+         _cov.alpha = 0.46
          _cov.backgroundColor = .black
          self.view.addSubview(_cov)
         
@@ -57,14 +59,17 @@ class IntroViewController: UIViewController {
         
         
         
-        let label = UILabel(frame: CGRect(x: 0, y: screenHeight-170, width: screenWidth, height: 77/3))
+        label = UILabel(frame: CGRect(x: 0, y: screenHeight-170, width: screenWidth, height: 77/3))
         label.font = UIFont(name: "Helvetica", size: 64/3)
         label.textAlignment = .center
         label.textColor = .white
         label.text = "tap to create"
         self.view.addSubview(label)
         
+
+        self.label.alpha = 1.0
         
+        startBlink()
         /*
         _name = UILabel(frame: CGRect(x: 0, y: screenHeight-45, width: screenWidth, height: 50/3))
         _name.font = UIFont(name: "Helvetica-LightOblique", size: 42/3)
@@ -93,6 +98,19 @@ class IntroViewController: UIViewController {
         _decBt.frame = CGRect(x:0, y:0, width:screenWidth, height:screenHeight)
         _decBt.addTarget(self, action: #selector(self.goToCamera), for: .touchUpInside)
         self.view.addSubview(_decBt)
+    }
+    
+    func startBlink(){
+        
+        UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+            self.label.alpha = 0
+        }, completion: { _ in
+            UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+                self.label.alpha = 1
+            }, completion: { _ in
+                self.startBlink()
+            })
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {

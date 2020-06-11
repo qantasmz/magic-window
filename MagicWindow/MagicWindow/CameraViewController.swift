@@ -171,9 +171,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     reverseButton = UIButton()
     reverseButton.frame = CGRect(x:screenWidth/2+85, y:screenHeight-113,
-                          width:89/3, height:81/3)
+                          width:89/3*1.05, height:81/3*1.05)
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 89/3, height: 81/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 89/3*1.05, height: 81/3*1.05)
     svgImage = SVGKImage(named: "cam_svg")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
@@ -250,7 +250,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     delegate?.setInputImage(img: capturedImage)
     delegate?.goToSky()
-    
     
    }
     @objc func openAlbum(_ sender : UIButton) {
