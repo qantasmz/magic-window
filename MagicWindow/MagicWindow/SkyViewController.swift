@@ -20,7 +20,8 @@ protocol SkyViewDelegate:class {
 
 class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
-    
+    var impUrl:URL!
+    var controller: UIDocumentInteractionController! = nil
     
     weak var  delegate:SkyViewDelegate? = nil
     
@@ -154,6 +155,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
 
     _core = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+    _core.backgroundColor = .clear
     self.view.addSubview(_core)
     
     backgroundWrapperView = UIScrollView()
@@ -303,7 +305,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
        _toggleBt = UIButton()
-       _toggleBt.frame = CGRect(x:screenWidth-50, y:35,
+       _toggleBt.frame = CGRect(x:screenWidth-40, y:35,
                              width:69/3, height:88/3)
        
        svgImageView = UIImageView()
@@ -330,7 +332,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     let _gifBt = UIButton()
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 102/3, height: 102/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 102/3*1.1, height: 102/3*1.1)
     svgImage = SVGKImage(named: "gif_svg")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
@@ -338,7 +340,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     
     _gifBt.addSubview(svgImageView)
-    _gifBt.frame = CGRect(x:screenWidth/5-102/3/2, y:215/3, width:102/3, height:102/3)
+    _gifBt.frame = CGRect(x:70-102/3/2*1.1, y:215/3, width:102/3*1.1, height:102/3*1.1)
     _gifBt.addTarget(self, action: #selector(self.gifButtonTapped), for: .touchUpInside)
     skyUI.addSubview(_gifBt)
     
@@ -346,13 +348,13 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     let _impBt = UIButton()
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 96/3, height: 96/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 96/3*1.1, height: 96/3*1.1)
     svgImage = SVGKImage(named: "plus_svg")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
     _impBt.addSubview(svgImageView)
-    _impBt.frame = CGRect(x:screenWidth/5*2-96/3/2, y:215/3, width:96/3, height:96/3)
+    _impBt.frame = CGRect(x:70+(screenWidth-140)/3-96/3/2*1.1, y:215/3, width:96/3*1.1, height:96/3*1.1)
     _impBt.addTarget(self, action: #selector(self.importButtonTapped), for: .touchUpInside)
     skyUI.addSubview(_impBt)
     
@@ -367,15 +369,15 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 94/3, height: 101/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 94/3*1.1, height: 101/3*1.1)
     svgImage = SVGKImage(named: "dl_svg")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
     _saveGifBt.addSubview(svgImageView)
 
-    _saveGifBt.frame = CGRect(x:screenWidth/5*3-94/3/2, y:212/3, width: 94/3, height: 101/3)
-    _saveGifBt.addTarget(self, action: #selector(self.saveGif), for: .touchUpInside)
+    _saveGifBt.frame = CGRect(x:70+(screenWidth-140)/3*2-94/3/2*1.1, y:212/3, width: 94/3*1.1, height: 101/3*1.1)
+    _saveGifBt.addTarget(self, action: #selector(self.saveVideo), for: .touchUpInside)
     
     
     skyUI.addSubview(_saveGifBt)
@@ -387,13 +389,13 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     let _shareVideoBt = UIButton()
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: 0, y: 0, width: 101/3, height: 69/3)
+    svgImageView.frame = CGRect(x: 0, y: 0, width: 101/3*1.1, height: 69/3*1.1)
     svgImage = SVGKImage(named: "share_svg")
     svgImage.size = svgImageView.bounds.size
     svgImageView.image = svgImage.uiImage
     
     _shareVideoBt.addSubview(svgImageView)
-    _shareVideoBt.frame = CGRect(x:screenWidth/5*4-94/3/2, y:222/3, width: 101/3, height: 69/3)
+    _shareVideoBt.frame = CGRect(x:70+(screenWidth-140)/3*3-101/3/2*1.1, y:222/3, width: 101/3*1.1, height: 69/3*1.1)
     _shareVideoBt.addTarget(self, action: #selector(self.shareVideo), for: .touchUpInside)
     
     
@@ -458,7 +460,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     var _obj = createButton()
     var _objBt = _obj["button"] as! UIButton
-    _objBt.frame = CGRect(x:screenWidth/2-450/3/2, y:30,width:450/3, height:150/3)
+    _objBt.frame = CGRect(x:screenWidth/2-700/3/2, y:30,width:700/3, height:150/3)
     self.view.addSubview(_objBt)
     
     _objLabel = _obj["label"] as! UILabel
@@ -467,6 +469,10 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
   }
     
+    func setLabelFrame(label:UILabel){
+        
+        label.makeOutLine(strokeWidth: -3.0, oulineColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.7), foregroundColor: .white)
+    }
     
     func createButton() -> NSDictionary {
 
@@ -476,23 +482,22 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         
         let label = UILabel()
-        label.frame = CGRect(x: 0, y: 0, width: 450/3, height: 138/3)
+        label.frame = CGRect(x: 0, y: 0, width: 700/3, height: 138/3)
         label.textAlignment = .center
         let font = UIFont(name: "Helvetica-BoldOblique", size: 55/3)
         label.font = font
         label.textColor = .white
-        
         button.addSubview(label)
         
         
         let sub = UILabel()
-        sub.frame = CGRect(x: 0, y: 18, width: 200/3, height: 138/3)
+        sub.frame = CGRect(x: 0, y: 18, width: 700/3, height: 138/3)
         sub.textAlignment = .center
         let fontSub = UIFont(name: "Helvetica", size: 40/3)
         sub.font = fontSub
         sub.textColor = .white
         
-        //button.addSubview(sub)
+        button.addSubview(sub)
 
     
           let _cov = UIView(frame: CGRect(x: 0, y: 0, width: 200/3, height: 150/3))
@@ -619,6 +624,15 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         self.renderFirstView()
         
         _objLabel.text = _initialName
+        
+        setLabelFrame(label: _objLabel)
+        _objLabel.numberOfLines = 0
+        var rect: CGSize = _objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
+        _objLabel.frame = CGRect(x: 0, y: 10, width: 700/3, height: rect.height)
+        _objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
+        _objSub.text = ""
+        
+        setLabelFrame(label: _objSub)
         //_objSub.text = _initialAuthor
         
     }
@@ -760,7 +774,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
         let rate:CGFloat = screenHeight/screenWidth
         
-        let _wid:CGFloat = 1280
+        let _wid:CGFloat = 800
         let _hgt:CGFloat = _wid * rate
         
         var size:CGSize = CGSize(width:_wid,height:_hgt)
@@ -837,8 +851,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
             
-            if _psec < 13 {
-                SVProgressHUD.showProgress(Float(Float(_psec)/13*0.5+0.5))
+            if _psec < 6 {
+                SVProgressHUD.showProgress(Float(Float(_psec)/6*0.5+0.5))
                 
                 //for image in self.images {
                 if(opCount < self.images.count){
@@ -878,6 +892,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     func showActivity(activityItems:[Any]){
         
+
+        
         let activityVc = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
         present(activityVc, animated: true, completion: nil)
@@ -888,6 +904,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     }
     func finishVideoGeneration(writerInput: AVAssetWriterInput,videoWriter: AVAssetWriter, durationForEachImage:Int,fps:__int32_t,frameCount:Int,url:URL){
         
+        impUrl = url
         // 動画生成終了
         writerInput.markAsFinished()
         videoWriter.endSession(atSourceTime: CMTimeMake(value: Int64((__int32_t(frameCount)) *  __int32_t(durationForEachImage)), timescale: fps))
@@ -899,13 +916,58 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             
             if(self._saveStat == 1 ) {
              DispatchQueue.main.async {
-                self.hideHud()
-                let text = "Magic Window"
-                let items = [text,url] as [Any]//動画のパスを渡す
+                
+                let task = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
+                      let url = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("tmp.mp4")
+                      let _nd = data as! NSData
+                      var _success = _nd.write(to: url!, atomically: true)
 
-                self.showActivity(activityItems: items)
-                // UIActivityViewControllerインスタンス化
-                //url
+                do {
+                    try data?.write(to: self.impUrl!)
+                    self.controller = UIDocumentInteractionController.init(url: self.impUrl!)
+                    self.controller.delegate = self
+                    self.controller.uti = "public.video"
+                } catch {
+                    print("error")
+                }
+                    
+
+                    DispatchQueue.main.async {
+                        
+                        
+                    if !self.controller!.presentOpenInMenu(from: self.view.frame, in: self.view, animated: true) {
+                    print("対応するアプリがありません")
+                }
+ 
+
+                        self.hideHud()
+                    }
+
+                    /*
+                      PHPhotoLibrary.shared().performChanges({
+                                            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url!)
+                                         }, completionHandler:  { success, error in
+                                            if !success { NSLog("error creating asset: \(error)") }else{
+
+                                               DispatchQueue.main.async {
+                                                self.hideHud()
+
+                                                let text = "Magic Window"
+                                                let items = [text,url!] as [Any]//動画のパスを渡す
+
+                                                self.showActivity(activityItems: items)
+                                                
+                                                
+                                               }
+                                               
+                                            }
+                                        })
+ */
+                   
+                    
+                })
+                   task.resume()
+
              }
             }else if(self._saveStat == 2 ){
                 
@@ -1056,6 +1118,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
                             DispatchQueue.main.async {
                             self.hideHud()
+                                
+
+                                let text = "Magic Window"
+                                let items = [text,url!] as [Any]//動画のパスを渡す
+
+                                self.showActivity(activityItems: items)
                             }
                            
                         }
@@ -1084,6 +1152,16 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         //self.setGif(id:self.gifList.data[nextInt].id)
         
         _objLabel.text = _initialName
+        setLabelFrame(label: _objLabel)
+        _objLabel.numberOfLines = 0
+        var rect: CGSize = _objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
+        _objLabel.frame = CGRect(x: 0, y: 10, width: 700/3, height: rect.height)
+
+        
+        _objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
+        _objSub.text = ""
+        
+        setLabelFrame(label: _objSub)
         //_objSub.text = _initialAuthor
         
         setGifFromURL(url:_initialURL)
@@ -1113,6 +1191,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     }
     @objc func tapCamera(_ sender : UIButton){
         if(_uiStat == 0){
+
+            _core.backgroundColor = .clear
             delegate!.backToCamera()
         }else{
             _uiStat = 0
@@ -1288,6 +1368,16 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
 
         self._objLabel.text = "imported"
+        
+        setLabelFrame(label: self._objLabel)
+        self._objLabel.numberOfLines = 0
+        var rect: CGSize = _objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
+        _objLabel.frame = CGRect(x: 0, y: 10, width: 700/3, height: rect.height)
+        
+        _objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
+        self._objSub.text = ""
+        
+        setLabelFrame(label: self._objSub)
         self.setFrameFlag()
         
         setScroll()
@@ -1571,7 +1661,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
               
             self.hideHud(s:1)
-              
+            self._core.backgroundColor = .white
               UIView.animate(withDuration: 0.5, animations: {
                                                         
                                                         
@@ -1653,7 +1743,17 @@ extension SkyViewController: GiphyDelegate {
     func didSelectMedia(giphyViewController: GiphyViewController, media: GPHMedia) {
         giphyViewController.dismiss(animated: true, completion: { [weak self] in
             self!.setGif(id:media.id)
-            self?._objLabel.text = "Giphy"
+            self!._objLabel.text = media.title
+
+            self!.setLabelFrame(label: self!._objLabel)
+            self!._objLabel.numberOfLines = 0
+            var rect: CGSize = self!._objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
+            self!._objLabel.frame = CGRect(x: 0, y: 10, width: 700/3, height: rect.height)
+
+            self?._objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
+            self?._objSub.text = "powered by Giphy"
+
+             self!.setLabelFrame(label:  self!._objSub)
             /*
             self?.addMessageToConversation(text: nil, media: media)
             guard self?.conversation.count ?? 0 > 7 else { return }
@@ -1717,9 +1817,17 @@ extension SkyViewController: UIScrollViewDelegate {
  */
 
 
-extension SkyViewController: UIScrollViewDelegate {
+extension SkyViewController: UIScrollViewDelegate,UIDocumentInteractionControllerDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.backgroundCoreView
+    }
+    
+    public func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+           return self
+    }
+
+    public func documentInteractionControllerDidEndPreview(_ controller: UIDocumentInteractionController) {
+        self.controller = nil
     }
 }
 /*
@@ -1905,3 +2013,21 @@ extension SkyViewController: UIScrollViewDelegate {
     }
 }
 */
+extension UILabel{
+
+    /// makeOutLine
+    ///
+    /// - Parameters:
+    ///   - strokeWidth: 線の太さ。負数
+    ///   - oulineColor: 線の色
+    ///   - foregroundColor: 縁取りの中の色
+    func makeOutLine(strokeWidth: CGFloat, oulineColor: UIColor, foregroundColor: UIColor) {
+        let strokeTextAttributes = [
+            .strokeColor : oulineColor,
+            .foregroundColor : foregroundColor,
+            .strokeWidth : strokeWidth,
+            .font : self.font
+        ] as [NSAttributedString.Key : Any]
+        self.attributedText = NSMutableAttributedString(string: self.text ?? "", attributes: strokeTextAttributes)
+    }
+}

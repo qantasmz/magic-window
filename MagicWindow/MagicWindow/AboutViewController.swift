@@ -11,6 +11,8 @@ protocol AboutViewDelegate:class {
 class AboutViewController: UIViewController {
 
     weak var  delegate:AboutViewDelegate? = nil
+    
+    var _label:UITextView!
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -73,9 +75,10 @@ class AboutViewController: UIViewController {
     
     baseString.append(attributedString)
     
-     _txt = "Fake Artists, "
+     _txt = "FAKE ARTISTS, "
     attrs = [NSAttributedString.Key.font :  UIFont(name: "Helvetica-Bold", size: 72/3)!]
     attributedString = NSMutableAttributedString(string:_txt, attributes:attrs)
+    
     
     baseString.append(attributedString)
     
@@ -85,7 +88,7 @@ class AboutViewController: UIViewController {
     
     baseString.append(attributedString)
     
-     _txt = "Bassdrum"
+     _txt = "BASSDRUM"
     attrs = [NSAttributedString.Key.font :  UIFont(name: "Helvetica-Bold", size: 72/3)!]
     attributedString = NSMutableAttributedString(string:_txt, attributes:attrs)
     
@@ -106,13 +109,35 @@ class AboutViewController: UIViewController {
     
     baseString.append(attributedString)
     
-    let _label = UILabel()
-    _label.numberOfLines = 0
+    let originString:NSString = baseString.mutableString
+    
+    baseString.addAttribute(.link,value: "https://www.fakeartists.studio/",range: NSString(string: originString).range(of: "FAKE ARTISTS"))
+    baseString.addAttribute(.link,value: "https://bassdrum.org/",range: NSString(string: originString).range(of: "BASSDRUM"))
+    baseString.addAttribute(.link,value: "http://dosomethinggood.co/",range: NSString(string: originString).range(of: "Do Something Good"))
+
+
+    /*
+     baseString.addAttribute(.underlineStyle,value: UIColor.black,range: NSString(string: originString).range(of: "FAKE ARTISTS"))
+    baseString.addAttribute(.underlineStyle,value: UIColor.black,range: NSString(string: originString).range(of: "BASSDRUM"))
+    baseString.addAttribute(.underlineStyle,value: UIColor.black,range: NSString(string: originString).range(of: "Do Something Good"))
+    */
+    
+    _label = UITextView()
+    _label.isEditable = false
+    //_label.numberOfLines = 0
     _label.textAlignment = .justified
     _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340-50, width: 980/3, height: 300)
+    let linkAttributes: [NSAttributedString.Key : Any] = [
+        NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.underlineColor: UIColor.clear,
+        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+    ]
+    
+    _label.linkTextAttributes = linkAttributes
     _label.attributedText = baseString
     core0.addSubview(_label)
     self.view.addSubview(core0)
+    
     /*
     let cpImage:UIImage = UIImage(named:"logos")!
     let cpImageView = UIImageView(image:cpImage)
@@ -125,6 +150,7 @@ class AboutViewController: UIViewController {
 
     self.setNeedsStatusBarAppearanceUpdate()
   }
+    
     override var prefersStatusBarHidden: Bool {
       return true
     }

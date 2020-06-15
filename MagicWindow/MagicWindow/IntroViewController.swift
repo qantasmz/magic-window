@@ -143,9 +143,9 @@ class IntroViewController: UIViewController {
     
     @objc func goToCamera(sender: UIButton!){
         if(_initFlg == true){
-           self.delegate?.goToCamera()
+           //self.delegate?.goToCamera()
             
-            //self.delegate?.goToTutorial()
+            self.delegate?.goToTutorial()
         }else{
 
             self.delegate?.goToTutorial()
