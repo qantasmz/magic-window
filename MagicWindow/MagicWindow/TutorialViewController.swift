@@ -42,7 +42,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     view0.backgroundColor = UIColor(red: 0/255, green: 53/255, blue: 255/255, alpha: 1)
     
     
-    _hnum = 515 + 270/3
+    _hnum = 600 + 270/3
     let core0:UIView = UIView(frame: CGRect(x: 0, y: screenHeight/2 - CGFloat(_hnum)/2, width: screenWidth, height: CGFloat(_hnum)))
     
     let label = UILabel(frame: CGRect(x: 0, y: 250 - 150, width: screenWidth, height: 114/3))
@@ -61,12 +61,12 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     core0.addSubview(svgImageView)
     
-    let lbl0 = UILabel(frame: CGRect(x: 0, y: 515 - 150, width: screenWidth, height: 270/3))
-    lbl0.font = UIFont(name: "Helvetica", size: 75/3)
+    let lbl0 = UILabel(frame: CGRect(x: 0, y: 515 - 165, width: screenWidth, height: 270/3))
+    lbl0.font = UIFont(name: "Helvetica", size: 65/3)
     lbl0.textAlignment = .center
     lbl0.textColor = .white
     lbl0.numberOfLines = 0
-    lbl0.text = "turn the sky into a\nplayground for your\ncreativity"
+    lbl0.text = "turn the sky into a playground for\nyour creativity!"
     core0.addSubview(lbl0)
     
     
@@ -79,19 +79,19 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     view1.backgroundColor = UIColor(red: 0/255, green: 53/255, blue: 255/255, alpha: 1)
     
     
-    _hnum = 400 + 270/3
+    _hnum = 600 + 270/3
     let core1:UIView = UIView(frame: CGRect(x: 0, y: screenHeight/2 - CGFloat(_hnum)/2, width: screenWidth, height: CGFloat(_hnum)))
     
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: screenWidth/2-276/3/2, y: 250 - 150, width: 276/3, height: 155/3)
+    svgImageView.frame = CGRect(x: screenWidth/2-276/3/2, y: 250 - 50, width: 276/3, height: 155/3)
     let svgImage1 = SVGKImage(named: "cloud2")
     svgImage1!.size = svgImageView.bounds.size
     svgImageView.image = svgImage1?.uiImage
     
     core1.addSubview(svgImageView)
     
-    let lead1 = UILabel(frame: CGRect(x: 0, y: 335 - 150, width: screenWidth, height: 40))
+    let lead1 = UILabel(frame: CGRect(x: 0, y: 335 - 50, width: screenWidth, height: 40))
      lead1.font = UIFont(name: "Helvetica-Bold", size: 75/3)
      lead1.textAlignment = .center
      lead1.textColor = .white
@@ -100,12 +100,12 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
      
 
 
-    let lbl1 = UILabel(frame: CGRect(x: 0, y: 400 - 150, width: screenWidth, height: 270/3))
-     lbl1.font = UIFont(name: "Helvetica", size: 75/3)
+    let lbl1 = UILabel(frame: CGRect(x: 0, y: 532 - 165, width: screenWidth, height: 270/3))
+     lbl1.font = UIFont(name: "Helvetica", size: 65/3)
      lbl1.textAlignment = .center
      lbl1.textColor = .white
      lbl1.numberOfLines = 0
-     lbl1.text = "capture an outdoor pic\nwith our camera or import\none of your own"
+     lbl1.text = "capture an outdoor pic with\nour camera or import one of\nyour own"
      core1.addSubview(lbl1)
      
     
@@ -119,19 +119,19 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     view2.backgroundColor = UIColor(red: 0/255, green: 53/255, blue: 255/255, alpha: 1)
     
     
-    _hnum = 400 + 360/3
+    _hnum = 600 + 270/3
     let core2:UIView = UIView(frame: CGRect(x: 0, y: screenHeight/2 - CGFloat(_hnum)/2, width: screenWidth, height: CGFloat(_hnum)))
     
     
     svgImageView = UIImageView()
-    svgImageView.frame = CGRect(x: screenWidth/2-252/3/2, y: 250 - 150, width: 252/3, height: 155/3)
+    svgImageView.frame = CGRect(x: screenWidth/2-252/3/2, y: 250 - 50, width: 252/3, height: 155/3)
     let svgImage2 = SVGKImage(named: "cloud3")
     svgImage2!.size = svgImageView.bounds.size
     svgImageView.image = svgImage2?.uiImage
     
     core2.addSubview(svgImageView)
     
-    let lead2 = UILabel(frame: CGRect(x: 0, y: 335 - 150, width: screenWidth, height: 40))
+    let lead2 = UILabel(frame: CGRect(x: 0, y: 335 - 50, width: screenWidth, height: 40))
      lead2.font = UIFont(name: "Helvetica-Bold", size: 75/3)
      lead2.textAlignment = .center
      lead2.textColor = .white
@@ -139,16 +139,16 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
      core2.addSubview(lead2)
     
     
-    let lbl2 = UILabel(frame: CGRect(x: 0, y: 400 - 150, width: screenWidth, height: 360/3))
-      lbl2.font = UIFont(name: "Helvetica", size: 75/3)
+    let lbl2 = UILabel(frame: CGRect(x: 0, y: 532 - 165, width: screenWidth, height: 360/3))
+      lbl2.font = UIFont(name: "Helvetica", size: 65/3)
       lbl2.textAlignment = .center
       lbl2.textColor = .white
       lbl2.numberOfLines = 0
-      lbl2.text = "select a visual from our artists,\ncor search for your own.\n\nMove it, resize it and voila! "
+      lbl2.text = "select a visual from our artists, or\nsearch for your own.\n\nmove it, resize it and voila! "
       core2.addSubview(lbl2)
     
-    tap = UILabel(frame: CGRect(x: 0, y: screenHeight - 150, width: screenWidth, height: 40))
-     tap.font = UIFont(name: "Helvetica-Bold", size: 100/3)
+    tap = UILabel(frame: CGRect(x: 0, y: screenHeight - 200, width: screenWidth, height: 40))
+     tap.font = UIFont(name: "Helvetica-Bold", size: 75/3)
      tap.textAlignment = .center
      tap.textColor = .white
      tap.text = "TAP TO CREATE"
@@ -189,10 +189,10 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
   }
     func startBlink(){
         
-        UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+        UIView.animate(withDuration:1.6, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
             self.tap.alpha = 0
         }, completion: { _ in
-            UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+            UIView.animate(withDuration:1.6, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
                 self.tap.alpha = 1
             }, completion: { _ in
                 self.startBlink()

@@ -14,8 +14,8 @@
             filePath = "MagicWindow/SkyViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MagicWindow/SkyViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "923"
-            endingLineNumber = "923"
+            startingLineNumber = "956"
+            endingLineNumber = "956"
             landmarkName = "finishVideoGeneration(writerInput:videoWriter:durationForEachImage:fps:frameCount:url:)"
             landmarkType = "7">
          </BreakpointContent>

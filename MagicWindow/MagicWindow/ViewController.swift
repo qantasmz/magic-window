@@ -70,6 +70,15 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      shareView.modalPresentationStyle = .overCurrentContext
      shareView.modalTransitionStyle = .crossDissolve
      
+     
+     upperView = UIImageView(frame: view.bounds)
+     
+     upperView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
+     upperView.contentMode = .scaleAspectFill
+     upperView.backgroundColor = .clear
+     upperView.alpha = 0
+     self.view.addSubview(upperView)
+     
      let imageLoading:UIImage = UIImage(named:"cloud")!
      imageLoadingView = UIImageView(image:imageLoading)
      let rect:CGRect = CGRect(x:0, y:0, width:414/3, height:278/3)
@@ -80,14 +89,6 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      self.view.addSubview(imageLoadingView)
      initialGif = NSMutableDictionary()
      getPreset()
-     
-     upperView = UIImageView(frame: view.bounds)
-     
-     upperView.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-     upperView.contentMode = .scaleAspectFill
-     upperView.backgroundColor = .clear
-     upperView.alpha = 0
-     self.view.addSubview(upperView)
      
      
      self.setNeedsStatusBarAppearanceUpdate()
@@ -311,10 +312,16 @@ override var prefersStatusBarHidden: Bool {
                self.skyView.initialize(img: self.inputImage)
 
                self.upperView.alpha = 0
+
+               //self.hideHud()
           }
      }
      
      func backToCamera(){
+
+          self.imageLoadingView.alpha = 0
+
+          self.imageLoadingView.isHidden = true
           dismiss(animated: true, completion:  {
                self.showCamera()
           })
@@ -334,6 +341,7 @@ override var prefersStatusBarHidden: Bool {
      }
      
      func setInputImage(img:UIImage){
+          showHud()
           inputImage = img
           upperView.alpha = 1
           upperView.image = inputImage

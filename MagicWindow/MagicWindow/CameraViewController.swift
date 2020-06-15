@@ -242,6 +242,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
    @objc func captureCamera(_ sender : UIButton) {
+    
     hideButton()
     
 

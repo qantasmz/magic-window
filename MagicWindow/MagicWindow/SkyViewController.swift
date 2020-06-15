@@ -6,6 +6,7 @@ import GiphyCoreSDK
 import ImageIO
 import MobileCoreServices
 import Photos
+import Foundation
 
 import SVGKit
 import SVProgressHUD
@@ -395,7 +396,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     svgImageView.image = svgImage.uiImage
     
     _shareVideoBt.addSubview(svgImageView)
-    _shareVideoBt.frame = CGRect(x:70+(screenWidth-140)/3*3-101/3/2*1.1, y:222/3, width: 101/3*1.1, height: 69/3*1.1)
+    _shareVideoBt.frame = CGRect(x:70+(screenWidth-140)/3*3-101/3/2*1.1, y:225/3, width: 101/3*1.1, height: 69/3*1.1)
     _shareVideoBt.addTarget(self, action: #selector(self.shareVideo), for: .touchUpInside)
     
     
@@ -419,7 +420,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     
-    
+    /*
     shareUI = UIView(frame: CGRect(x: 0, y: screenHeight -  227/3, width: screenSize.width, height: 227/3))
     
     
@@ -434,6 +435,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     self.view.addSubview(shareUI)
+ */
     
     
 
@@ -471,7 +473,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     func setLabelFrame(label:UILabel){
         
-        label.makeOutLine(strokeWidth: -3.0, oulineColor: UIColor(red: 1, green: 1, blue: 1, alpha: 0.7), foregroundColor: .white)
+        label.makeOutLine(strokeWidth: -1.0, oulineColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.5), foregroundColor: .white)
     }
     
     func createButton() -> NSDictionary {
@@ -484,7 +486,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: 700/3, height: 138/3)
         label.textAlignment = .center
-        let font = UIFont(name: "Helvetica-BoldOblique", size: 55/3)
+        let font = UIFont(name: "Helvetica-Oblique", size: 55/3)
         label.font = font
         label.textColor = .white
         button.addSubview(label)
@@ -493,7 +495,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         let sub = UILabel()
         sub.frame = CGRect(x: 0, y: 18, width: 700/3, height: 138/3)
         sub.textAlignment = .center
-        let fontSub = UIFont(name: "Helvetica", size: 40/3)
+        let fontSub = UIFont(name: "Helvetica-Light", size: 40/3)
         sub.font = fontSub
         sub.textColor = .white
         
@@ -602,7 +604,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
     public func startLoad(){
         
-        showHud()
+        showHud(s:1)
     }
     
     public func initialize(img:UIImage){
@@ -613,7 +615,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         upperView.alpha = 1
         backgroundWrapperView.alpha = 0
         //toggleUI.isHidden = false
-        shareUI.isHidden = true
+        //shareUI.isHidden = true
         skyUI.isHidden = false
         skyUI.alpha = 0
 
@@ -650,6 +652,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         var _duration =  self.backgroundView.animationDuration
         if(_frameFlg == 1){
             _duration = self.backgroundView.animationDuration*2
+        }else if(_frameFlg == 2){
+            _duration = self.backgroundView.animationDuration*4
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + _duration / Double(self.backgroundView.animationImages!.count)) {
@@ -661,7 +665,10 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             self._cnt += 1
             if(self._frameFlg == 1){
                 self._cnt += 1
+            }else if(self._frameFlg == 2){
+                self._cnt += 2
             }
+            
             if(Float(self._cnt) >= Float(_arr!.count)){
                 self._cnt = 0
             }
@@ -676,16 +683,20 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
        
     
 
-    func showHud(){
+    func showHud(s:Int = 0){
         SVProgressHUD.show()
         imageLoadingView.isHidden = false
         imageLoadingView.alpha = 0
         
-        UIView.animate(withDuration: 0.5, animations: {
-              self.imageLoadingView.alpha = 1
-         }, completion: { (finished: Bool) in
-         
-         })
+        if(s == 1){
+            imageLoadingView.alpha = 1
+        }else{
+            UIView.animate(withDuration: 0.5, animations: {
+                  self.imageLoadingView.alpha = 1
+             }, completion: { (finished: Bool) in
+             
+             })
+        }
     
     }
   
@@ -710,8 +721,22 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
         print(self.backgroundView.animationImages!.count)
         
-        if(self.backgroundView.animationImages!.count > 55){
+        
+        /*
+         オリジナルのフレーム
+         if(self.backgroundView.animationImages!.count > 55){
+             _frameFlg = 1
+             print("double")
+         }else{
+             _frameFlg = 0
+             print("single")
+         }
+         */
+        if(self.backgroundView.animationImages!.count > 20){
             _frameFlg = 1
+            print("double")
+        }else if(self.backgroundView.animationImages!.count > 50){
+            _frameFlg = 2
             print("double")
         }else{
             _frameFlg = 0
@@ -741,7 +766,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
                  self._saveCnt += 1
                 if(self._frameFlg == 1){
                     self._saveCnt += 1
+                }else if(self._frameFlg == 2){
+                    self._saveCnt += 2
+                    
                 }
+                
+                
                  self.renderSaving()
             }else{
                 if(self._saveStat == 0){
@@ -831,6 +861,9 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         var _duration =  self.backgroundView.animationDuration
         if(_frameFlg == 1){
             _duration = self.backgroundView.animationDuration*2
+        }else if(_frameFlg == 2){
+            _duration = self.backgroundView.animationDuration*4
+            
         }
         
         let fps:__int32_t = __int32_t(1/(_duration / Double(self.backgroundView.animationImages!.count)))
@@ -1079,6 +1112,9 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         var _duration =  self.backgroundView.animationDuration
         if(_frameFlg == 1){
             _duration = self.backgroundView.animationDuration*2
+        }else if(_frameFlg == 2){
+            _duration = self.backgroundView.animationDuration*4
+            
         }
         
         let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: _duration / Double(self.backgroundView.animationImages!.count)]]
@@ -1185,7 +1221,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         //toggleUI.isHidden = true
         UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: nil, completion: { _ in
             // replace camera preview with new one
-            self.shareUI.isHidden = false
+            //self.shareUI.isHidden = false
         })
         
     }
@@ -1196,7 +1232,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             delegate!.backToCamera()
         }else{
             _uiStat = 0
-            shareUI.isHidden = true
+            //shareUI.isHidden = true
             UIView.transition(with: self.view, duration: 0.5, options: [.transitionCrossDissolve], animations: nil, completion: { _ in
                 // replace camera preview with new one
                 self.skyUI.isHidden = false
@@ -1521,9 +1557,34 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     let ref = image.cgImage
     let output = ref!.masking(maskInner)
-    let outputImage = UIImage(cgImage: output!)
+    let outputImage:UIImage = UIImage(cgImage: output!)
         
         //var _uimage = segmentationResult?.resultImage
+    /*
+    var _owid:Int = Int(outputImage.size.width)
+    var _ohgt:Int = Int(outputImage.size.height)
+    var mcolor:UIColor = outputImage.getColor(x: 100, y: 100)!
+    var _alpha = convertToRGB(mcolor).alpha
+    print(convertToRGB(mcolor).red)
+    print(convertToRGB(mcolor).green)
+    print(convertToRGB(mcolor).blue)
+    print(convertToRGB(mcolor).alpha)
+    
+    var alphaPixels:Int = 0
+    
+    for dx in 0..._owid-1 {
+      for dy in 0..._ohgt-1 {
+
+        let dcolor:UIColor = outputImage.getColor(x: dx, y: dy)!
+        if(dcolor.cgColor.alpha < 0.5){
+            alphaPixels += 1
+        }
+      }
+    }
+    
+    print(alphaPixels)
+    print("aaaaaa")
+ */
     self.sceneView.image = outputImage
     
     
@@ -1533,6 +1594,14 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
 
   }
+    
+    func convertToRGB(_ color: UIColor) -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+
+        let components = color.cgColor.components! // UIColorをCGColorに変換し、RGBとAlphaがそれぞれCGFloatで配列として取得できる
+        return (red: components[0], green: components[1], blue: components[2], alpha: components[3])
+    }
+
+    
     func setGif(id: String){
         _cnt = 0
         
@@ -1743,7 +1812,14 @@ extension SkyViewController: GiphyDelegate {
     func didSelectMedia(giphyViewController: GiphyViewController, media: GPHMedia) {
         giphyViewController.dismiss(animated: true, completion: { [weak self] in
             self!.setGif(id:media.id)
-            self!._objLabel.text = media.title
+            let _ttl:String = media.title!
+            
+
+            var ttlArr = _ttl.components(separatedBy: " by ")
+            var _title: String = ttlArr[0]
+            var _author: String? = ttlArr.count > 1 ? ttlArr[1] : nil
+
+            self!._objLabel.text = _author
 
             self!.setLabelFrame(label: self!._objLabel)
             self!._objLabel.numberOfLines = 0
@@ -2029,5 +2105,29 @@ extension UILabel{
             .font : self.font
         ] as [NSAttributedString.Key : Any]
         self.attributedText = NSMutableAttributedString(string: self.text ?? "", attributes: strokeTextAttributes)
+    }
+}
+
+extension UIImage {
+
+    public func getColor (x: Int, y: Int) -> UIColor? {
+
+        if x < 0 || x > Int(size.width) || y < 0 || y > Int(size.height) {
+            return nil
+        }
+
+        let provider = self.cgImage!.dataProvider
+        let providerData = provider!.data
+        let data = CFDataGetBytePtr(providerData)
+
+        let numberOfComponents = 4
+        let pixelData = ((Int(size.width) * y) + x) * numberOfComponents
+
+        let r = CGFloat(data![pixelData]) / 255.0
+        let g = CGFloat(data![pixelData + 1]) / 255.0
+        let b = CGFloat(data![pixelData + 2]) / 255.0
+        let a = CGFloat(data![pixelData + 3]) / 255.0
+
+        return UIColor(red: r, green: g, blue: b, alpha: a)
     }
 }

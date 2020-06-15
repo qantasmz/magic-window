@@ -102,10 +102,10 @@ class IntroViewController: UIViewController {
     
     func startBlink(){
         
-        UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+        UIView.animate(withDuration:1.6, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
             self.label.alpha = 0
         }, completion: { _ in
-            UIView.animate(withDuration:2, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
+            UIView.animate(withDuration:1.6, delay: 0, options: UIView.AnimationOptions(rawValue: 0), animations: { () -> Void in
                 self.label.alpha = 1
             }, completion: { _ in
                 self.startBlink()
