@@ -12,7 +12,6 @@
 		837BFB8922AAE6FB00010A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837BFB8722AAE6FB00010A93 /* Main.storyboard */; };
 		837BFB8B22AAE6FC00010A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837BFB8A22AAE6FC00010A93 /* Assets.xcassets */; };
 		837BFB8E22AAE6FC00010A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837BFB8C22AAE6FC00010A93 /* LaunchScreen.storyboard */; };
-		83BE4F0422B2AE7400C6C5AF /* mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83BE4F0222B2AE7400C6C5AF /* mountains.jpg */; };
 		83BE4F0522B2AE7400C6C5AF /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 83BE4F0322B2AE7400C6C5AF /* clouds.png */; };
 		85678B6DC35BD83B13640DEE /* Pods_MagicWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448D00F9F3B04EF83872C4CC /* Pods_MagicWindow.framework */; };
 		AD091F172494288800DD16FD /* vl0.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD091F152494288800DD16FD /* vl0.svg */; };
@@ -20,6 +19,7 @@
 		AD3AD97A2492B24B000BE099 /* dot3.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD3AD9772492B24B000BE099 /* dot3.svg */; };
 		AD3AD97B2492B24B000BE099 /* dot1.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD3AD9782492B24B000BE099 /* dot1.svg */; };
 		AD3AD97C2492B24B000BE099 /* dot2.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD3AD9792492B24B000BE099 /* dot2.svg */; };
+		AD5816CB2498325E0001DEAE /* def.gif in Resources */ = {isa = PBXBuildFile; fileRef = AD5816CA2498325E0001DEAE /* def.gif */; };
 		AD711471248AC8D200894922 /* peke_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD711468248AC8D200894922 /* peke_svg.svg */; };
 		AD711472248AC8D200894922 /* dl_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD711469248AC8D200894922 /* dl_svg.svg */; };
 		AD711473248AC8D200894922 /* shoot_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71146A248AC8D200894922 /* shoot_svg.svg */; };
@@ -32,7 +32,6 @@
 		AD711482248AD1E700894922 /* gif_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD711480248AD1E700894922 /* gif_svg.svg */; };
 		AD711483248AD1E700894922 /* plus_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD711481248AD1E700894922 /* plus_svg.svg */; };
 		AD711485248AD22E00894922 /* grad.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD711484248AD22E00894922 /* grad.svg */; };
-		AD711487248ADC5600894922 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = AD711486248ADC5600894922 /* giphy.gif */; };
 		AD711489248ADC8800894922 /* def.png in Resources */ = {isa = PBXBuildFile; fileRef = AD711488248ADC8800894922 /* def.png */; };
 		AD71148B248B01F900894922 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD71148A248B01F900894922 /* AboutViewController.swift */; };
 		AD71148F248B056500894922 /* magicsky_top_b.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD71148E248B056500894922 /* magicsky_top_b.svg */; };
@@ -44,7 +43,6 @@
 		AD7BA53E24805AB6002295F0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */; };
 		AD7BA54024805AE1002295F0 /* SkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA53F24805AE1002295F0 /* SkyViewController.swift */; };
 		AD7BA54224805B00002295F0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA54124805B00002295F0 /* ShareViewController.swift */; };
-		AD7BA544248060D8002295F0 /* defsky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA543248060D8002295F0 /* defsky.jpg */; };
 		AD7BA54624806478002295F0 /* Bk_ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7BA54524806478002295F0 /* Bk_ref.swift */; };
 		AD7BA54824806971002295F0 /* ios-reverse-camera.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA54724806971002295F0 /* ios-reverse-camera.svg */; };
 		AD7BA54A2480789C002295F0 /* arrow-back-circle-sharp.svg in Resources */ = {isa = PBXBuildFile; fileRef = AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */; };
@@ -82,13 +80,13 @@
 		837BFB8A22AAE6FC00010A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		837BFB8D22AAE6FC00010A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		837BFB8F22AAE6FC00010A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83BE4F0222B2AE7400C6C5AF /* mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountains.jpg; sourceTree = "<group>"; };
 		83BE4F0322B2AE7400C6C5AF /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
 		AD091F152494288800DD16FD /* vl0.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = vl0.svg; path = ../../../src/vl0.svg; sourceTree = "<group>"; };
 		AD091F162494288800DD16FD /* vl1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = vl1.svg; path = ../../../src/vl1.svg; sourceTree = "<group>"; };
 		AD3AD9772492B24B000BE099 /* dot3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dot3.svg; path = ../../../src/dot3.svg; sourceTree = "<group>"; };
 		AD3AD9782492B24B000BE099 /* dot1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dot1.svg; path = ../../../src/dot1.svg; sourceTree = "<group>"; };
 		AD3AD9792492B24B000BE099 /* dot2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dot2.svg; path = ../../../src/dot2.svg; sourceTree = "<group>"; };
+		AD5816CA2498325E0001DEAE /* def.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = def.gif; sourceTree = "<group>"; };
 		AD711468248AC8D200894922 /* peke_svg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = peke_svg.svg; path = ../../../src/peke_svg.svg; sourceTree = "<group>"; };
 		AD711469248AC8D200894922 /* dl_svg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dl_svg.svg; path = ../../../src/dl_svg.svg; sourceTree = "<group>"; };
 		AD71146A248AC8D200894922 /* shoot_svg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = shoot_svg.svg; path = ../../../src/shoot_svg.svg; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		AD711480248AD1E700894922 /* gif_svg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = gif_svg.svg; path = ../../../src/gif_svg.svg; sourceTree = "<group>"; };
 		AD711481248AD1E700894922 /* plus_svg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = plus_svg.svg; path = ../../../src/plus_svg.svg; sourceTree = "<group>"; };
 		AD711484248AD22E00894922 /* grad.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = grad.svg; path = ../../../src/grad.svg; sourceTree = "<group>"; };
-		AD711486248ADC5600894922 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../../src/giphy.gif; sourceTree = "<group>"; };
 		AD711488248ADC8800894922 /* def.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = def.png; path = ../../../src/def.png; sourceTree = "<group>"; };
 		AD71148A248B01F900894922 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		AD71148E248B056500894922 /* magicsky_top_b.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = magicsky_top_b.svg; path = ../../../src/magicsky_top_b.svg; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 		AD7BA53D24805AB6002295F0 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		AD7BA53F24805AE1002295F0 /* SkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyViewController.swift; sourceTree = "<group>"; };
 		AD7BA54124805B00002295F0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		AD7BA543248060D8002295F0 /* defsky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defsky.jpg; sourceTree = "<group>"; };
 		AD7BA54524806478002295F0 /* Bk_ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bk_ref.swift; sourceTree = "<group>"; };
 		AD7BA54724806971002295F0 /* ios-reverse-camera.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ios-reverse-camera.svg"; sourceTree = "<group>"; };
 		AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "arrow-back-circle-sharp.svg"; sourceTree = "<group>"; };
@@ -219,6 +215,7 @@
 		ADA69B562475DAEE00672F65 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				AD5816CA2498325E0001DEAE /* def.gif */,
 				AD091F152494288800DD16FD /* vl0.svg */,
 				AD091F162494288800DD16FD /* vl1.svg */,
 				AD3AD9782492B24B000BE099 /* dot1.svg */,
@@ -229,7 +226,6 @@
 				AD71149024902EB200894922 /* peke2.svg */,
 				AD71148E248B056500894922 /* magicsky_top_b.svg */,
 				AD711488248ADC8800894922 /* def.png */,
-				AD711486248ADC5600894922 /* giphy.gif */,
 				AD711484248AD22E00894922 /* grad.svg */,
 				AD711480248AD1E700894922 /* gif_svg.svg */,
 				AD711481248AD1E700894922 /* plus_svg.svg */,
@@ -253,7 +249,6 @@
 				AD8255F0248173CA0062507C /* arrow-forward.svg */,
 				AD7BA5492480789C002295F0 /* arrow-back-circle-sharp.svg */,
 				AD7BA54724806971002295F0 /* ios-reverse-camera.svg */,
-				AD7BA543248060D8002295F0 /* defsky.jpg */,
 				ADA69B5B2475DE6600672F65 /* image-sharp.svg */,
 				ADA69B592475DD5400672F65 /* download-sharp.svg */,
 				ADA69B572475DB8700672F65 /* camera-sharp.svg */,
@@ -261,7 +256,6 @@
 				AD8AF3F0246B4CEE008A0777 /* camera.png */,
 				ADF5CB21246B41F1005342FC /* sky.jpg */,
 				83BE4F0322B2AE7400C6C5AF /* clouds.png */,
-				83BE4F0222B2AE7400C6C5AF /* mountains.jpg */,
 			);
 			path = imgs;
 			sourceTree = "<group>";
@@ -328,12 +322,12 @@
 			files = (
 				AD711482248AD1E700894922 /* gif_svg.svg in Resources */,
 				837BFB8E22AAE6FC00010A93 /* LaunchScreen.storyboard in Resources */,
-				AD711487248ADC5600894922 /* giphy.gif in Resources */,
 				AD7BA54C2480CC7A002295F0 /* Fritz-Info.plist in Resources */,
 				83BE4F0522B2AE7400C6C5AF /* clouds.png in Resources */,
 				AD711477248AC8D200894922 /* info_svg.svg in Resources */,
 				AD3AD97A2492B24B000BE099 /* dot3.svg in Resources */,
 				AD711472248AC8D200894922 /* dl_svg.svg in Resources */,
+				AD5816CB2498325E0001DEAE /* def.gif in Resources */,
 				AD7114992490321200894922 /* toggle2.svg in Resources */,
 				AD9225FC246F202B0018EF02 /* save.png in Resources */,
 				837BFB8B22AAE6FC00010A93 /* Assets.xcassets in Resources */,
@@ -363,7 +357,6 @@
 				AD711479248AC8D200894922 /* share_svg.svg in Resources */,
 				AD3AD97B2492B24B000BE099 /* dot1.svg in Resources */,
 				AD81515D2486EE4B00AA2181 /* cloud2.svg in Resources */,
-				AD7BA544248060D8002295F0 /* defsky.jpg in Resources */,
 				AD3AD97C2492B24B000BE099 /* dot2.svg in Resources */,
 				AD71148F248B056500894922 /* magicsky_top_b.svg in Resources */,
 				AD8151672486F70100AA2181 /* ptpp.svg in Resources */,
@@ -372,7 +365,6 @@
 				AD71149524902FAA00894922 /* peke4.svg in Resources */,
 				AD81515C2486EE4B00AA2181 /* cloud3.svg in Resources */,
 				AD71149124902EB300894922 /* peke2.svg in Resources */,
-				83BE4F0422B2AE7400C6C5AF /* mountains.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,9 +575,9 @@
 			baseConfigurationReference = C2FF1AFF71311CB0E5F8DD53 /* Pods-MagicWindow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 2SMAXGRFA3;
 				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -594,7 +586,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.magicWindow;
 				PRODUCT_NAME = "Magic Sky";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = MW3;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -605,9 +597,9 @@
 			baseConfigurationReference = 4BA49EF4305ED65A2C7DC475 /* Pods-MagicWindow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 2SMAXGRFA3;
 				INFOPLIST_FILE = MagicWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -616,7 +608,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.bassdrum.magicWindow;
 				PRODUCT_NAME = "Magic Sky";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = MW3;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

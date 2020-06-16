@@ -123,6 +123,7 @@ class AboutViewController: UIViewController {
     */
     
     _label = UITextView()
+    _label.backgroundColor = .clear
     _label.isEditable = false
     //_label.numberOfLines = 0
     _label.textAlignment = .justified

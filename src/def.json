@@ -14,15 +14,138 @@
 	}],
 
 	"gifs": [{
-		"id ": "0",
-		"url": "https://media.giphy.com/media/YqhIK6Gbor6CLeloBq/giphy-downsized.gif",
-		"author": "qanta",
-		"name": "hello"
-	}, {
-		"id ": "1",
-		"url": "https://media.giphy.com/media/3o7bugVV3SfjNC7j1K/giphy-downsized.gif",
-		"author": "matthieu",
-		"name": "bonsoir"
-	}]
+			"id ": "0",
+			"url": "http://origin.bassdrum.org/magicsky/Atmosphere.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "1",
+			"url": "http://origin.bassdrum.org/magicsky/Blue_Liquid.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "2",
+			"url": "http://origin.bassdrum.org/magicsky/Clouds.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "3",
+			"url": "http://origin.bassdrum.org/magicsky/Dollars.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "4",
+			"url": "http://origin.bassdrum.org/magicsky/Fireworks.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "5",
+			"url": "http://origin.bassdrum.org/magicsky/Glitch.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "6",
+			"url": "http://origin.bassdrum.org/magicsky/Glitter.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "7",
+			"url": "http://origin.bassdrum.org/magicsky/Gold_Coin.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "8",
+			"url": "http://origin.bassdrum.org/magicsky/Infinite_Zoom.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "9",
+			"url": "http://origin.bassdrum.org/magicsky/Lightning.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "10",
+			"url": "http://origin.bassdrum.org/magicsky/Lights.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "11",
+			"url": "http://origin.bassdrum.org/magicsky/Moonlight.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "12",
+			"url": "http://origin.bassdrum.org/magicsky/Nebula.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "13",
+			"url": "http://origin.bassdrum.org/magicsky/Office.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "14",
+			"url": "http://origin.bassdrum.org/magicsky/Space.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "15",
+			"url": "http://origin.bassdrum.org/magicsky/Star.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "16",
+			"url": "http://origin.bassdrum.org/magicsky/Storm.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "17",
+			"url": "http://origin.bassdrum.org/magicsky/Tagsgraphic.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		},
+		{
+			"id ": "18",
+			"url": "http://origin.bassdrum.org/magicsky/Vintage_90s.gif",
+			"author": "",
+			"name": "Magic Sky",
+			"link": ""
+		}
+	]
 
 }

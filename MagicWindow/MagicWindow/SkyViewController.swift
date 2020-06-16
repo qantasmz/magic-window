@@ -124,6 +124,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     var _initialDefURL:URL!
     var _initialURL:String!
+    var _initialLink:String!
     var _initialName:String!
     var _initialAuthor:String!
     var _objLabel:UILabel!
@@ -133,6 +134,8 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     var _toggleBt:UIButton!
     
     var gifObj:[NSDictionary]!
+    
+    var _objBt:UIButton!
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -461,8 +464,10 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
 
     var _obj = createButton()
-    var _objBt = _obj["button"] as! UIButton
+    _objBt = _obj["button"] as! UIButton
     _objBt.frame = CGRect(x:screenWidth/2-700/3/2, y:30,width:700/3, height:150/3)
+
+    _objBt.addTarget(self, action: #selector(self.tapCreator), for: .touchUpInside)
     self.view.addSubview(_objBt)
     
     _objLabel = _obj["label"] as! UILabel
@@ -579,11 +584,16 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     public func setInitial(obj:NSDictionary){
         if(obj["url"] != nil){
             _initialURL = obj["url"] as! String
+            _initialLink = obj["link"] as! String
+            if(_objBt != nil){
+
+                _objBt.addTarget(self, action: #selector(self.tapCreator), for: .touchUpInside)
+            }
             gifObj = obj["dataset"] as! [NSDictionary]
             rgifNum = obj["num"] as! Int
         }else{
             
-            _initialDefURL = Bundle.main.url(forResource: "giphy", withExtension: "gif")
+            _initialDefURL = Bundle.main.url(forResource: "def", withExtension: "gif")
 
             rgifNum = 0
             
@@ -1185,6 +1195,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         _initialURL = self.gifObj[rgifNum]["url"] as! String
         _initialName = self.gifObj[rgifNum]["name"] as! String
         _initialAuthor = self.gifObj[rgifNum]["author"] as! String
+        _initialLink = self.gifObj[rgifNum]["link"] as! String
         //self.setGif(id:self.gifList.data[nextInt].id)
         
         _objLabel.text = _initialName
@@ -1340,6 +1351,15 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         }
     }
     
+    
+    @objc func tapCreator(_ sender : UIButton) {
+        if(_initialLink != ""){
+            let url = NSURL(string: _initialLink)
+            if UIApplication.shared.canOpenURL(url! as URL){
+                UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+            }
+        }
+    }
     @objc func shareVideo(_ sender : UIButton) {
         
         
@@ -1404,7 +1424,7 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         
 
         self._objLabel.text = "imported"
-        
+        _initialLink = ""
         setLabelFrame(label: self._objLabel)
         self._objLabel.numberOfLines = 0
         var rect: CGSize = _objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
@@ -1819,6 +1839,8 @@ extension SkyViewController: GiphyDelegate {
             var _title: String = ttlArr[0]
             var _author: String? = ttlArr.count > 1 ? ttlArr[1] : nil
 
+            self!._initialLink = ""
+            
             self!._objLabel.text = _author
 
             self!.setLabelFrame(label: self!._objLabel)

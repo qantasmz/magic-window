@@ -174,6 +174,7 @@ override var prefersStatusBarHidden: Bool {
                self.initialGif["url"] = res.gifs[gifInt].url
                self.initialGif["name"] = res.gifs[gifInt].name
                self.initialGif["author"] = res.gifs[gifInt].author
+               self.initialGif["link"] = res.gifs[gifInt].link
                self.initialGif["num"] = gifInt
                     
                     var _dic = [NSMutableDictionary]()
@@ -184,6 +185,7 @@ override var prefersStatusBarHidden: Bool {
                          _obj["url"] = res.gifs[count].url
                          _obj["name"] = res.gifs[count].name
                          _obj["author"] = res.gifs[count].author
+                         _obj["link"] = res.gifs[count].link
                          _dic.append(_obj)
                     }
                     
@@ -224,6 +226,7 @@ override var prefersStatusBarHidden: Bool {
              let url: String
              let author: String
              let name: String
+             let link: String
         }
     }
      func setImage(from url: String,author:String) {
