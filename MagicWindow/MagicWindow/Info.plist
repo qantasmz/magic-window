@@ -26,9 +26,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>to take photo</string>
+	<string>Taking Photo including sky</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>save gif</string>
+	<string>Saving Video and Gif data</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

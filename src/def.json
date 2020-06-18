@@ -1,151 +1,171 @@
 {
 	"imgs": [{
 		"id": "0",
-		"url": "http://origin.bassdrum.org/magicsky/t01.jpg",
+		"url": "http://d1od0cnjfgn79u.cloudfront.net/magicsky/t01.jpg",
 		"author": "matthieu"
 	}, {
 		"id": "1",
-		"url": "http://origin.bassdrum.org/magicsky/t02.jpg",
+		"url": "http://d1od0cnjfgn79u.cloudfront.net/magicsky/t02.jpg",
 		"author": "qanta"
 	}, {
 		"id": "2",
-		"url": "http://origin.bassdrum.org/magicsky/t03.jpg",
+		"url": "http://d1od0cnjfgn79u.cloudfront.net/magicsky/t03.jpg",
 		"author": "qanta"
 	}],
 
-	"gifs": [{
+	"gifs": [
+
+		{
 			"id ": "0",
-			"url": "http://origin.bassdrum.org/magicsky/Atmosphere.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/hWGf3odxmk7NWvUYLx/giphy.gif",
+			"author": "Giphy",
+			"name": "Office",
 			"link": ""
 		},
+
 		{
 			"id ": "1",
-			"url": "http://origin.bassdrum.org/magicsky/Blue_Liquid.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/pbvJD67ZL7NyE/giphy.gif",
+			"author": "Giphy",
+			"name": "Beauty Artists",
 			"link": ""
 		},
+
 		{
 			"id ": "2",
-			"url": "http://origin.bassdrum.org/magicsky/Clouds.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/l41lS0IgRIFkAuA5G/giphy.gif",
+			"author": "Giphy",
+			"name": "Jelly London",
 			"link": ""
 		},
+
 		{
 			"id ": "3",
-			"url": "http://origin.bassdrum.org/magicsky/Dollars.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/jxLLvQcqWa56uq0h3L/giphy.gif",
+			"author": "Giphy",
+			"name": "Maximillian Piras",
 			"link": ""
 		},
+
 		{
 			"id ": "4",
-			"url": "http://origin.bassdrum.org/magicsky/Fireworks.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/5VqqDPfFsFV28/giphy.gif",
+			"author": "Giphy",
+			"name": "Black Lives Matter",
 			"link": ""
 		},
+
 		{
 			"id ": "5",
-			"url": "http://origin.bassdrum.org/magicsky/Glitch.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/h4gQ00LnaAp0XmmOz8/giphy.gif",
+			"author": "Giphy",
+			"name": "Borrachas",
 			"link": ""
 		},
-		{
-			"id ": "6",
-			"url": "http://origin.bassdrum.org/magicsky/Glitter.gif",
-			"author": "",
-			"name": "Magic Sky",
-			"link": ""
-		},
-		{
-			"id ": "7",
-			"url": "http://origin.bassdrum.org/magicsky/Gold_Coin.gif",
-			"author": "",
-			"name": "Magic Sky",
-			"link": ""
-		},
-		{
-			"id ": "8",
-			"url": "http://origin.bassdrum.org/magicsky/Infinite_Zoom.gif",
-			"author": "",
-			"name": "Magic Sky",
-			"link": ""
-		},
+
+
+
 		{
 			"id ": "9",
-			"url": "http://origin.bassdrum.org/magicsky/Lightning.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/l3V0hSwrWKBGIM2vS/giphy.gif",
+			"author": "Giphy",
+			"name": "ctrl+c",
 			"link": ""
 		},
+
 		{
 			"id ": "10",
-			"url": "http://origin.bassdrum.org/magicsky/Lights.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/oSYflamt3IEjm/giphy.gif",
+			"author": "Giphy",
+			"name": "Glow Daft Punk",
 			"link": ""
 		},
+
 		{
 			"id ": "11",
-			"url": "http://origin.bassdrum.org/magicsky/Moonlight.gif",
+			"url": "https://media.giphy.com/media/3ov9jJikNnrKktK1Wg/giphy.gif",
 			"author": "",
-			"name": "Magic Sky",
+			"name": "Erica Anderson",
 			"link": ""
 		},
+
 		{
 			"id ": "12",
-			"url": "http://origin.bassdrum.org/magicsky/Nebula.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/l0HlB4tK4SDFUkOQw/giphy.gif",
+			"author": "Giphy",
+			"name": "vektormon",
 			"link": ""
 		},
+
 		{
 			"id ": "13",
-			"url": "http://origin.bassdrum.org/magicsky/Office.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/McChlQ7JsJo759oHdv/giphy.gif",
+			"author": "Giphy",
+			"name": "Borrachas",
 			"link": ""
 		},
+
 		{
 			"id ": "14",
-			"url": "http://origin.bassdrum.org/magicsky/Space.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/TrOMR6REnWN1u/giphy.gif",
+			"author": "Giphy",
+			"name": "Loop Birds",
 			"link": ""
 		},
+
 		{
 			"id ": "15",
-			"url": "http://origin.bassdrum.org/magicsky/Star.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif",
+			"author": "Giphy",
+			"name": "Michael Shillingburg",
 			"link": ""
 		},
+
 		{
 			"id ": "16",
-			"url": "http://origin.bassdrum.org/magicsky/Storm.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/H54yJrvUdtb2WFDnqV/giphy.gif",
+			"author": "Giphy",
+			"name": "dualvoidanima",
+			"link": ""
+		},
+
+		{
+			"id ": "18",
+			"url": "https://media.giphy.com/media/4a7sWil1NZoRWymHJp/giphy.gif",
+			"author": "Giphy",
+			"name": "Trippy Checkers",
+			"link": ""
+		},
+
+		{
+			"id ": "19",
+			"url": "https://media.giphy.com/media/3o7TKH5XM5lrnU8T28/giphy.gif",
+			"author": "Giphy",
+			"name": "Psyklon",
+			"link": ""
+		},
+
+		{
+			"id ": "20",
+			"url": "https://media.giphy.com/media/3ohzh21wMTlaQ7TySI/giphy.gif",
+			"author": "Giphy",
+			"name": "Erica Anderson",
+			"link": ""
+		},
+
+		{
+			"id ": "21",
+			"url": "https://media.giphy.com/media/26tnffyD8Rt8rIQ4E/giphy.gif",
+			"author": "Giphy",
+			"name": "Rodrigo Tello",
 			"link": ""
 		},
 		{
 			"id ": "17",
-			"url": "http://origin.bassdrum.org/magicsky/Tagsgraphic.gif",
-			"author": "",
-			"name": "Magic Sky",
-			"link": ""
-		},
-		{
-			"id ": "18",
-			"url": "http://origin.bassdrum.org/magicsky/Vintage_90s.gif",
-			"author": "",
-			"name": "Magic Sky",
+			"url": "https://media.giphy.com/media/l4pT5OXCYRwTlrTFu/giphy.gif",
+			"author": "Giphy",
+			"name": "Sarah Zucker",
 			"link": ""
 		}
 	]
-
 }

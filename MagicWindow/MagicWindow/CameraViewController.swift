@@ -10,6 +10,7 @@ import Photos
 import SVGKit
 import SVProgressHUD
 
+import Firebase
 
 protocol CameraViewDelegate:class {
     func setInputImage(img:UIImage)
@@ -313,7 +314,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     super.viewDidAppear(animated)
     
 
-     
+     let _logTitle = "camera"
+     Analytics.logEvent(_logTitle, parameters: [
+         AnalyticsParameterItemID: "id-\(_logTitle)",
+         AnalyticsParameterItemName: _logTitle,
+     AnalyticsParameterContentType: "cont"
+     ])
   }
     
     public func showButton(){

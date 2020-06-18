@@ -10,6 +10,7 @@ import Foundation
 
 import SVGKit
 import SVProgressHUD
+import Firebase
 
 
 protocol SkyViewDelegate:class {
@@ -642,7 +643,13 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         var rect: CGSize = _objLabel.sizeThatFits(CGSize(width: 700/3, height: CGFloat.greatestFiniteMagnitude))
         _objLabel.frame = CGRect(x: 0, y: 10, width: 700/3, height: rect.height)
         _objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
-        _objSub.text = ""
+        
+        if(_initialAuthor == "Giphy"){
+            _objSub.text = "powered by Giphy"
+        }else{
+            _objSub.text = ""
+            
+        }
         
         setLabelFrame(label: _objSub)
         //_objSub.text = _initialAuthor
@@ -1206,7 +1213,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
 
         
         _objSub.frame = CGRect(x: 0, y: rect.height, width: 700/3, height: 138/3)
-        _objSub.text = ""
+        if(_initialAuthor == "Giphy"){
+            _objSub.text = "powered by Giphy"
+        }else{
+            _objSub.text = ""
+            
+        }
         
         setLabelFrame(label: _objSub)
         //_objSub.text = _initialAuthor
@@ -1530,7 +1542,12 @@ class SkyViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
+    let _logTitle = "output"
+    Analytics.logEvent(_logTitle, parameters: [
+        AnalyticsParameterItemID: "id-\(_logTitle)",
+        AnalyticsParameterItemName: _logTitle,
+    AnalyticsParameterContentType: "cont"
+    ])
      
     
     

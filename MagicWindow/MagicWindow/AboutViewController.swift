@@ -1,6 +1,7 @@
 import UIKit
 import SVGKit
 
+import Firebase
 
 protocol AboutViewDelegate:class {
     
@@ -53,7 +54,7 @@ class AboutViewController: UIViewController {
     
     let logoImage:UIImage = UIImage(named:"magic")!
     let logoImageView = UIImageView(image:logoImage)
-    let rect:CGRect = CGRect(x: screenWidth/2-930/3/2, y: 160-50, width: 930/3, height: 460/3)
+    let rect:CGRect = CGRect(x: screenWidth/2-844/3/2, y: 160-65, width: 844/3, height: 411/3)
      logoImageView.contentMode = .scaleAspectFill
     logoImageView.frame = rect;
     core0.addSubview(logoImageView)
@@ -127,7 +128,7 @@ class AboutViewController: UIViewController {
     _label.isEditable = false
     //_label.numberOfLines = 0
     _label.textAlignment = .justified
-    _label.frame = CGRect(x: screenWidth/2-980/3/2, y: 340-50, width: 980/3, height: 300)
+    _label.frame = CGRect(x: screenWidth/2-900/3/2, y: 340-50, width: 900/3, height: 300)
     let linkAttributes: [NSAttributedString.Key : Any] = [
         NSAttributedString.Key.foregroundColor: UIColor.black,
         NSAttributedString.Key.underlineColor: UIColor.clear,
@@ -136,6 +137,7 @@ class AboutViewController: UIViewController {
     
     _label.linkTextAttributes = linkAttributes
     _label.attributedText = baseString
+    _label.textAlignment = .justified
     core0.addSubview(_label)
     self.view.addSubview(core0)
     
@@ -158,6 +160,12 @@ class AboutViewController: UIViewController {
          
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    let _logTitle = "about"
+    Analytics.logEvent(_logTitle, parameters: [
+        AnalyticsParameterItemID: "id-\(_logTitle)",
+        AnalyticsParameterItemName: _logTitle,
+    AnalyticsParameterContentType: "cont"
+    ])
   }
     
     

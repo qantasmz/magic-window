@@ -142,7 +142,7 @@ override var prefersStatusBarHidden: Bool {
      }
      private func getPreset(){
           let randomInt = Int.random(in: 1..<1000000)
-         let urlString = "http://origin.bassdrum.org/magicsky/def.json?ran="+String(randomInt)
+         let urlString = "http://d1od0cnjfgn79u.cloudfront.net/magicsky/def.json?ran="+String(randomInt)
 
          guard let url = URLComponents(string: urlString) else { return }
          // HTTPメソッドを実行

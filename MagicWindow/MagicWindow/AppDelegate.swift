@@ -9,6 +9,7 @@
 import UIKit
 import Fritz
 import SVProgressHUD
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
       // Automatically added FritzCore configure.
     FritzCore.configure()
-    
+    FirebaseApp.configure()
     SVProgressHUD.setDefaultMaskType(.black)
     return true
   }

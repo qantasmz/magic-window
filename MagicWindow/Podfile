@@ -10,6 +10,6 @@ pod 'SVProgressHUD'
 pod 'Fritz/VisionSegmentationModel/Sky/Accurate'
 pod 'Giphy', :podspec => 'https://s3.amazonaws.com/sdk.mobile.giphy.com/SDK/1.2.8/Giphy.podspec'
 pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x'
-pod 'GoogleAnalytics'
+pod 'Firebase/Analytics'
 
 end

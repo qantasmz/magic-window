@@ -1,6 +1,6 @@
 import UIKit
 import SVGKit
-
+import Firebase
 
 protocol IntroViewDelegate:class {
     func goToCamera()
@@ -49,8 +49,8 @@ class IntroViewController: UIViewController {
          self.view.addSubview(_cov)
         
         var svgImageView: UIImageView = UIImageView()
-        svgImageView.frame = CGRect(x: screenWidth/2-930/3/2, y: screenHeight - 330, width: 930/3, height: 460/3)
-        let svgImage = SVGKImage(named: "magicsky_top")
+        svgImageView.frame = CGRect(x: screenWidth/2-843/3/2, y: screenHeight - 330, width: 843/3, height: 425/3)
+        let svgImage = SVGKImage(named: "logo_pp")
         svgImage?.size = svgImageView.bounds.size
         svgImageView.image = svgImage?.uiImage
         
@@ -116,6 +116,14 @@ class IntroViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        let _logTitle = "introduction"
+        Analytics.logEvent(_logTitle, parameters: [
+            AnalyticsParameterItemID: "id-\(_logTitle)",
+            AnalyticsParameterItemName: _logTitle,
+        AnalyticsParameterContentType: "cont"
+        ])
+        print("ununko")
+        
         if let _ = UserDefaults.standard.object(forKey: "num") as? Int {
             //labelに表示
             var _num = UserDefaults.standard.object(forKey: "num") as! Int
@@ -143,9 +151,9 @@ class IntroViewController: UIViewController {
     
     @objc func goToCamera(sender: UIButton!){
         if(_initFlg == true){
-           //self.delegate?.goToCamera()
+           self.delegate?.goToCamera()
             
-            self.delegate?.goToTutorial()
+            //self.delegate?.goToTutorial()
         }else{
 
             self.delegate?.goToTutorial()
