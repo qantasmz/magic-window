@@ -5,6 +5,7 @@ import SVProgressHUD
 class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, TutorialViewDelegate, SkyViewDelegate, ShareViewDelegate {
      
 
+     @IBOutlet var logoView: UIImageView!
 
      var sceneView: UIImageView!
     var introView: IntroViewController!
@@ -88,7 +89,11 @@ class ViewController: UIViewController, IntroViewDelegate, CameraViewDelegate, T
      imageLoadingView.isHidden = true
      self.view.addSubview(imageLoadingView)
      initialGif = NSMutableDictionary()
-     getPreset()
+     
+
+     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+          self.getPreset()
+     }
      
      
      self.setNeedsStatusBarAppearanceUpdate()
@@ -109,10 +114,14 @@ override var prefersStatusBarHidden: Bool {
   }
      
      private func initialize(img:UIImage,author:String){
-          
           //sceneView.image = img
-          present(introView, animated: true, completion: nil)
-          introView.initialize(img: img,author:author)
+          
+
+               self.present(self.introView, animated: true, completion: nil)
+               self.introView.initialize(img: img,author:author)
+               
+               self.logoView.alpha = 0
+          
      }
      
      private func setOffline(){
@@ -126,9 +135,12 @@ override var prefersStatusBarHidden: Bool {
           self.initialGif["num"] = nil
                
           self.skyView.setInitial(obj: self.initialGif)
-          
-          present(introView, animated: true, completion: nil)
-          introView.initialize(img: imageDef,author:"")
+
+          self.hideHud()
+               self.present(self.introView, animated: true, completion: nil)
+               self.introView.initialize(img: imageDef,author:"")
+               
+               self.logoView.alpha = 0
           /*
            let imageDef:UIImage = UIImage(named:"cloud")!
            imageLoadingView = UIImageView(image:imageLoading)
@@ -141,6 +153,8 @@ override var prefersStatusBarHidden: Bool {
            */
      }
      private func getPreset(){
+          
+          showHud()
           let randomInt = Int.random(in: 1..<1000000)
          let urlString = "http://d1od0cnjfgn79u.cloudfront.net/magicsky/def.json?ran="+String(randomInt)
 
@@ -230,7 +244,7 @@ override var prefersStatusBarHidden: Bool {
         }
     }
      func setImage(from url: String,author:String) {
-          showHud()
+          
          guard let imageURL = URL(string: url) else { return }
 
              // just not to cause a deadlock in UI!

@@ -1,0 +1,1036 @@
+2020-06-22 7:58:02 PM +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fe41ad5f5b0; archive(resolved)='<IDEArchive: 0x7fe417da80b0>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	Chain (12, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fe41ad5f5b0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fe41ad61bb0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe417861a00; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe4187e9580; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe4174e6450; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe417d9b650; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe41ad55be0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe41ad217b0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe41ad3c220; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fe42a5f80e0; teamID='CFWHV8688B', teamName='Fake Artists LLC', teamType='Company', username='qanta@qanta.jp', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fe42f4e4000; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='(null)'>
+	<IDEDistributionContext: 0x7fe41ad469e0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fe41549a4a0>', team='(null)'>
+	<IDEDistributionContext: 0x7fe4180d12e0; archive = '<IDEArchive: 0x7fe417da80b0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fe41ad5f5b0>
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionCreateDestRootStep
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionCopyItemStep
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app 
+2020-06-22 7:58:02 PM +0000  copying file ./_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  33505 bytes for ./_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./dot3.svg ... 
+2020-06-22 7:58:02 PM +0000  2042 bytes for ./dot3.svg
+2020-06-22 7:58:02 PM +0000  copying file ./arrow-forward.svg ... 
+2020-06-22 7:58:02 PM +0000  390 bytes for ./arrow-forward.svg
+2020-06-22 7:58:02 PM +0000  copying file ./dot2.svg ... 
+2020-06-22 7:58:02 PM +0000  2046 bytes for ./dot2.svg
+copying file ./vl0.svg ... 
+2020-06-22 7:58:02 PM +0000  3526 bytes for ./vl0.svg
+2020-06-22 7:58:02 PM +0000  copying file ./peke2.svg ... 
+2020-06-22 7:58:02 PM +0000  1301 bytes for ./peke2.svg
+copying file ./pt0.svg ... 
+2020-06-22 7:58:02 PM +0000  13719 bytes for ./pt0.svg
+2020-06-22 7:58:02 PM +0000  copying file ./dl_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2905 bytes for ./dl_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./dot1.svg ... 
+2020-06-22 7:58:02 PM +0000  2034 bytes for ./dot1.svg
+2020-06-22 7:58:02 PM +0000  copying file ./pt1.svg ... 
+2020-06-22 7:58:02 PM +0000  14471 bytes for ./pt1.svg
+copying file ./vl1.svg ... 
+2020-06-22 7:58:02 PM +0000  3925 bytes for ./vl1.svg
+2020-06-22 7:58:02 PM +0000  copying file ./peke4.svg ... 
+2020-06-22 7:58:02 PM +0000  2022 bytes for ./peke4.svg
+copying file ./cloud2.svg ... 
+2020-06-22 7:58:02 PM +0000  10122 bytes for ./cloud2.svg
+2020-06-22 7:58:02 PM +0000  copying file ./ios-reverse-camera.svg ... 
+2020-06-22 7:58:02 PM +0000  1212 bytes for ./ios-reverse-camera.svg
+2020-06-22 7:58:02 PM +0000  copying file ./cloud3.svg ... 
+2020-06-22 7:58:02 PM +0000  10590 bytes for ./cloud3.svg
+2020-06-22 7:58:02 PM +0000  copying file ./logo_pp.svg ... 
+2020-06-22 7:58:02 PM +0000  27305 bytes for ./logo_pp.svg
+2020-06-22 7:58:02 PM +0000  copying file ./Fritz-Info.plist ... 
+2020-06-22 7:58:02 PM +0000  154 bytes for ./Fritz-Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./import_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  3610 bytes for ./import_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./AppIcon60x60@2x.png ... 
+2020-06-22 7:58:02 PM +0000  2826 bytes for ./AppIcon60x60@2x.png
+2020-06-22 7:58:02 PM +0000  copying file ./def.png ... 
+2020-06-22 7:58:02 PM +0000  314101 bytes for ./def.png
+2020-06-22 7:58:02 PM +0000  copying file ./share_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2221 bytes for ./share_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./arrow-back-circle-sharp.svg ... 
+2020-06-22 7:58:02 PM +0000  304 bytes for ./arrow-back-circle-sharp.svg
+2020-06-22 7:58:02 PM +0000  copying file ./magicsky_top.svg ... 
+2020-06-22 7:58:02 PM +0000  26121 bytes for ./magicsky_top.svg
+copying file ./GoogleService-Info.plist ... 
+2020-06-22 7:58:02 PM +0000  718 bytes for ./GoogleService-Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./plus_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  1237 bytes for ./plus_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+2020-06-22 7:58:02 PM +0000  971 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+2020-06-22 7:58:02 PM +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2020-06-22 7:58:02 PM +0000  2078 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  258 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2020-06-22 7:58:02 PM +0000  1989 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2020-06-22 7:58:02 PM +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2020-06-22 7:58:02 PM +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2020-06-22 7:58:02 PM +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./cam_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2870 bytes for ./cam_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./toggle2.svg ... 
+2020-06-22 7:58:02 PM +0000  1644 bytes for ./toggle2.svg
+2020-06-22 7:58:02 PM +0000  copying file ./ptpp.svg ... 
+2020-06-22 7:58:02 PM +0000  13817 bytes for ./ptpp.svg
+2020-06-22 7:58:02 PM +0000  copying file ./grad.svg ... 
+2020-06-22 7:58:02 PM +0000  1017 bytes for ./grad.svg
+2020-06-22 7:58:02 PM +0000  copying file ./logo@3x.png ... 
+2020-06-22 7:58:02 PM +0000  488321 bytes for ./logo@3x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Assets.car ... 
+2020-06-22 7:58:02 PM +0000  638991 bytes for ./Assets.car
+2020-06-22 7:58:02 PM +0000  copying file ./camera-sharp.svg ... 
+2020-06-22 7:58:02 PM +0000  494 bytes for ./camera-sharp.svg
+2020-06-22 7:58:02 PM +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2020-06-22 7:58:02 PM +0000  3559 bytes for ./AppIcon76x76@2x~ipad.png
+2020-06-22 7:58:02 PM +0000  copying file ./magicsky_top_b.svg ... 
+2020-06-22 7:58:02 PM +0000  26705 bytes for ./magicsky_top_b.svg
+2020-06-22 7:58:02 PM +0000  copying file ./import_svg2.svg ... 
+2020-06-22 7:58:02 PM +0000  2844 bytes for ./import_svg2.svg
+2020-06-22 7:58:02 PM +0000  copying file ./peke_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  1598 bytes for ./peke_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./gifsvg.svg ... 
+2020-06-22 7:58:02 PM +0000  2816 bytes for ./gifsvg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./arrow-back.svg ... 
+2020-06-22 7:58:02 PM +0000  390 bytes for ./arrow-back.svg
+2020-06-22 7:58:02 PM +0000  copying file ./image-sharp.svg ... 
+2020-06-22 7:58:02 PM +0000  416 bytes for ./image-sharp.svg
+2020-06-22 7:58:02 PM +0000  copying file ./def.gif ... 
+2020-06-22 7:58:02 PM +0000  491546 bytes for ./def.gif
+copying file ./shoot_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2736 bytes for ./shoot_svg.svg
+copying file ./info_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2524 bytes for ./info_svg.svg
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVGKit.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/SVGKit.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVGKit.framework/SVGKit ... 
+2020-06-22 7:58:02 PM +0000  3367904 bytes for ./Frameworks/SVGKit.framework/SVGKit
+copying file ./Frameworks/SVGKit.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  735 bytes for ./Frameworks/SVGKit.framework/Info.plist
+copying file ./Frameworks/DeepDiff.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/DeepDiff.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/DeepDiff.framework/DeepDiff ... 
+2020-06-22 7:58:02 PM +0000  648048 bytes for ./Frameworks/DeepDiff.framework/DeepDiff
+copying file ./Frameworks/DeepDiff.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  739 bytes for ./Frameworks/DeepDiff.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FBLPromises.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/FBLPromises.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/FBLPromises.framework/FBLPromises ... 
+2020-06-22 7:58:02 PM +0000  684960 bytes for ./Frameworks/FBLPromises.framework/FBLPromises
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FBLPromises.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  745 bytes for ./Frameworks/FBLPromises.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  5706 bytes for ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2020-06-22 7:58:02 PM +0000  611872 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+2020-06-22 7:58:02 PM +0000  365 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2020-06-22 7:58:02 PM +0000  398 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+2020-06-22 7:58:02 PM +0000  8319 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2020-06-22 7:58:02 PM +0000  4893 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+2020-06-22 7:58:02 PM +0000  306 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+2020-06-22 7:58:02 PM +0000  1200 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+2020-06-22 7:58:02 PM +0000  462 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+2020-06-22 7:58:02 PM +0000  714 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2020-06-22 7:58:02 PM +0000  816 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+2020-06-22 7:58:02 PM +0000  184 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+2020-06-22 7:58:02 PM +0000  262 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2020-06-22 7:58:02 PM +0000  1845 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/SVProgressHUD.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  749 bytes for ./Frameworks/SVProgressHUD.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/GoogleUtilities.framework/GoogleUtilities ... 
+2020-06-22 7:58:02 PM +0000  1054224 bytes for ./Frameworks/GoogleUtilities.framework/GoogleUtilities
+copying file ./Frameworks/GoogleUtilities.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  755 bytes for ./Frameworks/GoogleUtilities.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVision.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  2086 bytes for ./Frameworks/FritzVision.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVision.framework/FritzVision ... 
+2020-06-22 7:58:02 PM +0000  9277744 bytes for ./Frameworks/FritzVision.framework/FritzVision
+copying file ./Frameworks/FritzVision.framework/Anchors.csv ... 
+2020-06-22 7:58:02 PM +0000  56582 bytes for ./Frameworks/FritzVision.framework/Anchors.csv
+copying file ./Frameworks/FritzVision.framework/Info.plist ... 
+738 bytes for ./Frameworks/FritzVision.framework/Info.plist
+copying file ./Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/CocoaLumberjack.framework/CocoaLumberjack ... 
+2020-06-22 7:58:02 PM +0000  1179264 bytes for ./Frameworks/CocoaLumberjack.framework/CocoaLumberjack
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/CocoaLumberjack.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  755 bytes for ./Frameworks/CocoaLumberjack.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/nanopb.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/nanopb.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/nanopb.framework/nanopb ... 
+2020-06-22 7:58:02 PM +0000  278160 bytes for ./Frameworks/nanopb.framework/nanopb
+copying file ./Frameworks/nanopb.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  739 bytes for ./Frameworks/nanopb.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  4316 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.shape ... 
+2020-06-22 7:58:02 PM +0000  5542 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.shape
+copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.net ... 
+2020-06-22 7:58:02 PM +0000  28613 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.net
+copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.weights ... 
+2020-06-22 7:58:02 PM +0000  8704192 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.weights
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model/coremldata.bin ... 
+200 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model/coremldata.bin
+copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/neural_network_optionals/coremldata.bin ... 
+32 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/neural_network_optionals/coremldata.bin
+copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/coremldata.bin ... 
+2020-06-22 7:58:02 PM +0000  159 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/coremldata.bin
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate ... 
+2020-06-22 7:58:02 PM +0000  224864 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate
+copying file ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  837 bytes for ./Frameworks/FritzVisionSkySegmentationModelAccurate.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/PINCache.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/PINCache.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/PINCache.framework/PINCache ... 
+2020-06-22 7:58:02 PM +0000  618784 bytes for ./Frameworks/PINCache.framework/PINCache
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/PINCache.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  739 bytes for ./Frameworks/PINCache.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzCore.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/FritzCore.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzCore.framework/FritzCore ... 
+2020-06-22 7:58:02 PM +0000  1642976 bytes for ./Frameworks/FritzCore.framework/FritzCore
+copying file ./Frameworks/FritzCore.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  734 bytes for ./Frameworks/FritzCore.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzManagedModel.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  2408 bytes for ./Frameworks/FritzManagedModel.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/FritzManagedModel.framework/FritzManagedModel ... 
+2020-06-22 7:58:02 PM +0000  2643920 bytes for ./Frameworks/FritzManagedModel.framework/FritzManagedModel
+copying file ./Frameworks/FritzManagedModel.framework/build-encrypted-model.sh ... 
+2954 bytes for ./Frameworks/FritzManagedModel.framework/build-encrypted-model.sh
+copying file ./Frameworks/FritzManagedModel.framework/strip-frameworks.sh ... 
+2020-06-22 7:58:02 PM +0000  2569 bytes for ./Frameworks/FritzManagedModel.framework/strip-frameworks.sh
+copying file ./Frameworks/FritzManagedModel.framework/Info.plist ... 
+784 bytes for ./Frameworks/FritzManagedModel.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/CoreMLHelpers.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/CoreMLHelpers.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/CoreMLHelpers.framework/CoreMLHelpers ... 
+2020-06-22 7:58:02 PM +0000  686960 bytes for ./Frameworks/CoreMLHelpers.framework/CoreMLHelpers
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/CoreMLHelpers.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  742 bytes for ./Frameworks/CoreMLHelpers.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/Fritz.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/Fritz.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/Fritz.framework/Fritz ... 
+2020-06-22 7:58:02 PM +0000  121504 bytes for ./Frameworks/Fritz.framework/Fritz
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/Fritz.framework/Info.plist ... 
+2020-06-22 7:58:02 PM +0000  726 bytes for ./Frameworks/Fritz.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/libwebp.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:02 PM +0000  1798 bytes for ./Frameworks/libwebp.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/libwebp.framework/libwebp ... 
+2020-06-22 7:58:02 PM +0000  2698960 bytes for ./Frameworks/libwebp.framework/libwebp
+2020-06-22 7:58:02 PM +0000  copying file ./Frameworks/libwebp.framework/Info.plist ... 
+737 bytes for ./Frameworks/libwebp.framework/Info.plist
+2020-06-22 7:58:02 PM +0000  copying file ./embedded.mobileprovision ... 
+2020-06-22 7:58:02 PM +0000  7317 bytes for ./embedded.mobileprovision
+2020-06-22 7:58:02 PM +0000  copying file ./Magic Sky ... 
+2020-06-22 7:58:02 PM +0000  17460720 bytes for ./Magic Sky
+copying file ./download-sharp.svg ... 
+2020-06-22 7:58:02 PM +0000  342 bytes for ./download-sharp.svg
+copying file ./Info.plist ... 
+1519 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+8 bytes for ./PkgInfo
+copying file ./gif_svg.svg ... 
+2020-06-22 7:58:02 PM +0000  2707 bytes for ./gif_svg.svg
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionEmbedProfileStep
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41858a3d0; bundleID='org.cocoapods.CocoaLumberjack', path='<DVTFilePath:0x7fe41804c440:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41087bd20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.CocoaLumberjack', executablePath='<DVTFilePath:0x7fe418004e60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41ac32900; bundleID='com.fritz.CoreMLHelpers', path='<DVTFilePath:0x7fe418018280:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417c614f0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.CoreMLHelpers', executablePath='<DVTFilePath:0x7fe41800ffd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe417a07380; bundleID='org.cocoapods.DeepDiff', path='<DVTFilePath:0x7fe418028c30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4174eb350; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41087bd20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.DeepDiff', executablePath='<DVTFilePath:0x7fe4180273b0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe417be8330; bundleID='org.cocoapods.FBLPromises', path='<DVTFilePath:0x7fe418012970:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe40fc09600; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42cce2e40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.FBLPromises', executablePath='<DVTFilePath:0x7fe4180365e0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4185c55a0; bundleID='com.fritz.Fritz', path='<DVTFilePath:0x7fe418014dc0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41855e630; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42f45f590; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.Fritz', executablePath='<DVTFilePath:0x7fe418030250:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework/Fritz'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4185ed700; bundleID='com.fritz.FritzCore', path='<DVTFilePath:0x7fe41800de60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187c6870; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42cce2e40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzCore', executablePath='<DVTFilePath:0x7fe41802b6f0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41ac36520; bundleID='com.fritz.sdk.FritzManagedModel', path='<DVTFilePath:0x7fe418018ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ff1700; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea4a50; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.sdk.FritzManagedModel', executablePath='<DVTFilePath:0x7fe41804ea20:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41ac2f490; bundleID='com.fritz.FritzVision', path='<DVTFilePath:0x7fe418040e30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187a9dc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad2a430; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzVision', executablePath='<DVTFilePath:0x7fe41a834b30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41ad51790; bundleID='ai.fritz.FritzVisionSkySegmentationModelAccurate', path='<DVTFilePath:0x7fe41800d180:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f565c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad2a430; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='ai.fritz.FritzVisionSkySegmentationModelAccurate', executablePath='<DVTFilePath:0x7fe418037a10:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4187e9510; bundleID='org.cocoapods.GoogleUtilities', path='<DVTFilePath:0x7fe4155d0fd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41ad51cc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42f45f590; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.GoogleUtilities', executablePath='<DVTFilePath:0x7fe4155cdf50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41ad554e0; bundleID='org.cocoapods.PINCache', path='<DVTFilePath:0x7fe4155dc520:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f5eec0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42fa8b3b0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.PINCache', executablePath='<DVTFilePath:0x7fe417af0470:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework/PINCache'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe41855c300; bundleID='org.cocoapods.SVGKit', path='<DVTFilePath:0x7fe4155e0600:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ce8f90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad2a430; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVGKit', executablePath='<DVTFilePath:0x7fe417a7d590:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4180fa710; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x7fe4155c0980:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417757590; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42fa8b3b0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x7fe417acbed0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4187db680; bundleID='org.cocoapods.libwebp', path='<DVTFilePath:0x7fe415595a50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe42ee2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad2a430; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.libwebp', executablePath='<DVTFilePath:0x7fe4155d9900:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework/libwebp'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Skipping profile for item: <IDEDistributionItem: 0x7fe4185ee4a0; bundleID='org.cocoapods.nanopb', path='<DVTFilePath:0x7fe4155d9e50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe418193220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42f45f590; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.nanopb', executablePath='<DVTFilePath:0x7fe4155db840:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework/nanopb'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionInfoPlistStep
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionItemRemovalStep
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionAppThinningPlistStep
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionCompileBitcodeStep
+2020-06-22 7:58:02 PM +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionCodeSlimmingStep
+2020-06-22 7:58:02 PM +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  58212 bytes for ./C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/319E51D1-C916-3351-BE02-497ACA9BDDE8.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  65488 bytes for ./E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  50585 bytes for ./DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/F177503C-AF2B-3528-A077-196AEED0FDEF.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/CFC35FA2-CFCB-3797-AA9C-CFA01FB6AAB2.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/BD8C30CB-3415-3DBF-A2FF-49A657A9970F.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/457B0532-62CF-37B4-BA0A-784BCC28609E.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  The archive did not contain /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/0C97F114-200D-3BA9-8A8B-D9896469FF91.bcsymbolmap as expected.
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  55305 bytes for ./A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  34829 bytes for ./292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  109532 bytes for ./4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:02 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap'
+2020-06-22 7:58:02 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap 
+2020-06-22 7:58:02 PM +0000  copying file ./6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap ... 
+2020-06-22 7:58:02 PM +0000  35253 bytes for ./6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap
+2020-06-22 7:58:02 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap'
+2020-06-22 7:58:03 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap 
+2020-06-22 7:58:03 PM +0000  copying file ./AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap ... 
+2020-06-22 7:58:03 PM +0000  77086 bytes for ./AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap
+2020-06-22 7:58:03 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap'
+2020-06-22 7:58:03 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap 
+2020-06-22 7:58:03 PM +0000  copying file ./3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap ... 
+2020-06-22 7:58:03 PM +0000  12750 bytes for ./3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap
+2020-06-22 7:58:03 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/ditto '-V' '/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/BCSymbolMaps/BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap'
+2020-06-22 7:58:03 PM +0000  >>> Copying /Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/BCSymbolMaps/BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap 
+2020-06-22 7:58:03 PM +0000  copying file ./BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap ... 
+2020-06-22 7:58:03 PM +0000  1097644 bytes for ./BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap
+2020-06-22 7:58:03 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionSymbolsStep
+2020-06-22 7:58:03 PM +0000  Excluding symbols for CocoaLumberjack.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for CoreMLHelpers.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for DeepDiff.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for FBLPromises.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for Fritz.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for FritzCore.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for FritzManagedModel.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for FritzVision.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for FritzVisionSkySegmentationModelAccurate.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for GoogleUtilities.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for PINCache.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for SVGKit.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for SVProgressHUD.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for libwebp.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for nanopb.framework
+2020-06-22 7:58:03 PM +0000  Excluding symbols for Magic Sky.app
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionAppThinningStep
+2020-06-22 7:58:03 PM +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionArchThinningStep
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "CocoaLumberjack" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "CoreMLHelpers" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "DeepDiff" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "FBLPromises" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/Fritz.framework/Fritz' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "Fritz" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "FritzCore" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "FritzManagedModel" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "FritzVision" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "FritzVisionSkySegmentationModelAccurate" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "GoogleUtilities" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/PINCache.framework/PINCache' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "PINCache" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "SVGKit" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "SVProgressHUD" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/libwebp.framework/libwebp' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "libwebp" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/nanopb.framework/nanopb' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "nanopb" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Magic Sky' '-verify_arch' 'arm64e'
+2020-06-22 7:58:03 PM +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-22 7:58:03 PM +0000  Skipping architecture thinning for item "Magic Sky" because arch "arm64e" wasn't found
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionODRStep
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionStripXattrsStep
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41858a3d0; bundleID='org.cocoapods.CocoaLumberjack', path='<DVTFilePath:0x7fe41804c440:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.CocoaLumberjack', executablePath='<DVTFilePath:0x7fe418004e60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41ac32900; bundleID='com.fritz.CoreMLHelpers', path='<DVTFilePath:0x7fe418018280:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417c614f0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.CoreMLHelpers', executablePath='<DVTFilePath:0x7fe41800ffd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe417a07380; bundleID='org.cocoapods.DeepDiff', path='<DVTFilePath:0x7fe418028c30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4174eb350; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea3d40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.DeepDiff', executablePath='<DVTFilePath:0x7fe4180273b0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe417be8330; bundleID='org.cocoapods.FBLPromises', path='<DVTFilePath:0x7fe418012970:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe40fc09600; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea3d40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.FBLPromises', executablePath='<DVTFilePath:0x7fe4180365e0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4185c55a0; bundleID='com.fritz.Fritz', path='<DVTFilePath:0x7fe418014dc0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41855e630; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe410dd0260; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.Fritz', executablePath='<DVTFilePath:0x7fe418030250:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework/Fritz'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4185ed700; bundleID='com.fritz.FritzCore', path='<DVTFilePath:0x7fe41800de60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187c6870; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe40fd07010; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzCore', executablePath='<DVTFilePath:0x7fe41802b6f0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41ac36520; bundleID='com.fritz.sdk.FritzManagedModel', path='<DVTFilePath:0x7fe418018ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ff1700; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.sdk.FritzManagedModel', executablePath='<DVTFilePath:0x7fe41804ea20:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41ac2f490; bundleID='com.fritz.FritzVision', path='<DVTFilePath:0x7fe418040e30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187a9dc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzVision', executablePath='<DVTFilePath:0x7fe41a834b30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41ad51790; bundleID='ai.fritz.FritzVisionSkySegmentationModelAccurate', path='<DVTFilePath:0x7fe41800d180:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f565c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='ai.fritz.FritzVisionSkySegmentationModelAccurate', executablePath='<DVTFilePath:0x7fe418037a10:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4187e9510; bundleID='org.cocoapods.GoogleUtilities', path='<DVTFilePath:0x7fe4155d0fd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41ad51cc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea3d40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.GoogleUtilities', executablePath='<DVTFilePath:0x7fe4155cdf50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41ad554e0; bundleID='org.cocoapods.PINCache', path='<DVTFilePath:0x7fe4155dc520:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f5eec0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42b4ece40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.PINCache', executablePath='<DVTFilePath:0x7fe417af0470:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework/PINCache'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe41855c300; bundleID='org.cocoapods.SVGKit', path='<DVTFilePath:0x7fe4155e0600:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ce8f90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42b4ece40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVGKit', executablePath='<DVTFilePath:0x7fe417a7d590:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4180fa710; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x7fe4155c0980:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417757590; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42b4ece40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x7fe417acbed0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4187db680; bundleID='org.cocoapods.libwebp', path='<DVTFilePath:0x7fe415595a50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe42ee2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417dc9830; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.libwebp', executablePath='<DVTFilePath:0x7fe4155d9900:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework/libwebp'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fe4185ee4a0; bundleID='org.cocoapods.nanopb', path='<DVTFilePath:0x7fe4155d9e50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe418193220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417dc9830; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.nanopb', executablePath='<DVTFilePath:0x7fe4155db840:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework/nanopb'>', hardenedRuntime='0'>'>
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/xattr '-crs' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app'
+2020-06-22 7:58:03 PM +0000  /usr/bin/xattr exited with 0
+2020-06-22 7:58:03 PM +0000  Processing step: IDEDistributionCodesignStep
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41858a3d0; bundleID='org.cocoapods.CocoaLumberjack', path='<DVTFilePath:0x7fe41804c440:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417cff2e0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.CocoaLumberjack', executablePath='<DVTFilePath:0x7fe418004e60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41858a3d0; bundleID='org.cocoapods.CocoaLumberjack', path='<DVTFilePath:0x7fe41804c440:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.CocoaLumberjack', executablePath='<DVTFilePath:0x7fe418004e60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~SO6Q4f
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~SO6Q4f' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.CocoaLumberjack]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41ac32900; bundleID='com.fritz.CoreMLHelpers', path='<DVTFilePath:0x7fe418018280:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea3d40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.CoreMLHelpers', executablePath='<DVTFilePath:0x7fe41800ffd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41ac32900; bundleID='com.fritz.CoreMLHelpers', path='<DVTFilePath:0x7fe418018280:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187eb470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417d4ca80; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.CoreMLHelpers', executablePath='<DVTFilePath:0x7fe41800ffd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~oBoaaf
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~oBoaaf' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework: signed bundle with Mach-O universal (arm64) [com.fritz.CoreMLHelpers]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe417a07380; bundleID='org.cocoapods.DeepDiff', path='<DVTFilePath:0x7fe418028c30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4174eb350; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.DeepDiff', executablePath='<DVTFilePath:0x7fe4180273b0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe417a07380; bundleID='org.cocoapods.DeepDiff', path='<DVTFilePath:0x7fe418028c30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4174eb350; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41a807c00; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.DeepDiff', executablePath='<DVTFilePath:0x7fe4180273b0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~anYbMz
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~anYbMz' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/DeepDiff.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/DeepDiff.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.DeepDiff]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe417be8330; bundleID='org.cocoapods.FBLPromises', path='<DVTFilePath:0x7fe418012970:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe40fc09600; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417cff2e0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.FBLPromises', executablePath='<DVTFilePath:0x7fe4180365e0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe417be8330; bundleID='org.cocoapods.FBLPromises', path='<DVTFilePath:0x7fe418012970:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe40fc09600; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe4174e5c20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.FBLPromises', executablePath='<DVTFilePath:0x7fe4180365e0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~mIv3HV
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~mIv3HV' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FBLPromises.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FBLPromises.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.FBLPromises]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4185c55a0; bundleID='com.fritz.Fritz', path='<DVTFilePath:0x7fe418014dc0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41855e630; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe4180f4260; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.Fritz', executablePath='<DVTFilePath:0x7fe418030250:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework/Fritz'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4185c55a0; bundleID='com.fritz.Fritz', path='<DVTFilePath:0x7fe418014dc0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41855e630; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417c614f0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.Fritz', executablePath='<DVTFilePath:0x7fe418030250:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/Fritz.framework/Fritz'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~UJly1O
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~UJly1O' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/Fritz.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/Fritz.framework: signed bundle with Mach-O universal (arm64) [com.fritz.Fritz]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4185ed700; bundleID='com.fritz.FritzCore', path='<DVTFilePath:0x7fe41800de60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187c6870; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42eff5110; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzCore', executablePath='<DVTFilePath:0x7fe41802b6f0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4185ed700; bundleID='com.fritz.FritzCore', path='<DVTFilePath:0x7fe41800de60:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187c6870; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42fb52880; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzCore', executablePath='<DVTFilePath:0x7fe41802b6f0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~9bsJ52
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~9bsJ52' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzCore.framework'
+2020-06-22 7:58:03 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzCore.framework: signed bundle with Mach-O universal (arm64) [com.fritz.FritzCore]
+2020-06-22 7:58:03 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:03 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41ac36520; bundleID='com.fritz.sdk.FritzManagedModel', path='<DVTFilePath:0x7fe418018ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ff1700; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea3d40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.sdk.FritzManagedModel', executablePath='<DVTFilePath:0x7fe41804ea20:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:03 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41ac36520; bundleID='com.fritz.sdk.FritzManagedModel', path='<DVTFilePath:0x7fe418018ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ff1700; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41a862bb0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.sdk.FritzManagedModel', executablePath='<DVTFilePath:0x7fe41804ea20:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~LOyrgB
+2020-06-22 7:58:03 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~LOyrgB' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework: signed bundle with Mach-O universal (arm64) [com.fritz.sdk.FritzManagedModel]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41ac2f490; bundleID='com.fritz.FritzVision', path='<DVTFilePath:0x7fe418040e30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187a9dc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe4175bc870; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzVision', executablePath='<DVTFilePath:0x7fe41a834b30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41ac2f490; bundleID='com.fritz.FritzVision', path='<DVTFilePath:0x7fe418040e30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe4187a9dc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417b46b20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='com.fritz.FritzVision', executablePath='<DVTFilePath:0x7fe41a834b30:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~PwO7Dj
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~PwO7Dj' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVision.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVision.framework: signed bundle with Mach-O universal (arm64) [com.fritz.FritzVision]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41ad51790; bundleID='ai.fritz.FritzVisionSkySegmentationModelAccurate', path='<DVTFilePath:0x7fe41800d180:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f565c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe4180ecc30; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='ai.fritz.FritzVisionSkySegmentationModelAccurate', executablePath='<DVTFilePath:0x7fe418037a10:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41ad51790; bundleID='ai.fritz.FritzVisionSkySegmentationModelAccurate', path='<DVTFilePath:0x7fe41800d180:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f565c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41751ffe0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='ai.fritz.FritzVisionSkySegmentationModelAccurate', executablePath='<DVTFilePath:0x7fe418037a10:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~PXX2eY
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~PXX2eY' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework: signed bundle with Mach-O universal (arm64) [ai.fritz.FritzVisionSkySegmentationModelAccurate]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4187e9510; bundleID='org.cocoapods.GoogleUtilities', path='<DVTFilePath:0x7fe4155d0fd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41ad51cc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42b4ece40; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.GoogleUtilities', executablePath='<DVTFilePath:0x7fe4155cdf50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4187e9510; bundleID='org.cocoapods.GoogleUtilities', path='<DVTFilePath:0x7fe4155d0fd0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe41ad51cc0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ab359b0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.GoogleUtilities', executablePath='<DVTFilePath:0x7fe4155cdf50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~0KpCMT
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~0KpCMT' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.GoogleUtilities]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41ad554e0; bundleID='org.cocoapods.PINCache', path='<DVTFilePath:0x7fe4155dc520:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f5eec0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41751ffe0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.PINCache', executablePath='<DVTFilePath:0x7fe417af0470:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework/PINCache'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41ad554e0; bundleID='org.cocoapods.PINCache', path='<DVTFilePath:0x7fe4155dc520:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417f5eec0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42f87bc10; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.PINCache', executablePath='<DVTFilePath:0x7fe417af0470:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/PINCache.framework/PINCache'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~iKItWw
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~iKItWw' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/PINCache.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/PINCache.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.PINCache]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe41855c300; bundleID='org.cocoapods.SVGKit', path='<DVTFilePath:0x7fe4155e0600:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ce8f90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea4a50; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVGKit', executablePath='<DVTFilePath:0x7fe417a7d590:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe41855c300; bundleID='org.cocoapods.SVGKit', path='<DVTFilePath:0x7fe4155e0600:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417ce8f90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417eae0a0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVGKit', executablePath='<DVTFilePath:0x7fe417a7d590:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~498VZi
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~498VZi' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVGKit.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVGKit.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.SVGKit]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4180fa710; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x7fe4155c0980:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417757590; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41751ffe0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x7fe417acbed0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4180fa710; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x7fe4155c0980:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417757590; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe42f840350; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x7fe417acbed0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~GBLxLA
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~GBLxLA' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.SVProgressHUD]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4187db680; bundleID='org.cocoapods.libwebp', path='<DVTFilePath:0x7fe415595a50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe42ee2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad55fa0; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.libwebp', executablePath='<DVTFilePath:0x7fe4155d9900:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework/libwebp'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4187db680; bundleID='org.cocoapods.libwebp', path='<DVTFilePath:0x7fe415595a50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe42ee2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ad70e00; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.libwebp', executablePath='<DVTFilePath:0x7fe4155d9900:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/libwebp.framework/libwebp'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~eHAZmy
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~eHAZmy' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/libwebp.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/libwebp.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.libwebp]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe4185ee4a0; bundleID='org.cocoapods.nanopb', path='<DVTFilePath:0x7fe4155d9e50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe418193220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe41ac0db20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.nanopb', executablePath='<DVTFilePath:0x7fe4155db840:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework/nanopb'>', hardenedRuntime='0'>'>: {
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe4185ee4a0; bundleID='org.cocoapods.nanopb', path='<DVTFilePath:0x7fe4155d9e50:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe418193220; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea5160; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='(null)', teamID='CFWHV8688B', identifier='org.cocoapods.nanopb', executablePath='<DVTFilePath:0x7fe4155db840:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Frameworks/nanopb.framework/nanopb'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~lgbUN6
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~lgbUN6' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/nanopb.framework'
+2020-06-22 7:58:04 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app/Frameworks/nanopb.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.nanopb]
+2020-06-22 7:58:04 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:04 PM +0000  Entitlements for <IDEDistributionItem: 0x7fe417b0a7b0; bundleID='studio.fakeartists.magicsky', path='<DVTFilePath:0x7fe4177f7850:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417a3aa60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417ea4a50; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='{
+    "application-identifier" = "CFWHV8688B.studio.fakeartists.magicsky";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = CFWHV8688B;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "CFWHV8688B.studio.fakeartists.magicsky"
+    );
+}', teamID='CFWHV8688B', identifier='studio.fakeartists.magicsky', executablePath='<DVTFilePath:0x7fe41a840ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Magic Sky'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "CFWHV8688B.studio.fakeartists.magicsky";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = CFWHV8688B;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "CFWHV8688B.studio.fakeartists.magicsky"
+    );
+}
+2020-06-22 7:58:04 PM +0000  Writing entitlements for <IDEDistributionItem: 0x7fe417b0a7b0; bundleID='studio.fakeartists.magicsky', path='<DVTFilePath:0x7fe4177f7850:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fe417a3aa60; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fe417b46b20; name='Apple Distribution: Fake Artists LLC (CFWHV8688B)', hash='25CB496F66A574C319A7CD0BFF05A97BC87B3F1E', serialNumber='47789D7FEABDBF5A', certificateKinds='(
+    "1.2.840.113635.100.6.1.4",
+    "1.2.840.113635.100.6.1.7"
+), issueDate='2020-06-17 8:23:12 PM +0000''>', entitlements='{
+    "application-identifier" = "CFWHV8688B.studio.fakeartists.magicsky";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = CFWHV8688B;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "CFWHV8688B.studio.fakeartists.magicsky"
+    );
+}', teamID='CFWHV8688B', identifier='studio.fakeartists.magicsky', executablePath='<DVTFilePath:0x7fe41a840ab0:'/Users/qanta/Library/Developer/Xcode/Archives/2020-06-22/MagicWindow 6-22-20, 3.55 PM.xcarchive/Products/Applications/Magic Sky.app/Magic Sky'>', hardenedRuntime='0'>'> to: /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~dt2mF4
+2020-06-22 7:58:04 PM +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '25CB496F66A574C319A7CD0BFF05A97BC87B3F1E' '--entitlements' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/entitlements~~~dt2mF4' '--preserve-metadata=identifier,flags,runtime' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app'
+2020-06-22 7:58:05 PM +0000  /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root/Payload/Magic Sky.app: signed app bundle with Mach-O thin (arm64) [studio.fakeartists.magicsky]
+2020-06-22 7:58:05 PM +0000  /usr/bin/codesign exited with 0
+2020-06-22 7:58:05 PM +0000  Processing step: IDEDistributionZipODRItemStep
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-22 7:58:05 PM +0000  Processing step: IDEDistributionCreateIPAStep
+2020-06-22 7:58:05 PM +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root' '/var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Packages/MagicWindow.ipa'
+2020-06-22 7:58:05 PM +0000  >>> Copying /var/folders/s5/97mr2jlx7jb8704y5fmjsnb40000gn/T/XcodeDistPipeline.~~~lawTDb/Root 
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  1097644 bytes for ./BCSymbolMaps/BDDBFF02-F827-37CF-9087-BB078BB7F00B.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  65488 bytes for ./BCSymbolMaps/E71D152A-8D4C-384E-8385-5779EF524113.bcsymbolmap
+copying file ./BCSymbolMaps/292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  34829 bytes for ./BCSymbolMaps/292CCF3E-948C-33EA-9303-00075D3BEFE0.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  12750 bytes for ./BCSymbolMaps/3701E8D9-548A-34D2-A190-9BEB13AF3E99.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  109532 bytes for ./BCSymbolMaps/4FB8EAAE-3912-3CB6-993A-77EB2115BE93.bcsymbolmap
+copying file ./BCSymbolMaps/C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  58212 bytes for ./BCSymbolMaps/C6FF593F-BBC4-317E-A057-1A99840D9039.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  55305 bytes for ./BCSymbolMaps/A511C902-F162-3C3D-9BE8-B0F2EE829C44.bcsymbolmap
+copying file ./BCSymbolMaps/DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  50585 bytes for ./BCSymbolMaps/DA284946-CE73-3C71-BFC5-7861ACA1CC37.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./BCSymbolMaps/AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  77086 bytes for ./BCSymbolMaps/AA27998E-D0CF-393B-B412-421366AD2323.bcsymbolmap
+copying file ./BCSymbolMaps/6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap ... 
+2020-06-22 7:58:05 PM +0000  35253 bytes for ./BCSymbolMaps/6B697549-876D-3F3D-8232-B9201DD11754.bcsymbolmap
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  33505 bytes for ./Payload/Magic Sky.app/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/dot3.svg ... 
+2020-06-22 7:58:05 PM +0000  2042 bytes for ./Payload/Magic Sky.app/dot3.svg
+copying file ./Payload/Magic Sky.app/arrow-forward.svg ... 
+2020-06-22 7:58:05 PM +0000  390 bytes for ./Payload/Magic Sky.app/arrow-forward.svg
+copying file ./Payload/Magic Sky.app/dot2.svg ... 
+2020-06-22 7:58:05 PM +0000  2046 bytes for ./Payload/Magic Sky.app/dot2.svg
+copying file ./Payload/Magic Sky.app/vl0.svg ... 
+2020-06-22 7:58:05 PM +0000  3526 bytes for ./Payload/Magic Sky.app/vl0.svg
+copying file ./Payload/Magic Sky.app/peke2.svg ... 
+2020-06-22 7:58:05 PM +0000  1301 bytes for ./Payload/Magic Sky.app/peke2.svg
+copying file ./Payload/Magic Sky.app/pt0.svg ... 
+2020-06-22 7:58:05 PM +0000  13719 bytes for ./Payload/Magic Sky.app/pt0.svg
+copying file ./Payload/Magic Sky.app/dl_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  2905 bytes for ./Payload/Magic Sky.app/dl_svg.svg
+copying file ./Payload/Magic Sky.app/dot1.svg ... 
+2020-06-22 7:58:05 PM +0000  2034 bytes for ./Payload/Magic Sky.app/dot1.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/pt1.svg ... 
+2020-06-22 7:58:05 PM +0000  14471 bytes for ./Payload/Magic Sky.app/pt1.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/vl1.svg ... 
+2020-06-22 7:58:05 PM +0000  3925 bytes for ./Payload/Magic Sky.app/vl1.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/peke4.svg ... 
+2020-06-22 7:58:05 PM +0000  2022 bytes for ./Payload/Magic Sky.app/peke4.svg
+copying file ./Payload/Magic Sky.app/cloud2.svg ... 
+2020-06-22 7:58:05 PM +0000  10122 bytes for ./Payload/Magic Sky.app/cloud2.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/ios-reverse-camera.svg ... 
+2020-06-22 7:58:05 PM +0000  1212 bytes for ./Payload/Magic Sky.app/ios-reverse-camera.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/cloud3.svg ... 
+2020-06-22 7:58:05 PM +0000  10590 bytes for ./Payload/Magic Sky.app/cloud3.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/logo_pp.svg ... 
+2020-06-22 7:58:05 PM +0000  27305 bytes for ./Payload/Magic Sky.app/logo_pp.svg
+copying file ./Payload/Magic Sky.app/Fritz-Info.plist ... 
+2020-06-22 7:58:05 PM +0000  154 bytes for ./Payload/Magic Sky.app/Fritz-Info.plist
+copying file ./Payload/Magic Sky.app/import_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  3610 bytes for ./Payload/Magic Sky.app/import_svg.svg
+copying file ./Payload/Magic Sky.app/AppIcon60x60@2x.png ... 
+2020-06-22 7:58:05 PM +0000  2826 bytes for ./Payload/Magic Sky.app/AppIcon60x60@2x.png
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/def.png ... 
+2020-06-22 7:58:05 PM +0000  314101 bytes for ./Payload/Magic Sky.app/def.png
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/share_svg.svg ... 
+2221 bytes for ./Payload/Magic Sky.app/share_svg.svg
+copying file ./Payload/Magic Sky.app/arrow-back-circle-sharp.svg ... 
+2020-06-22 7:58:05 PM +0000  304 bytes for ./Payload/Magic Sky.app/arrow-back-circle-sharp.svg
+copying file ./Payload/Magic Sky.app/magicsky_top.svg ... 
+2020-06-22 7:58:05 PM +0000  26121 bytes for ./Payload/Magic Sky.app/magicsky_top.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/GoogleService-Info.plist ... 
+2020-06-22 7:58:05 PM +0000  718 bytes for ./Payload/Magic Sky.app/GoogleService-Info.plist
+copying file ./Payload/Magic Sky.app/plus_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  1237 bytes for ./Payload/Magic Sky.app/plus_svg.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+2020-06-22 7:58:05 PM +0000  971 bytes for ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+copying file ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2020-06-22 7:58:05 PM +0000  2078 bytes for ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  258 bytes for ./Payload/Magic Sky.app/Base.lproj/Main.storyboardc/Info.plist
+copying file ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2020-06-22 7:58:05 PM +0000  1989 bytes for ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2020-06-22 7:58:05 PM +0000  896 bytes for ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  258 bytes for ./Payload/Magic Sky.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/Magic Sky.app/cam_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  2870 bytes for ./Payload/Magic Sky.app/cam_svg.svg
+copying file ./Payload/Magic Sky.app/toggle2.svg ... 
+2020-06-22 7:58:05 PM +0000  1644 bytes for ./Payload/Magic Sky.app/toggle2.svg
+copying file ./Payload/Magic Sky.app/ptpp.svg ... 
+2020-06-22 7:58:05 PM +0000  13817 bytes for ./Payload/Magic Sky.app/ptpp.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/grad.svg ... 
+2020-06-22 7:58:05 PM +0000  1017 bytes for ./Payload/Magic Sky.app/grad.svg
+copying file ./Payload/Magic Sky.app/logo@3x.png ... 
+2020-06-22 7:58:05 PM +0000  488321 bytes for ./Payload/Magic Sky.app/logo@3x.png
+copying file ./Payload/Magic Sky.app/Assets.car ... 
+2020-06-22 7:58:05 PM +0000  638991 bytes for ./Payload/Magic Sky.app/Assets.car
+copying file ./Payload/Magic Sky.app/camera-sharp.svg ... 
+2020-06-22 7:58:05 PM +0000  494 bytes for ./Payload/Magic Sky.app/camera-sharp.svg
+copying file ./Payload/Magic Sky.app/AppIcon76x76@2x~ipad.png ... 
+2020-06-22 7:58:05 PM +0000  3559 bytes for ./Payload/Magic Sky.app/AppIcon76x76@2x~ipad.png
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/magicsky_top_b.svg ... 
+2020-06-22 7:58:05 PM +0000  26705 bytes for ./Payload/Magic Sky.app/magicsky_top_b.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/import_svg2.svg ... 
+2844 bytes for ./Payload/Magic Sky.app/import_svg2.svg
+copying file ./Payload/Magic Sky.app/peke_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  1598 bytes for ./Payload/Magic Sky.app/peke_svg.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/gifsvg.svg ... 
+2020-06-22 7:58:05 PM +0000  2816 bytes for ./Payload/Magic Sky.app/gifsvg.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/arrow-back.svg ... 
+2020-06-22 7:58:05 PM +0000  390 bytes for ./Payload/Magic Sky.app/arrow-back.svg
+copying file ./Payload/Magic Sky.app/image-sharp.svg ... 
+2020-06-22 7:58:05 PM +0000  416 bytes for ./Payload/Magic Sky.app/image-sharp.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/def.gif ... 
+2020-06-22 7:58:05 PM +0000  491546 bytes for ./Payload/Magic Sky.app/def.gif
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/shoot_svg.svg ... 
+2736 bytes for ./Payload/Magic Sky.app/shoot_svg.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/info_svg.svg ... 
+2020-06-22 7:58:05 PM +0000  2524 bytes for ./Payload/Magic Sky.app/info_svg.svg
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit ... 
+2020-06-22 7:58:05 PM +0000  2632880 bytes for ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/SVGKit
+copying file ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  735 bytes for ./Payload/Magic Sky.app/Frameworks/SVGKit.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff ... 
+2020-06-22 7:58:05 PM +0000  459552 bytes for ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/DeepDiff
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/Info.plist ... 
+739 bytes for ./Payload/Magic Sky.app/Frameworks/DeepDiff.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises ... 
+2020-06-22 7:58:05 PM +0000  513824 bytes for ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/FBLPromises
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/Info.plist ... 
+745 bytes for ./Payload/Magic Sky.app/Frameworks/FBLPromises.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  5706 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2020-06-22 7:58:05 PM +0000  453104 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+2020-06-22 7:58:05 PM +0000  365 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2020-06-22 7:58:05 PM +0000  398 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+2020-06-22 7:58:05 PM +0000  8319 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2020-06-22 7:58:05 PM +0000  4893 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+2020-06-22 7:58:05 PM +0000  306 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+2020-06-22 7:58:05 PM +0000  1200 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+2020-06-22 7:58:05 PM +0000  462 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+2020-06-22 7:58:05 PM +0000  714 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2020-06-22 7:58:05 PM +0000  816 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+184 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+262 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2020-06-22 7:58:05 PM +0000  1845 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/Info.plist ... 
+749 bytes for ./Payload/Magic Sky.app/Frameworks/SVProgressHUD.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities ... 
+2020-06-22 7:58:05 PM +0000  782800 bytes for ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/GoogleUtilities
+copying file ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  755 bytes for ./Payload/Magic Sky.app/Frameworks/GoogleUtilities.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  2086 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/_CodeSignature/CodeResources
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision ... 
+2020-06-22 7:58:05 PM +0000  6324080 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/FritzVision
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/Anchors.csv ... 
+2020-06-22 7:58:05 PM +0000  56582 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/Anchors.csv
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  738 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVision.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack ... 
+2020-06-22 7:58:05 PM +0000  867984 bytes for ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/CocoaLumberjack
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/Info.plist ... 
+755 bytes for ./Payload/Magic Sky.app/Frameworks/CocoaLumberjack.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/nanopb.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/Magic Sky.app/Frameworks/nanopb.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/nanopb.framework/nanopb ... 
+2020-06-22 7:58:05 PM +0000  213776 bytes for ./Payload/Magic Sky.app/Frameworks/nanopb.framework/nanopb
+copying file ./Payload/Magic Sky.app/Frameworks/nanopb.framework/Info.plist ... 
+2020-06-22 7:58:05 PM +0000  739 bytes for ./Payload/Magic Sky.app/Frameworks/nanopb.framework/Info.plist
+2020-06-22 7:58:05 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:05 PM +0000  4316 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.shape ... 
+2020-06-22 7:58:05 PM +0000  5542 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.shape
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.net ... 
+2020-06-22 7:58:05 PM +0000  28613 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.net
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.weights ... 
+2020-06-22 7:58:06 PM +0000  8704192 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model.espresso.weights
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model/coremldata.bin ... 
+200 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/model/coremldata.bin
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/neural_network_optionals/coremldata.bin ... 
+32 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/neural_network_optionals/coremldata.bin
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/coremldata.bin ... 
+2020-06-22 7:58:06 PM +0000  159 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/sky_segmentation_mobilenet_512x512_75_1568486643.mlmodelc/coremldata.bin
+copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate ... 
+2020-06-22 7:58:06 PM +0000  158384 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/FritzVisionSkySegmentationModelAccurate
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/Info.plist ... 
+837 bytes for ./Payload/Magic Sky.app/Frameworks/FritzVisionSkySegmentationModelAccurate.framework/Info.plist
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/PINCache.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/Magic Sky.app/Frameworks/PINCache.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/PINCache.framework/PINCache ... 
+2020-06-22 7:58:06 PM +0000  457328 bytes for ./Payload/Magic Sky.app/Frameworks/PINCache.framework/PINCache
+copying file ./Payload/Magic Sky.app/Frameworks/PINCache.framework/Info.plist ... 
+2020-06-22 7:58:06 PM +0000  739 bytes for ./Payload/Magic Sky.app/Frameworks/PINCache.framework/Info.plist
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore ... 
+2020-06-22 7:58:06 PM +0000  1123072 bytes for ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/FritzCore
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/Info.plist ... 
+734 bytes for ./Payload/Magic Sky.app/Frameworks/FritzCore.framework/Info.plist
+copying file ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:06 PM +0000  2408 bytes for ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel ... 
+2020-06-22 7:58:06 PM +0000  1754976 bytes for ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/FritzManagedModel
+copying file ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/build-encrypted-model.sh ... 
+2020-06-22 7:58:06 PM +0000  2954 bytes for ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/build-encrypted-model.sh
+copying file ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/strip-frameworks.sh ... 
+2020-06-22 7:58:06 PM +0000  2569 bytes for ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/strip-frameworks.sh
+copying file ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/Info.plist ... 
+2020-06-22 7:58:06 PM +0000  784 bytes for ./Payload/Magic Sky.app/Frameworks/FritzManagedModel.framework/Info.plist
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:06 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers ... 
+2020-06-22 7:58:06 PM +0000  505040 bytes for ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/CoreMLHelpers
+copying file ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/Info.plist ... 
+2020-06-22 7:58:06 PM +0000  742 bytes for ./Payload/Magic Sky.app/Frameworks/CoreMLHelpers.framework/Info.plist
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/Fritz.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:06 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/Fritz.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/Fritz.framework/Fritz ... 
+2020-06-22 7:58:06 PM +0000  100608 bytes for ./Payload/Magic Sky.app/Frameworks/Fritz.framework/Fritz
+copying file ./Payload/Magic Sky.app/Frameworks/Fritz.framework/Info.plist ... 
+2020-06-22 7:58:06 PM +0000  726 bytes for ./Payload/Magic Sky.app/Frameworks/Fritz.framework/Info.plist
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Frameworks/libwebp.framework/_CodeSignature/CodeResources ... 
+2020-06-22 7:58:06 PM +0000  1798 bytes for ./Payload/Magic Sky.app/Frameworks/libwebp.framework/_CodeSignature/CodeResources
+copying file ./Payload/Magic Sky.app/Frameworks/libwebp.framework/libwebp ... 
+2020-06-22 7:58:06 PM +0000  2045376 bytes for ./Payload/Magic Sky.app/Frameworks/libwebp.framework/libwebp
+copying file ./Payload/Magic Sky.app/Frameworks/libwebp.framework/Info.plist ... 
+2020-06-22 7:58:06 PM +0000  737 bytes for ./Payload/Magic Sky.app/Frameworks/libwebp.framework/Info.plist
+copying file ./Payload/Magic Sky.app/embedded.mobileprovision ... 
+7317 bytes for ./Payload/Magic Sky.app/embedded.mobileprovision
+2020-06-22 7:58:06 PM +0000  copying file ./Payload/Magic Sky.app/Magic Sky ... 
+2020-06-22 7:58:06 PM +0000  14507312 bytes for ./Payload/Magic Sky.app/Magic Sky
+copying file ./Payload/Magic Sky.app/download-sharp.svg ... 
+2020-06-22 7:58:06 PM +0000  342 bytes for ./Payload/Magic Sky.app/download-sharp.svg
+copying file ./Payload/Magic Sky.app/Info.plist ... 
+1519 bytes for ./Payload/Magic Sky.app/Info.plist
+copying file ./Payload/Magic Sky.app/PkgInfo ... 
+8 bytes for ./Payload/Magic Sky.app/PkgInfo
+copying file ./Payload/Magic Sky.app/gif_svg.svg ... 
+2020-06-22 7:58:06 PM +0000  2707 bytes for ./Payload/Magic Sky.app/gif_svg.svg
+2020-06-22 7:58:06 PM +0000  /usr/bin/ditto exited with 0
+2020-06-22 7:58:06 PM +0000  Processing step: IDEDistributionAppStoreInformationStep
+2020-06-22 7:58:06 PM +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2020-06-22 7:58:06 PM +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2020-06-22 7:58:06 PM +0000  Processing step: IDEDistributionCreateManifestStep
+2020-06-22 7:58:06 PM +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

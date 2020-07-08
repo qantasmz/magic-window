@@ -248,8 +248,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
 
     self.captureSession.stopRunning()
-    
-    
+    print(capturedImage.size.width)
+    print(capturedImage.size.height)
     delegate?.setInputImage(img: capturedImage)
     delegate?.goToSky()
     
@@ -365,7 +365,18 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
       if let pickedImage = info[.originalImage] as? UIImage {
         //runSegmentation(pickedImage)
 
-          delegate?.setInputImage(img: pickedImage)
+        
+        let rate:CGFloat = pickedImage.size.height/pickedImage.size.width
+        
+        let _wid:CGFloat = 800
+        let _hgt:CGFloat = _wid * rate
+        
+        
+        
+        var size:CGSize = CGSize(width:_wid,height:_hgt)
+        
+        let resize = self.resizeImage(image: pickedImage, contentSize: size)
+          delegate?.setInputImage(img: resize)
           delegate?.goToSky()
         /*
           if(_calcLock == 0){
@@ -378,7 +389,30 @@ extension CameraViewController: UIImagePickerControllerDelegate, UINavigationCon
 
     }
     
-
+    
+    private func resizeImage(image:UIImage,contentSize:CGSize) -> UIImage{
+        // リサイズ処理
+        let origWidth  = Int(image.size.width)
+        let origHeight = Int(image.size.height)
+        var resizeWidth:Int = 0, resizeHeight:Int = 0
+        if (origWidth < origHeight) {
+            resizeWidth = Int(contentSize.width)
+            resizeHeight = origHeight * resizeWidth / origWidth
+        } else {
+            resizeHeight = Int(contentSize.height)
+            resizeWidth = origWidth * resizeHeight / origHeight
+        }
+        
+        let resizeSize = CGSize(width:CGFloat(resizeWidth), height:CGFloat(resizeHeight))
+        UIGraphicsBeginImageContext(resizeSize)
+        
+        image.draw(in: CGRect(x:0,y: 0,width: CGFloat(resizeWidth), height:CGFloat(resizeHeight)))
+        
+        let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+    
+        return resizeImage!
+    }
 
    // カメラの画質の設定
    func setupCaptureSession() {
